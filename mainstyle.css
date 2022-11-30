@@ -100,7 +100,7 @@
     position: absolute;
     text-align: center;
     color: white;
-    bottom: 0%;
+    float: bottom;
     left: 0%;
     width: 100%;
     height: 300px;
