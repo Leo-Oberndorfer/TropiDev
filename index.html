@@ -8,11 +8,40 @@
     <script src="script/include.js"></script>
 </head>
 <body>
-    <div include-html="include/head.html"></div>
-    <div class="content-box">
-        <h1>This will be an awesome website!</h1>
+    <div class="header" include-html="include/head.html"></div>
+    <div class="welcome">
+        <div class="container">
+            <div class="wrapper-1">
+                <h1>HELLO WORLD!</h1>
+                <p>Interested in becoming a programmer?<br>Well, this is definitely the right place!</p>
+            </div>
+        </div>
     </div>
-    <div include-html="include/foot.html"></div>
+    <div class="offers">
+        <div class="container">
+            <div class="wrapper-2">
+                <h1>OUR OFFERS</h1>
+                <div class="boxes">
+                    <div class="box-1">
+                        <img src="assets/flag.png">
+                        <h2>Events</h2>
+                        <p>Sometimes we host some fun events in which you can participate.</p>
+                    </div>
+                    <div class="box-2">
+                        <img src="assets/laptop.png">
+                        <h2>Free courses</h2>
+                        <p>Our courses are 100% free, and we try to provide the best learning atmosphere.</p>
+                    </div>
+                    <div class="box-3">
+                        <img src="assets/chart.png">
+                        <h2>Competition</h2>
+                        <p>Complete challenges to earn xp and compete against other users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer include-html="include/foot.html"></footer>
 </body>
 <script>
     includeHTML();

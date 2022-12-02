@@ -1,3 +1,79 @@
-.content-box{
-    height: 1000px;
+.welcome{
+    background-image: url("assets/island.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    text-align: center;
+}
+
+.wrapper-1{
+    padding-bottom: 165px;
+    padding-top: 35px;
+}
+
+.wrapper-1 h1{
+    margin: auto;
+    padding-bottom: 220px;
+    font-size: 75px;
+    color: #dcffff;
+    text-shadow: 0px 0px 12px #04a0da;
+    font-family: "Arial Black";
+}
+
+.wrapper-1 p{
+    margin: auto;
+    display: block;
+    font-family: "Arial Black";
+    color: #e0ceff;
+    text-shadow: 0px 0px 12px #ff0d00;
+    font-size: 25px;
+}
+
+.offers{
+    background-color: #d6d6d6;
+}
+
+.wrapper-2{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.boxes {
+    font-size: 20px;
+    text-align: left;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.boxes img{
+    margin-right: 15px;
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+.boxes div{
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px red;
+    padding: 20px;
+    margin: 20px;
+}
+
+.boxes h2{
+    color: #120055;
+    margin-top: 5px;
+}
+
+.boxes p{
+    margin: auto;
+}
+
+.wrapper-2 h1{
+    text-align: center;
+    font-size: 70px;
+    color: #4f003f;
+    margin: auto;
+    padding-bottom: 20px;
 }

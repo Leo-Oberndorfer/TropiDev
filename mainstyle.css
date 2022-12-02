@@ -1,21 +1,23 @@
+html, body{
+    font-family: "Nirmala UI";
+    margin: 0%;
+    min-height: 100%;
+    width: 100%;
+}
 .header{
-    position: fixed;
-    top: 0%;
-    left: 0%;
+    position: sticky;
+    top: 0px;
     width: 100%;
     height: 90px;
-    background-color: #2c1342;
+    background-color: #230d34;
 }
 
 .action-row{
-    position: absolute;
-    left: 10%;
-    width: 80%;
     height: 100%;
 }
 
 .logo-row{
-    position: relative;
+    display: flex;
     float: left;
     height: 100%;
     width: 285px;
@@ -41,13 +43,12 @@
     color: #de3169;
     text-shadow: 0 0 10px #ab00b0, 0 0 12px #0090ff;
     margin: auto;
-    top: 8%;
-    left: 10%
+    left: 15px;
 }
 
 .button-row{
     position: relative;
-    left: 5%;
+    left: 20px;
     float: left;
     height: 100%;
     width: 35%;
@@ -96,13 +97,24 @@
     color: #cbfaff;
 }
 
-.footer{
-    position: absolute;
+.container{
+    height: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+footer{
     text-align: center;
     color: white;
-    float: bottom;
-    left: 0%;
     width: 100%;
     height: 300px;
     background-color: #00172b;
+}
+
+footer img{
+    width: 50px;
+    height: 50px;
 }
