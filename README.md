@@ -6,9 +6,9 @@ Eine Website für unser WMC Projekt. Mit der Website für Developer Island möch
 Wo unsere Motivation herkommt? Ganz einfach: Da wir in Programmieren keine Probleme haben und anderen Leuten gerne etwas beibringen, haben wir uns dazu entschieden, unsere Hilfe weltweit für jeden anzubieten.
 
 ## Teammitglieder
-* Leo Oberndorfer (Backend und Frontend)
-* Lejla Music (Backend, Frontend und Design)
-* Lisa Wieshofer (Frontend)
+* Leo Oberndorfer
+* Lejla Music
+* Lisa Wieshofer
 
 ## Technischer Inhalt
 ### Statisch:
