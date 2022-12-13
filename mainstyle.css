@@ -64,8 +64,48 @@ html, body{
     font-size: 20px;
     color: #c8c8c8;
 }
+/*Lejla's Comment: Will clean up the dropdown later.. :) */
 
-.button-row button:hover{
+.button-row .dropdown button{
+    padding: 33px;
+}
+.dropdown-content{
+    display: none;
+    font-family: "Cascadia Code";
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 166px;
+    margin-top: 90px;
+    border-radius: 3px;
+
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: #4e4e52;
+}
+.dropdown-content a:hover {
+    background-color: white;
+}
+
+.dropdown:hover .dropbtn {
+    cursor: pointer;
+    font-size: 21px;
+    background-color: #654284;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.button-row button:hover {
     cursor: pointer;
     font-size: 21px;
     background-color: #654284;
