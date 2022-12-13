@@ -13,9 +13,9 @@
 .wrapper-1 h1{
     margin: auto;
     padding-bottom: 220px;
-    font-size: 75px;
     color: #dcffff;
     text-shadow: 0px 0px 12px #04a0da;
+    font-size: 75px;
     font-family: "Arial Black";
 }
 
@@ -28,8 +28,8 @@
     font-size: 25px;
 }
 
-.offers{
-    background-color: #d6d6d6;
+.offers, .events{
+    background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 98%, rgb(225, 225, 225) 100%);;
 }
 
 .wrapper-2{
@@ -70,7 +70,7 @@
     margin: auto;
 }
 
-.wrapper-2 h1{
+.wrapper-2 h1, .wrapper-3 h1{
     text-align: center;
     font-size: 70px;
     color: #4f003f;
