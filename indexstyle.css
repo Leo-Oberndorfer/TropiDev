@@ -1,18 +1,19 @@
 .welcome{
-    background-image: url("assets/island.png");
+    background-image: url("assets/banner.png");
     background-size: cover;
-    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
     text-align: center;
 }
 
 .wrapper-1{
-    padding-bottom: 165px;
-    padding-top: 35px;
+    padding-bottom: 200px;
+    padding-top: 180px;
 }
 
 .wrapper-1 h1{
     margin: auto;
-    padding-bottom: 220px;
+    padding-bottom: 30px;
     color: #dcffff;
     text-shadow: 0px 0px 12px #04a0da;
     font-size: 75px;

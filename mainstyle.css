@@ -139,11 +139,11 @@ html, body{
 
 .container{
     height: 100%;
-    max-width: 1440px;
+    max-width: 1640px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 footer{
