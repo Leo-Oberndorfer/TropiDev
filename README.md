@@ -13,11 +13,12 @@ Wo unsere Motivation herkommt? Ganz einfach: Da wir in Programmieren keine Probl
 ## Inhalt
 ### Features
 * Kostenlose Kurse mit präzisen Erklärungen (vorerst HTML, CSS und C#)
-* Challenges an denen man teilnehmen kann um sich hoch zu leveln
+* Challenges an denen man teilnehmen kann um sich hoch zu leveln. Bei den Challenges muss man dann sein Programm abgeben.
 * Ein Leaderboard auf dem man die User mit den meisten Punkten sehen kann
 * Login und Register um den Stand der Kurse und die erhaltenen Punkte zu speichern
 * Verknüpfung mit dem Discord Server
 * Veranstaltungen bei der man etwas gewinnen kann
+* Eine Option für Mitarbeiter Challenges zu erstellen und zu abgegebenen Programmen Feedback zu geben
 * (Vielleicht einen "kids"-Bereich, indem Kinder programmieren lernen können)
 ### Statisch:
 Home-, Leaderboard- und About-page
