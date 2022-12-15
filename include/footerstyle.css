@@ -1,0 +1,25 @@
+footer{
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 300px;
+    background-color: #00172b;
+    font-family: "Cascadia Code";
+}
+
+footer img{
+    width: 50px;
+    height: 50px;
+}
+
+.footer-headline{
+    height: 20%;
+    width: 300px;
+    padding: 2px;
+    font-size: large;
+}
+.soziale-medien{
+    height: 50%;
+    width: 200px;
+    padding: 10px;
+}

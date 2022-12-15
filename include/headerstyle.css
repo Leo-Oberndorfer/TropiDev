@@ -1,0 +1,132 @@
+.header{
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 90px;
+    background-color: #230d34;
+}
+
+.action-row{
+    height: 100%;
+}
+
+.logo-row{
+    display: flex;
+    float: left;
+    height: 100%;
+    width: 285px;
+}
+
+.logo-row:hover{
+    cursor: pointer;
+}
+
+.logo-row img{
+    position: relative;
+    float: left;
+    top: 8%;
+    left: 5%;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+}
+.logo-row h1{
+    position: relative;
+    float: left;
+    font-family: "Cascadia Code";
+    color: #de3169;
+    text-shadow: 0 0 10px #ab00b0, 0 0 12px #0090ff;
+    margin: auto;
+    left: 15px;
+}
+
+.button-row{
+    position: relative;
+    left: 20px;
+    float: left;
+    height: 100%;
+    width: 35%;
+}
+
+.button-row button{
+    float: left;
+    height: 100%;
+    width: 33%;
+    background-color: transparent;
+    border: none;
+    font-family: "Cascadia Code";
+    font-size: 20px;
+    color: #c8c8c8;
+}
+/*Lejla's Comment: Will clean up the dropdown later.. :) */
+
+.button-row .dropdown button{
+    padding: 33px;
+}
+.dropdown-content{
+    display: none;
+    font-family: "Cascadia Code";
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 183px;
+    margin-top: 90px;
+    border-radius: 3px;
+
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: #4e4e52;
+}
+.dropdown-content a:hover {
+    background-color: white;
+}
+
+.dropdown:hover .dropbtn {
+    cursor: pointer;
+    font-size: 21px;
+    background-color: #654284;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.button-row button:hover {
+    cursor: pointer;
+    font-size: 21px;
+    background-color: #654284;
+    color: white;
+}
+
+.account{
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 20%;
+}
+
+.account button{
+    float: left;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    border: none;
+    font-family: "Cascadia Code";
+    font-size: 20px;
+    color: #9cfaff;
+}
+
+.account button:hover{
+    cursor: pointer;
+    font-size: 21px;
+    background-color: #654284;
+    color: #cbfaff;
+}
