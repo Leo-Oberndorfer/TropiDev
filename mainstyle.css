@@ -160,14 +160,18 @@ footer img{
     height: 50px;
 }
 
-.footerheadline{
+.footer-headline{
     height: 20%;
     width: 300px;
     padding: 2px;
     font-size: large;
 }
-.sozialemedien{
+.soziale-medien{
     height: 50%;
     width: 200px;
     padding: 10px;
+}
+
+.w-layout-grid footer-grid{
+
 }
