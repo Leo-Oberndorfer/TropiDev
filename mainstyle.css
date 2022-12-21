@@ -5,6 +5,11 @@ html, body{
     width: 100%;
 }
 
+a{
+    text-decoration: none;
+    color: #04a0da;
+}
+
 .container{
     height: 100%;
     max-width: 1640px;

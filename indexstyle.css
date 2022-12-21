@@ -1,3 +1,4 @@
+/* Welcome section */
 .welcome{
     background-image: url("assets/banner.png");
     background-size: cover;
@@ -29,11 +30,21 @@
     font-size: 25px;
 }
 
-.offers, .events{
+/* General style for sections */
+.offers, .cococoding{
     background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 98%, rgb(225, 225, 225) 100%);;
 }
 
-.wrapper-2{
+.wrapper-2 h1, .wrapper-3 h1{
+    text-align: center;
+    font-size: 70px;
+    color: #4f003f;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+/* Offer section */
+.wrapper-2, .wrapper-3{
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -71,10 +82,18 @@
     margin: auto;
 }
 
-.wrapper-2 h1, .wrapper-3 h1{
-    text-align: center;
-    font-size: 70px;
-    color: #4f003f;
-    margin: auto;
-    padding-bottom: 20px;
+/* Coconut Coding section*/
+.cococoding img{
+    float: left;
+    box-shadow: #125d59 0px 0px 10px;
+    border-radius: 23px;
+    margin: 20px;
+    width: 400px;
+    height: 390px;
+}
+
+.cococoding p {
+    width: 800px;
+    font-size: 20px;
+    padding: 20px;
 }
