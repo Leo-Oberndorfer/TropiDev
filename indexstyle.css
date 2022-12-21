@@ -1,4 +1,5 @@
 /* Welcome section */
+
 .welcome{
     background-image: url("assets/banner.png");
     background-size: cover;
@@ -82,13 +83,13 @@
 
 .boxes div{
     border-radius: 5px;
-    box-shadow: 0px 0px 6px #8b65ad;
+    box-shadow: 0px 0px 5px #c01c44;
     padding: 20px;
     margin: 20px;
 }
 
 .boxes h2{
-    color: #120055;
+    color: #000044;
     margin-top: 5px;
 }
 
