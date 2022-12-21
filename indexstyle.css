@@ -48,6 +48,20 @@
     padding-top: 40px;
     padding-bottom: 40px;
 }
+.container-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-Mango {
+    max-width: 100%;
+    flex-basis: 40%;
+}
+
+.text-3 {
+    font-size: 20px;
+    padding-left: 20px;
+}
 
 .boxes {
     font-size: 20px;

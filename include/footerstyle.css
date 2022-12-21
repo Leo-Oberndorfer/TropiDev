@@ -24,5 +24,11 @@ footer img{
     padding: 10px;
 }
 .section{
-
+    font-size: 20px;
+    text-align: left;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
 }
