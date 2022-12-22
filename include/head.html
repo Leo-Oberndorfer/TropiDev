@@ -1,27 +1,46 @@
 <div class="container">
-    <div class="action-row">
-        <div class="logo-row">
-            <img src="/DeveloperIsland/assets/icon.png" alt="icon">
-            <h1>Developer<br>Island </h1>
-        </div>
-        <div class="button-row">
-            <div class="dropdown">
-                <button class="dropbtn">Courses
-                    <!-- <i class="fa fa-caret-down"></i> not working (¬_¬ ) -->
-                </button>
-                <div class="dropdown-content">
-                    <a href="https://i.pinimg.com/originals/3d/1d/de/3d1dde5b00a160536436b81ff450e6f4.gif">C#</a>
-                    <a href="#Link">HTML</a>
-                    <a href="#Link">CSS</a>
-                </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="navbar-logo">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/icon.png" width="75" height="75" alt="logo">
+                    <b>Developer<br>Island</b>
+                </a>
             </div>
-            <button onclick="document.location='cococoding.html'">Coconut Coding</button>
-            <button onclick="document.location='leaderboard.html'">Leaderboard</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">C#</a></li>
+                            <li><a class="dropdown-item" href="#">HTML</a></li>
+                            <li><a class="dropdown-item" href="#">CSS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Coconut Coding</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Leaderboard</a>
+                    </li>
+                </ul>
+                <!--
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>
+                </ul>
+                -->
+            </div>
         </div>
-        <div class="account">
-            <!--Change later-->
-            <button>Login</button>
-            <button>Register</button>
-        </div>
-    </div>
+    </nav>
 </div>
