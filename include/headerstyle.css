@@ -27,7 +27,7 @@
 
 }
 
-.navbar-logo a{
+.navbar-brand b{
     float: right;
     font-size: 25px;
     color: #de3169;
@@ -44,31 +44,4 @@
 
 .navbar-nav a:hover {
     color: white;
-}
-
-/*Lejla's Comment: Will clean up the dropdown later.. :) */
-
-.account{
-    position: relative;
-    float: right;
-    height: 100%;
-    width: 300px;
-}
-
-.account button{
-    float: left;
-    height: 100%;
-    width: 150px;
-    background-color: transparent;
-    border: none;
-    font-family: "Cascadia Code";
-    font-size: 20px;
-    color: #9cfaff;
-}
-
-.account button:hover{
-    cursor: pointer;
-    font-size: 21px;
-    background-color: #654284;
-    color: #cbfaff;
 }
