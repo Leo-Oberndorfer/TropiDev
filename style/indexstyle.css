@@ -1,7 +1,7 @@
 /* Welcome section */
 
 .welcome{
-    background-image: url("assets/banner.png");
+    background-image: url("../assets/banner.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 25%;
@@ -17,7 +17,7 @@
     margin: auto;
     padding-bottom: 30px;
     color: #dcffff;
-    text-shadow: 0px 0px 12px #04a0da;
+    text-shadow: 0 0 12px #04a0da;
     font-size: 75px;
     font-family: "Arial Black";
 }
@@ -27,7 +27,7 @@
     display: block;
     font-family: "Arial Black";
     color: #e0ceff;
-    text-shadow: 0px 0px 12px #ff0d00;
+    text-shadow: 0 0 12px #ff0d00;
     font-size: 25px;
 }
 
@@ -90,7 +90,7 @@
 
 .cococoding img{
     float: left;
-    box-shadow: #125d59 0px 0px 10px;
+    box-shadow: #125d59 0 0 10px;
     border-radius: 23px;
     margin: 20px;
     width: 35%;
