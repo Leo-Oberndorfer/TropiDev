@@ -36,6 +36,11 @@
     background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 98%, rgb(225, 225, 225) 100%);;
 }
 
+.wrapper-2, .wrapper-3{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 .wrapper-2 h1, .wrapper-3 h1{
     text-align: center;
     font-size: 70px;
@@ -45,40 +50,10 @@
 }
 
 /* Offer section */
-.wrapper-2, .wrapper-3{
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-.container-3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.image-Mango {
-    max-width: 100%;
-    flex-basis: 40%;
-}
-
-.text-3 {
-    font-size: 20px;
-    padding-left: 20px;
-}
-
 .boxes {
-    font-size: 20px;
-    text-align: left;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.boxes img{
-    margin-right: 15px;
-    float: left;
-    width: 50px;
-    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .boxes div{
@@ -86,6 +61,15 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
     margin: 20px;
+    min-width: 350px;
+    max-width: 390px;
+}
+
+.boxes img{
+    margin-right: 15px;
+    float: left;
+    width: 50px;
+    height: 50px;
 }
 
 .boxes h2{
@@ -98,17 +82,22 @@
 }
 
 /* Coconut Coding section*/
+.container-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .cococoding img{
     float: left;
     box-shadow: #125d59 0px 0px 10px;
     border-radius: 23px;
     margin: 20px;
-    width: 400px;
-    height: 390px;
+    width: 35%;
+    height: 34%;
 }
 
 .cococoding p {
-    width: 800px;
     font-size: 20px;
     padding: 20px;
 }

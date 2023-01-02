@@ -1,14 +1,8 @@
 .header{
     position: sticky;
     top: 0;
-    width: 100%;
-    height: 100px;
     background-color: #230d34;
-}
-
-.navbar {
     font-family: "Cascadia Code";
-    height: 100%;
 }
 
 .navbar-logo {
@@ -35,13 +29,48 @@
     margin: auto;
 }
 
+.navbar-nav .nav-item{
+    margin: 5px 15px;
+}
+
 .navbar-nav a {
     font-size: 20px;
     color: #b2b2b2;
     text-align: center;
-    width: 200px;
 }
 
 .navbar-nav a:hover {
     color: white;
+}
+
+.navbar-nav a:focus{
+    color: white;
+}
+
+.navbar .dropdown-menu{
+    background-color: #46295d;
+    border: 1px solid #6a3e8d;
+}
+
+.navbar .dropdown-item{
+    color: #cccccc;
+}
+
+.navbar .dropdown-item:hover{
+    color: #dadada;
+    background-color: #5a3577;
+}
+
+.navbar-toggler{
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none !important;
+    background-color: #5a3577;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
