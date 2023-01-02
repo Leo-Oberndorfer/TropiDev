@@ -82,22 +82,16 @@
 }
 
 /* Coconut Coding section*/
-.container-3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .cococoding img{
-    float: left;
-    box-shadow: #125d59 0 0 10px;
-    border-radius: 23px;
-    margin: 20px;
-    width: 35%;
-    height: 34%;
+    /*filter: drop-shadow( 0 0 10px #125d59);*/
+    border-radius: 20px;
+    margin: 20px !important;
+    width: 30%;
+    height: 29%;
 }
 
 .cococoding p {
     font-size: 20px;
     padding: 20px;
+    margin: 0;
 }
