@@ -39,11 +39,7 @@
     text-align: center;
 }
 
-.navbar-nav a:hover {
-    color: white;
-}
-
-.navbar-nav a:focus{
+.navbar-nav a:hover, .navbar-nav a:focus {
     color: white;
 }
 
