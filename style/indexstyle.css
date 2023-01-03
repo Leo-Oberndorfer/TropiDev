@@ -5,16 +5,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 25%;
-    text-align: center;
 }
 
-.wrapper-1{
+.welcome .wrapper{
     padding-bottom: 200px;
     padding-top: 180px;
 }
 
-.wrapper-1 h1{
-    margin: auto;
+.welcome .wrapper h1{
     padding-bottom: 30px;
     color: #dcffff;
     text-shadow: 0 0 12px #04a0da;
@@ -22,7 +20,8 @@
     font-family: "Arial Black";
 }
 
-.wrapper-1 p{
+.welcome .wrapper p{
+    text-align: center;
     margin: auto;
     display: block;
     font-family: "Arial Black";
@@ -32,16 +31,12 @@
 }
 
 /* General style for sections */
-.offers, .cococoding{
-    background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 98%, rgb(225, 225, 225) 100%);;
-}
-
-.wrapper-2, .wrapper-3{
+.wrapper{
     padding-top: 40px;
     padding-bottom: 40px;
 }
 
-.wrapper-2 h1, .wrapper-3 h1{
+.wrapper h1{
     text-align: center;
     font-size: 70px;
     color: #4f003f;
@@ -83,7 +78,6 @@
 
 /* Coconut Coding section*/
 .cococoding img{
-    /*filter: drop-shadow( 0 0 10px #125d59);*/
     border-radius: 20px;
     margin: 20px !important;
     width: 30%;
