@@ -29,61 +29,12 @@
     font-size: 25px;
 }
 
-/* General style for wrapper */
-.wrapper{
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.wrapper h1{
-    text-align: center;
-    font-size: 70px;
-    color: #4f003f;
-    margin: auto;
-    padding-bottom: 20px;
-}
-
-.wrapper h2{
-    color: #000044;
-    margin-top: 5px;
-}
-
-.wrapper p{
-    font-size: 18px;
-    margin: auto;
-}
-
 /* Offer section */
 .offers {
     background: linear-gradient(180deg, rgb(250, 250, 250) 0%, rgb(250,250,250) 98%, rgb(225, 225, 225) 100%);
 }
 
-.boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.boxes div{
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 20px;
-    margin: 20px;
-    min-width: 350px;
-    max-width: 390px;
-}
-
-.boxes img{
-    margin-right: 15px;
-    float: left;
-    width: 50px;
-    height: 50px;
-}
-
-/* Coconut Coding section*/
-.cococoding {
-}
-
+/* Coconut Coding section */
 .cococoding img{
     border-radius: 20px;
     margin: 20px !important;
@@ -93,4 +44,13 @@
 
 .cococoding p {
     padding: 20px;
+}
+
+/* Stats section */
+.stats{
+    background-color: rgba(187, 139, 255, 0.2);
+}
+
+.stats .boxes div {
+    background-color: white;
 }
