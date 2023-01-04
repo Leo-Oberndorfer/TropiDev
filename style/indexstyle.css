@@ -15,7 +15,6 @@
     padding-bottom: 30px;
     color: #dcffff;
     text-shadow: 0 0 12px #04a0da;
-    font-size: 75px;
     font-family: "Arial Black", sans-serif;
 }
 
@@ -65,8 +64,8 @@
 }
 
 .course-overview .card{
-    background-color: rgb(255, 254, 215);
     padding: 20px;
+    background-color: rgb(255, 254, 215);
     height: 250px;
     text-align: center;
 }
