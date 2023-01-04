@@ -39,7 +39,6 @@
     border-radius: 20px;
     margin: 20px !important;
     width: 30%;
-    height: 29%;
 }
 
 .cococoding p {
@@ -53,4 +52,40 @@
 
 .stats .boxes div {
     background-color: white;
+}
+
+/* Mascots section */
+.mascots .row img{
+    height: 80%;
+}
+
+/* Course overview section */
+.course-overview {
+    background-color: rgba(0, 35, 66, 0.2);
+}
+
+.course-overview .card{
+    background-color: rgb(255, 254, 215);
+    padding: 20px;
+    height: 250px;
+    text-align: center;
+}
+
+.course-overview h2{
+    margin: 10px;
+    font-weight: 700;
+}
+
+.course-overview p{
+    margin: 15px;
+}
+
+.course-overview .card .btn{
+    margin: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: #262626;
+    color: white !important;
+    border-radius: 20px;
+    width: 200px;
 }
