@@ -1,0 +1,37 @@
+.course-info {
+    background-color: #230d34;
+    color: #c9c9c9;
+}
+
+.info-flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.info-flex .block {
+    margin-right: 35px;
+}
+
+.size-12 {
+    font-size: 12px !important;
+}
+
+.size-16 {
+    font-size: 16px !important;
+}
+
+.faded {
+    opacity: 0.75;
+}
+
+.course-start {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course-start .c-2{
+    flex: 1;
+    min-width: 500px;
+}
+
