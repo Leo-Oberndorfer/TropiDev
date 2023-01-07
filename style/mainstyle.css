@@ -49,6 +49,10 @@
     height: 50px;
 }
 
+.boxes p {
+    float: left;
+}
+
 .card {
     margin: 20px;
 }
