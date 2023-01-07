@@ -56,3 +56,20 @@
 .card {
     margin: 20px;
 }
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.size-12 {
+    font-size: 12px !important;
+}
+
+.size-16 {
+    font-size: 16px !important;
+}
+
+.faded {
+    opacity: 0.75;
+}
