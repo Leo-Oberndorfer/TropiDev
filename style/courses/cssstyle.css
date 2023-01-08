@@ -1,0 +1,23 @@
+.course-start {
+    background-color: #dbf7ff;
+}
+
+.course-start .skills ul li::before{
+    content: "\2022";
+    color: #009dff;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: -20px;
+    width: 20px;
+}
+
+.intro .btn {
+    margin-top: 25px;
+    background-color: dodgerblue;
+    border: none;
+    font-size: 18px;
+}
+
+.intro .btn:hover{
+    background-color: #5daeff;
+}
