@@ -17,6 +17,11 @@ header{
     filter: drop-shadow( 0 0 4px #623ce8);
 }
 
+.navbar-nav {
+    align-items: center;
+    justify-content: center;
+}
+
 .navbar-nav .nav-item{
     margin: 5px 15px;
 }
@@ -60,6 +65,8 @@ header{
 }
 
 .navbar-nav .register {
+    padding: 5px;
     border-radius: 5px;
+    margin: 0;
     background-color: #46295d;
 }
