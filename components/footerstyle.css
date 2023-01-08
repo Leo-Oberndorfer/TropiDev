@@ -39,3 +39,8 @@ footer .footer-bottom a:hover {
     align-content: end;
 }
 
+.devisland img {
+    -webkit-filter: drop-shadow(  0 0 3px #310c29);
+    filter: drop-shadow( 0 0 4px #623ce8);
+}
+
