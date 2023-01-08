@@ -3,3 +3,39 @@ footer{
     background-color: #00172b;
 }
 
+@media screen and (max-width: 991px){
+    .footer-top, .footer-bottom {
+        justify-content: space-evenly !important;
+        align-content: center !important;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.footer-top {
+    justify-content: space-between;
+    align-content: start;
+}
+
+.footer-top div {
+    margin-bottom: 32px;
+}
+
+footer a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-bottom a:hover {
+    opacity: 1 !important;
+    color: #ffffff;
+}
+
+.footer-bottom {
+    padding-top: 32px;
+    margin-top: 16px;
+    justify-content: space-between;
+    align-content: end;
+}
+
