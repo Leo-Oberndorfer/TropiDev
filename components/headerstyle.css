@@ -6,9 +6,12 @@ header{
     font-family: "Cascadia Code", sans-serif;
 }
 
+.container-fluid {
+    padding: 0 !important;
+}
+
 .navbar-brand {
     margin-right: 24px !important;
-    margin-left: 2px;
 }
 
 .navbar-brand img{
@@ -65,8 +68,7 @@ header{
 }
 
 .navbar-nav .register {
-    padding: 5px;
     border-radius: 5px;
-    margin: 0;
+    padding: 5px;
     background-color: #46295d;
 }
