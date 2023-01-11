@@ -23,7 +23,7 @@ Wo unsere Motivation herkommt? Ganz einfach: Da wir in Programmieren keine Probl
 * Eine Option für Mitarbeiter, Challenges zu erstellen und zu abgegebenen Programmen Feedback zu geben
 * (Vielleicht einen "kids"-Bereich, indem Kinder programmieren lernen können)
 ### Statisch:
-Home-, Leaderboard-, Profil- und Coconut Coding Seite
+Home-, Leaderboard-, Kurs-, Profil- und Coconut Coding Seite
 ### Verwendung von JavaScript:
 Bei den Kursen, Erstellung und Auswertung von Challenges, für Login / Register und Anzeige des Leaderboards
 
