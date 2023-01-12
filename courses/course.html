@@ -25,20 +25,22 @@
     <header import="../components/header.html"></header>
     <div class="wrapper course-info">
         <div class="container">
-            <h3>Learning HTML</h3>
-            <p>In this course you will learn how to build the structure of a website. Some chapters provide interactive exercises to make learning more fun.</p>
+            <div class="course-head"> <!-- Set with JS -->
+                <h3>Learning HTML</h3>
+                <p></p>
+            </div>
             <div class="info flex">
                 <div class="block">
                     <p class="size-12 faded">COURSE DURATION</p>
-                    <p class="size-16">0</p>
+                    <p class="size-16 duration">0</p> <!-- Set with JS -->
                 </div>
                 <div class="block">
                     <p class="size-12 faded">CHAPTERS</p>
-                    <p class="size-16">0</p>
+                    <p class="size-16 chapters">0</p> <!-- Set with JS -->
                 </div>
                 <div class="block">
                     <p class="size-12 faded">DIFFICULTY LEVEL</p>
-                    <p class="size-16 level-easy">Easy</p>
+                    <p class="size-16 difficulty">Easy</p> <!-- Set with JS -->
                 </div>
             </div>
         </div>
@@ -47,20 +49,16 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col" style="width: 450px">
-                    <div class="card skills">
+                    <div class="card skill-card">
                         <img src="../assets/courses/html/html.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text size-16">After completing this course you can:</p>
-                            <ul>
-                                <li>Add text to a website</li>
-                                <li>Embed images and videos</li>
-                                <li>Create links to other websites</li>
-                                <li>Create tables and forms</li>
-                                <li>Create lists</li>
+                            <ul class="skills"> <!-- Set with JS -->
+                                <li>Set items with JS</li>
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">
+                            <small class="text-muted user-progress"> <!-- Set with JS -->
                                 <p class="size-16">Your progress (0%):</p>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-label="course-progress" style="width: 0%;" aria-valuemin="0" aria-valuemax="100"></div>
@@ -73,8 +71,8 @@
                     <div class="card intro">
                         <div class="card-body">
                             <h2 class="card-title">Introduction</h2>
-                            <p class="card-text size-16">HTML is the language used to build and style websites. Here you will learn things such as: how to create and edit HTML documents, how to use HTML tags to structure and format different elements on a web page, how to insert links and images into an HTML document and how to create tables and forms with HTML. In the CSS course you can learn how to style websites and in the JavaScript course we will teach you how to make HTML pages interactive.</p>
-                            <a href="#" class="btn btn-primary faded">Start learning</a>
+                            <p class="card-text size-16 course-desc">Hello World!</p>  <!-- Set with JS -->
+                            <a href="#" class="btn btn-primary faded course-start-btn">Start learning</a>
                         </div>
                     </div>
                 </div>
