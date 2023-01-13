@@ -1,0 +1,21 @@
+{
+  "course-heading": "Learn CSS",
+  "course-description": "In this course you will learn how to style the components of a website. Some chapters provide interactive exercises to make learning more fun.",
+  "course-duration": "-",
+  "course-chapters": "-",
+  "course-difficulty": "Easy",
+  "course-skills": [
+    "Style text and images",
+    "Add color to html elements",
+    "Add spacing between html elements",
+    "Set the position of html elements",
+    "Animate html elements"
+  ],
+  "course-intro": "CSS is used to style the html elements on a website. In this course you will learn how to add style and formatting to HTML documents, control the layout of a web page, create responsive designs, use selectors to target specific elements, work with web fonts, and use CSS preprocessors. CSS is an essential skill for any web developer or designer and is used in modern web development to create visually appealing and user-friendly websites.",
+
+  "list-item-dot-color": "#009dff",
+  "bg-color": "#dbf7ff",
+  "btn-color": "dodgerblue",
+
+  "course-assets": []
+}

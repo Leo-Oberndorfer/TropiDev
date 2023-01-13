@@ -20,9 +20,13 @@
     color: red;
 }
 
-.course-start .skill-card ul{
+#course-start .skill-card ul{
     list-style: none;
     margin-top: 10px;
     margin-bottom: 0;
+}
+
+#course-start-btn:hover {
+    opacity: 0.65;
 }
 
