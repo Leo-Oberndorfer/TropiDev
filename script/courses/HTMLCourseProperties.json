@@ -15,7 +15,5 @@
 
   "list-item-dot-color": "orangered",
   "bg-color": "#fff2db",
-  "btn-color": "orangered",
-
-  "course-assets": []
+  "btn-color": "orangered"
 }

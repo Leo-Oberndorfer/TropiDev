@@ -22,18 +22,22 @@ function setHomeAppearance(){
                 list.appendChild(li);
             }
 
-            document.getElementById("course-image").src = `../../assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
+            calculateUserProgress();
 
+            //Style
+            document.getElementById("course-image").src = `../../assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
             document.getElementById("course-start").style.backgroundColor = data["bg-color"];
             let listStyle = document.body.appendChild(document.createElement("style"));
             listStyle.innerHTML = `#course-skills li::before {content: "\\2022"; color: ${data["list-item-dot-color"]}; display: inline-block; font-weight: bold; margin-left: -20px; width: 20px;}`;
-
-            let progress = 0; //Calculate this - Progress
-            document.getElementById("user-progress").innerHTML = progress.toString();
-            document.getElementById("user-progress").style.width = progress + "%";
 
             //Button
             document.getElementById("course-start-btn").innerHTML = "Start learning"; //Calculate this
             document.getElementById("course-start-btn").style.cssText = `margin-top: 25px; background-color: ${data["btn-color"]}; border: none; font-size: 18px;`;
         });
+}
+
+function calculateUserProgress(){
+    let progress = 0; //Calculate this - Progress
+    document.getElementById("user-progress").innerHTML = progress.toString();
+    document.getElementById("user-progress").style.width = progress + "%";
 }

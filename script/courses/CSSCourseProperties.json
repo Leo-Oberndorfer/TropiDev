@@ -15,7 +15,5 @@
 
   "list-item-dot-color": "#009dff",
   "bg-color": "#dbf7ff",
-  "btn-color": "dodgerblue",
-
-  "course-assets": []
+  "btn-color": "dodgerblue"
 }

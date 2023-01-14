@@ -1,0 +1,7 @@
+{
+  "name": "DeveloperIsland",
+  "version": "1.0.0",
+  "dependencies": {
+    "sqlite3": "^5.1.4"
+  }
+}
