@@ -22,7 +22,7 @@ function setHomeAppearance(){
                 list.appendChild(li);
             }
 
-            calculateUserProgress();
+            calculateUserProgress(data);
 
             //Style
             document.getElementById("course-image").src = `../../assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
@@ -36,8 +36,8 @@ function setHomeAppearance(){
         });
 }
 
-function calculateUserProgress(){
-    let progress = 0; //Calculate this - Progress
+function calculateUserProgress(data){
+    let progress = 50; //Calculate this - Progress
     document.getElementById("user-progress").innerHTML = progress.toString();
-    document.getElementById("user-progress").style.width = progress + "%";
+    document.getElementById("progress-bar").style.cssText = `width: ${progress}%; background-color: ${data["btn-color"]};`;
 }
