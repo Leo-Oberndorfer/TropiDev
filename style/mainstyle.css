@@ -27,6 +27,7 @@
     margin: auto;
 }
 
+/** The boxes we used in the offer section on the main page */
 .boxes {
     display: flex;
     flex-wrap: wrap;
@@ -51,6 +52,12 @@
 
 .boxes p {
     float: left;
+}
+
+/** That fancy purple box we got on every course site */
+.info-box {
+    background-color: #230d34;
+    color: #c9c9c9;
 }
 
 .card {
