@@ -22,17 +22,18 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="components/ComponentLoader.js"></script>
     <script src="script/courses/ContentLoader.js"></script>
+    <script src="script/Events.js"></script>
 </head>
 <body>
     <header import="../components/header.html"></header>
     <div id="course-body">
-        <div class="wrapper info-box">
+        <div class="wrapper info-box" id="info-box">
             <div class="container">
                 <div class="course-head">
                     <h3 id="course-heading">Learn Programming</h3>
                     <p id="course-description">Empty</p>
                 </div>
-                <div class="info flex">
+                <div class="info flex" id="info">
                     <div class="block">
                         <p class="size-12 faded">COURSE DURATION</p>
                         <p class="size-16" id="course-duration">0</p>
@@ -48,9 +49,9 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper flex" id="course-start">
+        <div class="wrapper flex" id="course-content">
             <div class="container">
-                <div class="row row-cols-1 row-cols-md-2 g-4" style="justify-content: center">
+                <div class="row row-cols-1 row-cols-md-2 g-4" id="cards" style="justify-content: center">
                     <div class="col" style="max-width: 450px">
                         <div class="card skill-card">
                             <img src="" class="card-img-top" id="course-image" alt="...">
@@ -85,6 +86,7 @@
     <footer import="../components/footer.html"></footer>
 </body>
 <script>
+    registerCourseEvents();
     loadComponents();
     setHomeAppearance();
 </script>
