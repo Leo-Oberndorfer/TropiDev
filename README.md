@@ -1,5 +1,5 @@
 # Developer Island
-Preview: http://167.172.187.0/
+Preview: http://167.172.187.0/ - Frequently updated
 
 Eine Website für unser WMC Projekt. Mit der Website für Developer Island möchten wir anderen Leuten das Programmieren näher bringen und sie für absolvierte Kurse oder der Teilnahme an Challenges belohnen.
 <br>Außerdem möchten wir zeigen, wie lustig und interessant das Entwickeln von Anwendungen sein kann und dass der Kreativität keine Grenzen gesetzt sind.
