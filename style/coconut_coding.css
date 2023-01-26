@@ -1,0 +1,39 @@
+.coconut-info {
+    background-color: #230d34;
+    color: #c9c9c9;
+}
+.info .block {
+    margin-top: 20px;
+    margin-right: 35px;
+}
+
+
+/* Challenge section */
+.challenge-overview {
+    background-color: rgba(169, 169, 169, 0.24);
+}
+
+.challenge-overview .card{
+    background-color: rgba(147, 255, 236, 0.50);
+    height: 200px;
+    text-align: center;
+}
+
+.challenge-overview h2{
+    margin: 10px;
+    font-weight: 700;
+}
+
+.challenge-overview img{
+    height: 50%;
+}
+
+.challenge-overview .card .btn{
+    margin: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: rgba(38, 38, 38, 0.9);
+    color: white !important;
+    border-radius: 20px;
+    width: 200px;
+}
