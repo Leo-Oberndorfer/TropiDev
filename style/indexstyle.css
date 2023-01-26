@@ -44,6 +44,11 @@
     padding: 20px;
 }
 
+.cococoding .card{
+    padding: 20px;
+    background-color: rgba(253, 255, 229, 0.5);
+}
+
 /* Stats section */
 .stats{
     background-color: rgba(187, 139, 255, 0.2);
