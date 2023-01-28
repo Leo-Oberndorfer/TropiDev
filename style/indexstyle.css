@@ -162,7 +162,7 @@
 
 .reveal{
     position: relative;
-    transform: translateY(110px);
+    transform: translateY(30px);
     opacity: 0;
     transition: 0.9s all ease;
 }
