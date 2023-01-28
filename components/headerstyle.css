@@ -1,6 +1,6 @@
 header{
     position: sticky;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     background-color: #230d34;
     font-family: "Cascadia Code", sans-serif;

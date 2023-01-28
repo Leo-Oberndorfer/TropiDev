@@ -19,6 +19,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="components/ComponentLoader.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     <header import="components/header.html"></header>
@@ -26,8 +27,12 @@
         <div class="welcome">
             <div class="container">
                 <div class="wrapper">
-                    <h1>HELLO WORLD!</h1>
-                    <p>Interested in becoming a programmer?<br>Well, this is definitely the right place!</p>
+                    <h1>
+                        <a id="typeWrite" class="animate-popin typewrite text" data-period="2000" data-type='["Hello \"World\" ", "console.log(\"Hello World!\");"]'>
+                            <span class="wrap"></span>
+                        </a>
+                    </h1>
+                    <p id="subtitel" class="animate-popin text">Interested in becoming a programmer?<br>Well, this is definitely the right place!</p>
                 </div>
             </div>
         </div>
@@ -243,40 +248,37 @@
             <div class="container">
                 <div class="wrapper">
                     <h1>Course overview</h1>
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="row row-cols- row-cols-md-3 g-4">
                         <div class="col">
-                            <div class="card">
+                            <div class="card" id="c-sharp-card">
                                 <div class="card-body">
                                     <h2 class="card-title">C#</h2>
                                     <p class="card-text">A programming language</p>
-                                    <a href="/courses/csharp-course.html" class="btn btn-primary"><b>Learn C#</b></a>
+                                    <div class="d-grid gap-1 col-10 mx-auto">
+                                        <a href="/courses/csharp-course.html" class="btn btn-primary"><b>Learn C#</b></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card">
+                            <div class="card" id="html-card">
                                 <div class="card-body">
                                     <h2 class="card-title">HTML</h2>
                                     <p class="card-text">The language for building web pages</p>
-                                    <a href="/course.html" class="btn btn-primary"><b>Learn HTML</b></a>
+                                    <div class="d-grid gap-1 col-10 mx-auto">
+                                        <a href="/courses/html-course.html" class="btn btn-primary "><b>Learn HTML</b></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card">
+                            <div class="card" id="css-card">
                                 <div class="card-body">
                                     <h2 class="card-title">CSS</h2>
                                     <p class="card-text">The language for styling web pages</p>
-                                    <a href="/courses/css-course.html" class="btn btn-primary"><b>Learn CSS</b></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h2 class="card-title">.mohay</h2>
-                                    <p class="card-text">A language for drawing and animating shapes</p>
-                                    <a href="#" class="btn btn-primary"><b>Learn .mohay</b></a>
+                                    <div class="d-grid gap-1 col-10 mx-auto">
+                                    <a href="/courses/css-course.html" class="btn btn-primary " ><b>Learn CSS</b></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -289,5 +291,63 @@
 </body>
 <script>
     loadComponents();
+
+    //Zum austesten:
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function() {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
 </script>
 </html>
