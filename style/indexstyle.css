@@ -81,7 +81,6 @@
 }
 #css-card {
     background-color: #04a0da;
-    position: center;
 }
 
 .course-overview h2{
@@ -102,27 +101,11 @@
     border-radius: 20px;
     max-width: 300px;
     min-width: 100px;
-
-        text-align: center;
+    text-align: center;
 }
 
 #typeWrite{
     color: #ffffff;
-}
-
-.text:before{
-    animation: fade-slide-down 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
-
-    no-repeat: bottom;
-    background-size: cover;
-    content: "";
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
 }
 
 .animate-popin {
