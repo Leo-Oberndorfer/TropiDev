@@ -159,3 +159,14 @@
         transform: none;
     }
 }
+
+.reveal{
+    position: relative;
+    transform: translateY(110px);
+    opacity: 0;
+    transition: 0.9s all ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
