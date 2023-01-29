@@ -60,34 +60,41 @@
 }
 
 /* Course overview section */
+@media screen and (max-width: 991px){
+    .course-overview .row {
+        flex-direction: column;
+    }
+    .course-overview .row .col {
+        min-width: 400px;
+    }
+}
+
 .course-overview {
     background-color: #dcf7ff;
 }
 
-.course-overview .card-header{
+.course-overview .row{
+    justify-content: center;
+    align-content: center;
+}
+
+.course-overview .card-title {
     color: #ffeeee;
-    size: 10px;
     text-shadow: 0 0 4px #ffb9c2;
     padding: 10px;
-    border-color: rgba(0, 0, 0, 0.22);
-    border-width: 0.1rem;
-    /*box-shadow: 0 4px 6px -6px rgba(0, 0, 0, 0.94);*/
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.22);
 }
 
 .course-overview .card-text{
+    min-height: 75px;
     padding: 10px;
     color: white;
-    size: 20px;
-    text-shadow: 0px 1px 2px rgb(199, 194, 194);
+    text-shadow: 0 1px 2px rgb(199, 194, 194);
 }
-.course-overview .card-body{
-    padding: 4px;
-}
+
 .course-overview .card{
-    min-width: 210px;
-    max-width: 500px;
     padding: 10px;
-    height: 250px;
+    min-height: 250px;
     text-align: center;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 12px 0 rgba(0, 0, 0, 0.19);
 }
@@ -100,7 +107,6 @@
 }
 #css-card {
     background-color: #04a0da;
-    position: center;
 }
 
 .course-overview h2{
@@ -115,10 +121,8 @@
     background-color: #262626;
     color: white !important;
     border-radius: 20px;
-    max-width: 300px;
-    min-width: 100px;
-    box-shadow: 0px 1px 3px rgba(21, 19, 19, 0.86);
-    text-align: center;
+    min-width: 175px;
+    box-shadow: 0 1px 3px rgba(21, 19, 19, 0.86);
 }
 
 #typeWrite{
@@ -161,7 +165,6 @@
 }
 
 .reveal{
-    position: relative;
     transform: translateY(30px);
     opacity: 0;
     transition: 0.9s all ease;

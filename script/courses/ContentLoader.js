@@ -38,23 +38,6 @@ function setHomeAppearance(){
 
 function loadLayout(){
     const duration = 1500;
-    const flyUp = [
-        {transform: 'translateY(0)'},
-        {transform: 'translateY(-200%)'}
-    ];
-    const shrink = [
-        {height: '100%'},
-        {height: '50%'}
-    ];
-    const fadeOut = [
-        {opacity: '1'},
-        {opacity: '0'}
-    ]
-    getElement("info-box").animate(shrink, {duration, fill: "forwards"});
-
-    getElement("cards").animate(flyUp, duration);
-    getElement("info").animate(fadeOut, duration)
-    getElement("course-description").animate(fadeOut, duration)
 
     setTimeout(function (){getElement("cards").remove()}, duration);
     setTimeout(function (){getElement("info").remove()}, duration);
@@ -69,7 +52,7 @@ function courseNotFound(){
     getElement("course-body").innerHTML =
         "<h1 style='font-size: 64px; font-weight: 750; color: #230d34;'>Course not found</h1>" +
         "<p style='font-size: 18px; font-weight: 500; color: #00172b'>The course you were looking for does not exist (yet)</p>";
-    getElement("course-body").style.cssText = "text-align: center; padding: 230px 25px 230px 25px;";
+    getElement("course-body").style.cssText = "text-align: center; padding: 250px 25px 250px 25px;";
     console.log("File not found, enter a valid course.");
 }
 
