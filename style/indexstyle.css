@@ -40,10 +40,18 @@
     margin: 20px !important;
     width: 30%;
 }
-
 .cococoding p {
     padding: 20px;
 }
+.cococoding .card-title{
+    text-align: center;
+}
+.cococoding .card{
+    background-color: rgba(255, 240, 203, 0.10);
+    padding: 10px;
+    min-height: 550px;
+}
+
 
 /* Stats section */
 .stats{
