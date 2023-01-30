@@ -1,0 +1,40 @@
+.leaderboard-info {
+    background-color: #230d34;
+    color: #c9c9c9;
+}
+.info .block {
+    margin-top: 20px;
+    margin-right: 35px;
+}
+
+.leaderboard{
+    background-color: rgba(36, 0, 87, 0.77);
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    margin: 20px;
+}
+table{
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard table th{
+    font-size: 25px;
+}
+table td th {
+    border: 1px solid;
+}
+
+.username td{
+    font-weight: bold;
+}
+
+.rank{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
