@@ -89,6 +89,7 @@
     min-height: 75px;
     padding: 10px;
     color: white;
+    font-size: 20px;
     text-shadow: 0 1px 2px rgb(199, 194, 194);
 }
 
@@ -108,7 +109,12 @@
 #css-card {
     background-color: #04a0da;
 }
-
+#c-card{
+    background-color: #3d65e7;
+}
+#js-card{
+    background-color: #ffbb47;
+}
 .course-overview h2{
     margin: 10px;
     font-weight: 700;
