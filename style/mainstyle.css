@@ -56,6 +56,8 @@
 
 /** That fancy purple box we got on every course site */
 .info-box {
+    position: relative;
+    z-index: 8;
     background-color: #230d34;
     color: #c9c9c9;
 }
@@ -79,4 +81,28 @@
 
 .faded {
     opacity: 0.75;
+}
+
+.fade-out {
+    animation-name: fadeAnimation;
+    animation-duration: 2000ms;
+}
+
+.fade-in {
+    animation-name: fadeAnimation;
+    animation-duration: 2000ms;
+    animation-direction: reverse;
+}
+
+@keyframes fadeAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none;
 }

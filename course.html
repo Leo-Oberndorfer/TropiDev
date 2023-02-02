@@ -49,8 +49,8 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper flex" id="course-content">
-            <div class="container">
+        <div class="wrapper flex" id="course-wrapper">
+            <div class="container" id="course-overview">
                 <div class="row row-cols-1 row-cols-md-2 g-4" id="cards" style="justify-content: center">
                     <div class="col" style="max-width: 450px">
                         <div class="card skill-card">
@@ -61,12 +61,10 @@
                                 </ul>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted user-progress">
-                                    <p class="size-16">Your progress (<span id="user-progress">0</span>%):</p>
-                                    <div class="progress">
-                                        <div class="progress-bar faded" id="progress-bar" role="progressbar" aria-label="course-progress" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </small>
+                                <small class="text-muted user-progress size-16">Your progress (<span id="user-progress">0</span>%):</small>
+                                <div class="progress">
+                                    <div class="progress-bar faded" id="progress-bar" role="progressbar" aria-label="course-progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -78,6 +76,17 @@
                                 <a href="#" class="btn btn-primary faded" id="course-start-btn">Not available</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container hidden" id="course-content">
+                <div class="card">
+                    <div class="card-header">
+                        Hello World
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Chapter 1: Creating a html document</h5>
+                        <p>Some content goes here</p>
                     </div>
                 </div>
             </div>

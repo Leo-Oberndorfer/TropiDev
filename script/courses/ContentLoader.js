@@ -39,13 +39,21 @@ function setHomeAppearance(){
 function loadLayout(){
     const duration = 1500;
 
-    setTimeout(function (){getElement("cards").remove()}, duration);
+    getElement("course-overview").classList.add("slide-up", "fade-out");
+    setTimeout(function (){getElement("course-overview").remove()}, duration);
+    getElement("course-content").classList.add("slide-in", "fade-in");
+    getElement("course-content").classList.remove("hidden");
+
     setTimeout(function (){getElement("info").remove()}, duration);
     setTimeout(function (){getElement("course-description").remove()}, duration);
 }
 
 function getElement(id){
     return document.getElementById(id);
+}
+
+function getElements(className){
+    return document.getElementsByClassName(className);
 }
 
 function courseNotFound(){
@@ -58,7 +66,7 @@ function courseNotFound(){
 
 function setStyle(data){
     getElement("course-image").src = `../../assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
-    getElement("course-content").style.backgroundColor = data["bg-color"];
+    getElement("course-wrapper").style.backgroundColor = data["bg-color"];
     let listStyle = document.body.appendChild(document.createElement("style"));
     listStyle.innerHTML = `#course-skills li::before {content: "\\2022"; color: ${data["list-item-dot-color"]}; display: inline-block; font-weight: bold; margin-left: -20px; width: 20px;}`;
     getElement("course-start-btn").style.cssText = `margin-top: 25px; background-color: ${data["btn-color"]}; border: none; font-size: 18px;`;
