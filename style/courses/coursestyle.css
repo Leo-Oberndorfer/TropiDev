@@ -1,21 +1,21 @@
-.info .block {
+.info-box .block {
     margin-top: 20px;
     margin-right: 35px;
 }
 
-.info .level-easy {
+.info-box .level-easy {
     color: #8bd700;
 }
 
-.info .level-medium {
+.info-box .level-medium {
     color: #d77a00;
 }
 
-.info .level-hard {
+.info-box .level-hard {
     color: red;
 }
 
-#course-wrapper .skill-card ul{
+#course-info-wrapper .skill-card ul{
     list-style: none;
     margin-top: 10px;
     margin-bottom: 0;
@@ -26,7 +26,7 @@
 }
 
 .slide-up {
-    transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-out;
     transform: translateY(-100%);
 }
 

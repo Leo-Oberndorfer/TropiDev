@@ -29,11 +29,11 @@
     <div id="course-body">
         <div class="wrapper info-box" id="info-box">
             <div class="container">
-                <div class="course-head">
-                    <h3 id="course-heading">Learn Programming</h3>
-                    <p id="course-description">Empty</p>
+                <div class="course-head" id="head">
+                    <h3 id="course-head-title"></h3>
+                    <p id="course-head-description"></p>
                 </div>
-                <div class="info flex" id="info">
+                <div class="course-info flex" id="info">
                     <div class="block">
                         <p class="size-12 faded">COURSE DURATION</p>
                         <p class="size-16" id="course-duration">0</p>
@@ -49,12 +49,12 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper flex" id="course-wrapper">
-            <div class="container" id="course-overview">
-                <div class="row row-cols-1 row-cols-md-2 g-4" id="cards" style="justify-content: center">
+        <div class="wrapper flex" id="course-info-wrapper">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 g-4" id="course-wrapper-cards" style="justify-content: center">
                     <div class="col" style="max-width: 450px">
                         <div class="card skill-card">
-                            <img src="" class="card-img-top" id="course-image" alt="...">
+                            <img src="" class="card-img-top" id="course-wrapper-image">
                             <div class="card-body">
                                 <p class="card-text size-16">After completing this course you can:</p>
                                 <ul id="course-skills">
@@ -73,20 +73,18 @@
                             <div class="card-body">
                                 <h2 class="card-title">Introduction</h2>
                                 <p class="card-text size-16" id="course-intro"></p>
-                                <a href="#" class="btn btn-primary faded" id="course-start-btn">Not available</a>
+                                <a href="#" class="btn btn-primary faded" id="course-start-btn"></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container hidden" id="course-content">
+            <div class="container" id="course-container">
                 <div class="card">
-                    <div class="card-header">
-                        Hello World
-                    </div>
+                    <div class="card-header" id="course-container-header">Chapter 1: <span id="course-chapter-heading">Introduction</span></div>
                     <div class="card-body">
-                        <h5 class="card-title">Chapter 1: Creating a html document</h5>
-                        <p>Some content goes here</p>
+                        <h5>Hallo</h5>
+                        <p id="course-chapter-content">Lukas ist ein Autist</p>
                     </div>
                 </div>
             </div>

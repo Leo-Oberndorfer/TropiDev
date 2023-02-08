@@ -2,20 +2,18 @@ const urlParams = new URLSearchParams(window.location.search);
 const selectedCourseUpper = urlParams.get('course').toUpperCase();
 const selectedCourseLower = urlParams.get('course').toLowerCase();
 const file = `/script/courses/${selectedCourseUpper}CourseProperties.json`;
-let properties = ["course-heading", "course-description", "course-intro", "course-duration", "course-chapters", "course-difficulty"];
+let properties = ["course-head-title", "course-head-description", "course-intro", "course-duration", "course-chapters", "course-difficulty"];
 
 function setHomeAppearance(){
     fetch(file)
         .then(response => {
             if(response.ok){
                 response.json().then(data => {
+                    data = data["course-info"];
                     document.title = `Developer Island | ${selectedCourseUpper} Course`;
                     for (let property of properties) {
                         getElement(property).innerHTML = data[property];
                     }
-
-                    let difficulty = getElement("course-difficulty");
-                    difficulty.setAttribute("class", `size-16 level-${difficulty.innerHTML.toLowerCase()}`);
 
                     let list = getElement("course-skills");
                     for (let item of data["course-skills"]) {
@@ -24,11 +22,10 @@ function setHomeAppearance(){
                         list.appendChild(li);
                     }
 
+                    setDifficulty();
                     calculateUserProgress(data);
+                    setButton();
                     setStyle(data);
-
-                    //Button
-                    getElement("course-start-btn").innerHTML = "Start learning"; //Calculate this
                 });
             } else {
                 courseNotFound();
@@ -65,11 +62,27 @@ function courseNotFound(){
 }
 
 function setStyle(data){
-    getElement("course-image").src = `../../assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
-    getElement("course-wrapper").style.backgroundColor = data["bg-color"];
+    getElement("course-wrapper-image").src = `../../assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
+    getElement("course-info-wrapper").style.backgroundColor = data["bg-color"];
     let listStyle = document.body.appendChild(document.createElement("style"));
-    listStyle.innerHTML = `#course-skills li::before {content: "\\2022"; color: ${data["list-item-dot-color"]}; display: inline-block; font-weight: bold; margin-left: -20px; width: 20px;}`;
+    listStyle.innerHTML = `
+    #course-skills li::before {
+    content: "\\2022"; 
+    color: ${data["list-item-dot-color"]}; 
+    display: inline-block; 
+    font-weight: bold; 
+    margin-left: -20px; 
+    width: 20px;}`;
     getElement("course-start-btn").style.cssText = `margin-top: 25px; background-color: ${data["btn-color"]}; border: none; font-size: 18px;`;
+}
+
+function setDifficulty(){
+    let difficulty = getElement("course-difficulty");
+    difficulty.setAttribute("class", `size-16 level-${difficulty.innerHTML.toLowerCase()}`);
+}
+
+function setButton(){
+    getElement("course-start-btn").innerHTML = "Start learning"; //Calculate this
 }
 
 function calculateUserProgress(data){

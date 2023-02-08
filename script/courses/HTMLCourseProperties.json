@@ -1,19 +1,39 @@
 {
-  "course-heading": "Learn HTML",
-  "course-description": "In this course you will learn how to build the structure of a website. Some chapters provide interactive exercises to make learning more fun.",
-  "course-duration": "-",
-  "course-chapters": "-",
-  "course-difficulty": "Easy",
-  "course-skills": [
-    "Add text to a website",
-    "Embed images and videos",
-    "Create links to other websites",
-    "Create tables and forms",
-    "Create lists"
-  ],
-  "course-intro": "HTML is the language used to build and style websites. Here you will learn things such as: how to create and edit HTML documents, how to use HTML tags to structure and format different elements on a web page, how to insert links and images into an HTML document and how to create tables and forms with HTML. In the CSS course you can learn how to style websites and in the JavaScript course we will teach you how to make HTML pages interactive.",
-
-  "list-item-dot-color": "orangered",
-  "bg-color": "#fff2db",
-  "btn-color": "orangered"
+  "course-info": {
+    "course-head-title": "Learn HTML",
+    "course-head-description": "In this course you will learn how to build the structure of a website. Some chapters provide interactive exercises to make learning more fun.",
+    "course-duration": "-",
+    "course-chapters": "-",
+    "course-difficulty": "Easy",
+    "course-skills": [
+      "Add text to a website",
+      "Embed images and videos",
+      "Create links to other websites",
+      "Create tables and forms",
+      "Create lists"
+    ],
+    "course-intro": "HTML is the language used to build and style websites. Here you will learn things such as: how to create and edit HTML documents, how to use HTML tags to structure and format different elements on a web page, how to insert links and images into an HTML document and how to create tables and forms with HTML. In the CSS course you can learn how to style websites and in the JavaScript course we will teach you how to make HTML pages interactive.",
+    "list-item-dot-color": "orangered",
+    "bg-color": "#fff2db",
+    "btn-color": "orangered"
+  },
+  "course-content":
+    {
+      "chapter-title": "Introduction",
+      "chapter-description": "In this chapter you will learn what HTML is and how it is used to build websites.",
+      "chapter-lessons": [
+        {
+          "lesson-title": "What is HTML?",
+          "lesson-description": "In this lesson you will learn what HTML is and how it is used to build websites.",
+          "lesson-video": "https://www.youtube.com/embed/1QX3QXjZ9bA",
+          "lesson-exercise": "https://www.w3schools.com/html/exercise.asp?filename=exercise_html_intro"
+        },
+        {
+          "lesson-title": "HTML Editors",
+          "lesson-description": "In this lesson you will learn how to use HTML editors to create and edit HTML documents.",
+          "lesson-video": "https://www.youtube.com/embed/1QX3QXjZ9bA",
+          "lesson-exercise": "https://www.w3schools.com/html/exercise.asp?filename=exercise_html_intro"
+        }
+      ]
+    }
 }
