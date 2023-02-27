@@ -11,4 +11,4 @@ while True:
     else:
         os.chdir(f"{path}/DeveloperIsland")
         os.system("git pull origin master")
-    time.sleep(300)
+    time.sleep(60)
