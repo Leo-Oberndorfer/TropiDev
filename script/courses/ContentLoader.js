@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const selectedCourseUpper = urlParams.get('course').toUpperCase();
 const selectedCourseLower = urlParams.get('course').toLowerCase();
-const file = `/script/courses/${selectedCourseUpper}CourseProperties.json`;
+const file = `script/courses/${selectedCourseUpper}CourseProperties.json`;
 let properties = ["course-head-title", "course-head-description", "course-intro", "course-duration", "course-chapters", "course-difficulty"];
 
 function setHomeAppearance(){
