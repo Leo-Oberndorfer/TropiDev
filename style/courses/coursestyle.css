@@ -15,6 +15,24 @@
     color: red;
 }
 
+#course-wrapper-cards {
+    justify-content: center;
+}
+
+#course-wrapper-cards .skill-card {
+    max-width: 450px;
+}
+
+#course-wrapper-cards .intro-card {
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 991px) {
+    #course-wrapper-cards .skill-card {
+        max-width: 550px;
+    }
+}
+
 #course-info-wrapper .skill-card ul{
     list-style: none;
     margin-top: 10px;
