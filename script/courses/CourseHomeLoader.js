@@ -33,26 +33,6 @@ function setHomeAppearance(){
         })
 }
 
-function loadLayout(){
-    const duration = 1500;
-
-    getElement("course-overview").classList.add("slide-up", "fade-out");
-    setTimeout(function (){getElement("course-overview").remove()}, duration);
-    getElement("course-content").classList.add("slide-in", "fade-in");
-    getElement("course-content").classList.remove("hidden");
-
-    setTimeout(function (){getElement("info").remove()}, duration);
-    setTimeout(function (){getElement("course-description").remove()}, duration);
-}
-
-function getElement(id){
-    return document.getElementById(id);
-}
-
-function getElements(className){
-    return document.getElementsByClassName(className);
-}
-
 function courseNotFound(){
     getElement("course-body").innerHTML =
         "<h1 style='font-size: 64px; font-weight: 750; color: #230d34;'>Course not found</h1>" +
