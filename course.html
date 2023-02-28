@@ -22,6 +22,7 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="components/ComponentLoader.js"></script>
     <script src="script/courses/CourseHomeLoader.js"></script>
+    <script src="script/courses/CourseUtils.js"></script>
     <script src="script/utils/Events.js"></script>
     <script src="script/utils/Utils.js"></script>
 </head>
@@ -94,8 +95,7 @@
     <footer import="components/footer.html"></footer>
 </body>
 <script>
-    registerCourseEvents();
     loadComponents();
-    setHomeAppearance();
+    loadCourse();
 </script>
 </html>

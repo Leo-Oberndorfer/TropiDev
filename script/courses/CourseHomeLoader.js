@@ -1,10 +1,13 @@
-const urlParams = new URLSearchParams(window.location.search);
-const selectedCourseUpper = urlParams.get('course').toUpperCase();
-const selectedCourseLower = urlParams.get('course').toLowerCase();
-const file = `script/courses/${selectedCourseUpper}CourseProperties.json`;
-let properties = ["course-head-title", "course-head-description", "course-intro", "course-duration", "course-chapters", "course-difficulty"];
+let selectedCourseUpper;
+let selectedCourseLower;
+let file;
+const properties = ["course-head-title", "course-head-description", "course-intro", "course-duration", "course-chapters", "course-difficulty"];
 
-function setHomeAppearance(){
+function setHomeAppearance(course){
+    selectedCourseLower = course;
+    selectedCourseUpper = course.toUpperCase();
+    file = `script/courses/${selectedCourseUpper}CourseProperties.json`;
+
     fetch(file)
         .then(response => {
             if(response.ok){
@@ -42,7 +45,7 @@ function courseNotFound(){
 }
 
 function setStyle(data){
-    getElement("course-wrapper-image").src = `../../assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
+    getElement("course-wrapper-image").src = `assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
     getElement("course-info-wrapper").style.backgroundColor = data["bg-color"];
     let listStyle = document.body.appendChild(document.createElement("style"));
     listStyle.innerHTML = `
@@ -62,11 +65,11 @@ function setDifficulty(){
 }
 
 function setButton(){
-    getElement("course-start-btn").innerHTML = "Start learning"; //Calculate this
+    getElement("course-start-btn").innerHTML = "Start learning"; //TODO: Calculate this
 }
 
 function calculateUserProgress(data){
-    let progress = 50; //Calculate this - Progress
+    let progress = 50; //TODO: Calculate this - Progress
     getElement("user-progress").innerHTML = progress.toString();
     getElement("progress-bar").style.cssText = `width: ${progress}%; background-color: ${data["btn-color"]};`;
 }
