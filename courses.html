@@ -35,7 +35,7 @@
                     <h3 id="course-head-title"></h3>
                     <p id="course-head-description"></p>
                 </div>
-                <ul>
+                <ul id="course-info-list">
                     <li>
                         <p class="size-12 faded">COURSE DURATION</p>
                         <p class="size-16" id="course-duration">0</p>
@@ -63,9 +63,11 @@
                                 </ul>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted user-progress size-16">Your progress (<span id="user-progress">0</span>%):</small>
-                                <div class="progress">
-                                    <div class="progress-bar faded" id="progress-bar" role="progressbar" aria-label="course-progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div id="course-progress-bar">
+                                    <small class="text-muted user-progress size-16">Your progress (<span id="user-progress">0</span>%):</small>
+                                    <div class="progress">
+                                        <div class="progress-bar faded" id="progress-bar" role="progressbar" aria-label="course-progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container" id="course-container">
+            <div class="container hidden" id="course-container">
                 <div class="card">
                     <div class="card-header" id="course-container-header">Chapter 1: <span id="course-chapter-heading"></span></div>
                     <div class="card-body"></div>
