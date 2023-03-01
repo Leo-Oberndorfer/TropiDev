@@ -30,29 +30,29 @@
     <header import="components/header.html"></header>
     <div id="course-body">
         <div class="wrapper info-box" id="info-box">
-            <div class="container">
+            <div class="container" id="course-overview-container">
                 <div class="course-head" id="head">
                     <h3 id="course-head-title"></h3>
                     <p id="course-head-description"></p>
                 </div>
-                <div class="course-info flex" id="info">
-                    <div class="block">
+                <ul>
+                    <li>
                         <p class="size-12 faded">COURSE DURATION</p>
                         <p class="size-16" id="course-duration">0</p>
-                    </div>
-                    <div class="block">
+                    </li>
+                    <li>
                         <p class="size-12 faded">CHAPTERS</p>
                         <p class="size-16" id="course-chapters">0</p>
-                    </div>
-                    <div class="block">
+                    </li>
+                    <li>
                         <p class="size-12 faded">DIFFICULTY LEVEL</p>
                         <p class="size-16" id="course-difficulty">0</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="wrapper flex" id="course-info-wrapper">
-            <div class="container">
+            <div class="container" id="course-intro-container">
                 <div class="row row-cols-1 row-cols-md-2 g-4" id="course-wrapper-cards">
                     <div class="col skill-card">
                         <div class="card">
@@ -84,10 +84,7 @@
             <div class="container" id="course-container">
                 <div class="card">
                     <div class="card-header" id="course-container-header">Chapter 1: <span id="course-chapter-heading"></span></div>
-                    <div class="card-body">
-                        <h5 id="course-chapter-title"></h5>
-                        <p id="course-chapter-content"></p>
-                    </div>
+                    <div class="card-body"></div>
                 </div>
             </div>
         </div>

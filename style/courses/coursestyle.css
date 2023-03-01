@@ -1,4 +1,11 @@
-.info-box .block {
+.info-box ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-box ul li {
     margin-top: 20px;
     margin-right: 35px;
 }

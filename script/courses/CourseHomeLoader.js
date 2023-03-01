@@ -6,7 +6,7 @@ const properties = ["course-head-title", "course-head-description", "course-intr
 function setHomeAppearance(course){
     selectedCourseLower = course;
     selectedCourseUpper = course.toUpperCase();
-    file = `script/courses/${selectedCourseUpper}CourseProperties.json`;
+    file = `assets/courses/${selectedCourseLower}/${selectedCourseUpper}CourseProperties.json`;
 
     fetch(file)
         .then(response => {
@@ -39,7 +39,7 @@ function setHomeAppearance(course){
 function courseNotFound(){
     getElement("course-body").innerHTML =
         "<h1 style='font-size: 64px; font-weight: 750; color: #230d34;'>Course not found</h1>" +
-        "<p style='font-size: 18px; font-weight: 500; color: #00172b'>The course you were looking for does not exist (yet)</p>";
+        "<p style='font-size: 18px; font-weight: 500; color: #00172b'><p>We couldn't find a course associated with this url.</p>";
     getElement("course-body").style.cssText = "text-align: center; padding: 250px 25px 250px 25px;";
     console.log("File not found, enter a valid course.");
 }
