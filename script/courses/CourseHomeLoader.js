@@ -39,7 +39,7 @@ function setHomeAppearance(course){
 function courseNotFound(){
     getElement("course-body").innerHTML =
         "<h1 style='font-size: 64px; font-weight: 750; color: #230d34;'>Course not found</h1>" +
-        "<p style='font-size: 18px; font-weight: 500; color: #00172b'><p>We couldn't find a course associated with this url.</p>";
+        "<p style='font-size: 18px; font-weight: 500; color: #00172b'><p>We couldn't find a course associated with this url</p>";
     getElement("course-body").style.cssText = "text-align: center; padding: 250px 25px 250px 25px;";
     console.log("File not found, enter a valid course.");
 }

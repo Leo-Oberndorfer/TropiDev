@@ -1,6 +1,4 @@
-:root {
-    --default-transition-duration: 1.5s;
-}
+/* Course Page */
 
 .info-box ul{
     padding: 0;
@@ -56,14 +54,14 @@
 
 /* Animations */
 .slide-out {
-    transition: var(--default-transition-duration) ease-in-out;
-    transform: translateY(-100%);
+    transition: transform 1.5s ease-in;
+    transform: translateY(-120%);
 }
+
 .fade-out {
     opacity: 0;
 }
 
 .fade-in {
-    transition: var(--default-transition-duration) ease-in-out;
     opacity: 1;
 }
