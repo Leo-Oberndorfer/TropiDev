@@ -4,7 +4,6 @@ function loadCourse(){
 
     if(param != null){
         setHomeAppearance(param.toLowerCase());
-        registerCourseEvents();
     } else {
         courseNotFound();
     }

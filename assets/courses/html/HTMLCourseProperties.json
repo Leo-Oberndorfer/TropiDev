@@ -1,30 +1,36 @@
 {
   "course-info": {
     "course-head-title": "Learn HTML",
-    "course-head-description": "In this course you will learn how to build the structure of a website. Some chapters provide interactive exercises to make learning more fun.",
+    "course-head-description": "The language used to build the structure of websites. Learn how to add text, images, links and more to your website.",
     "course-duration": "-",
-    "course-chapters": "-",
     "course-difficulty": "Easy",
     "course-skills": [
-      "Add text to a website",
-      "Embed images and videos",
+      "Create the structure of a website",
+      "Add content to a website",
       "Create links to other websites",
       "Create tables and forms",
       "Create lists"
     ],
-    "course-intro": "HTML is the language used to build and style websites. Here you will learn things such as: how to create and edit HTML documents, how to use HTML tags to structure and format different elements on a web page, how to insert links and images into an HTML document and how to create tables and forms with HTML. In the CSS course you can learn how to style websites and in the JavaScript course we will teach you how to make HTML pages interactive.",
     "list-item-dot-color": "orangered",
     "bg-color": "#fff2db",
     "btn-color": "orangered"
   },
-  "course-content":
-    {
-      "chapter-1": {
-        "course-chapter-heading": "Introduction",
-        "lesson-1": {
-          "lesson-title": "What is HTML?",
-          "lesson-content": "HTML is the language used to build and style websites. Here you will learn things such as: how to create and edit HTML documents, how to use HTML tags to structure and format different elements on a web page, how to insert links and images into an HTML document and how to create tables and forms with HTML. In the CSS course you can learn how to style websites and in the JavaScript course we will teach you how to make HTML pages interactive."
-        }
-      }
+  "course-chapters": {
+    "chapter-1": {
+      "chapter-title": "Introduction to HTML",
+      "chapter-task-description": "HTML is the language used to create the structure of a website. You can think of HTML as the skeleton of a website. In this course we will teach you some basic HTML knowledge and also get a little bit into CSS."
+    },
+    "chapter-2": {
+      "chapter-title": "Creating a basic HTML document",
+      "chapter-task-description": "To get started we first need to create a html document. You can do that by creating a new file and saving it with the extension .html."
+    },
+    "chapter-3": {
+      "chapter-title": "Adding text to a website",
+      "chapter-task-description": "Learn how to add text to a website."
+    },
+    "chapter-4": {
+      "chapter-title": "Adding images and videos to a website",
+      "chapter-task-description": "Learn how to add images and videos to a website."
     }
+  }
 }

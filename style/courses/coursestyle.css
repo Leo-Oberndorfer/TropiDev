@@ -1,5 +1,12 @@
-/* Course Page */
+.accordion {
+    --bs-accordion-active-color: black !important;
+    --bs-accordion-active-bg: #f8f9fa !important;
+    --bs-accordion-btn-focus-border-color: none !important;
+    --bs-accordion-btn-focus-box-shadow: none !important;
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
 
+/* Course Page */
 .info-box ul{
     padding: 0;
     list-style: none;
@@ -24,28 +31,54 @@
     color: red;
 }
 
+#course-start-btn {
+    margin: 21px 0 10px 0;
+    border: none;
+    font-size: 18px;
+}
+
 #course-wrapper-cards {
+    align-content: center;
     justify-content: center;
 }
 
 #course-wrapper-cards .skill-card {
-    max-width: 450px;
+    max-width: 400px;
 }
 
-#course-wrapper-cards .intro-card {
+#course-wrapper-cards .overview-card {
     flex-grow: 1;
 }
 
 @media screen and (max-width: 991px) {
-    #course-wrapper-cards .skill-card {
-        max-width: 550px;
+    #course-wrapper-cards {
+        flex-direction: column;
+    }
+
+    #course-wrapper-cards .col {
+        max-width: none !important;
+        width: 100% !important;
     }
 }
 
-#course-info-wrapper .skill-card ul{
+#course-body-wrapper .skill-card ul{
     list-style: none;
     margin-top: 10px;
     margin-bottom: 0;
+}
+
+.accordion-button {
+    align-content: center;
+}
+
+.accordion-header .task-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: inline-block;
+    line-height: 1;
+    margin-right: 5px;
 }
 
 #course-start-btn:hover {

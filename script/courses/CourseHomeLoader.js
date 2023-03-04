@@ -1,7 +1,7 @@
 let selectedCourseUpper;
 let selectedCourseLower;
 let file;
-const properties = ["course-head-title", "course-head-description", "course-intro", "course-duration", "course-chapters", "course-difficulty"];
+const properties = ["course-head-title", "course-head-description", "course-duration", "course-difficulty"];
 
 function setHomeAppearance(course){
     selectedCourseLower = course;
@@ -12,23 +12,25 @@ function setHomeAppearance(course){
         .then(response => {
             if(response.ok){
                 response.json().then(data => {
-                    data = data["course-info"];
+                    let courseInfo = data["course-info"];
+                    let courseChapters = data["course-chapters"];
                     document.title = `Developer Island | ${selectedCourseUpper} Course`;
                     for (let property of properties) {
-                        getElement(property).innerHTML = data[property];
+                        getElement(property).innerHTML = courseInfo[property];
                     }
 
                     let list = getElement("course-skills");
-                    for (let item of data["course-skills"]) {
+                    for (let item of courseInfo["course-skills"]) {
                         let li = document.createElement("li");
                         li.innerHTML = item;
                         list.appendChild(li);
                     }
 
                     setDifficulty();
-                    calculateUserProgress(data);
+                    calculateUserProgress(courseInfo);
+                    loadChapters(courseChapters);
                     setButton();
-                    setStyle(data);
+                    setStyle(courseInfo);
                 });
             } else {
                 courseNotFound();
@@ -46,7 +48,7 @@ function courseNotFound(){
 
 function setStyle(data){
     getElement("course-wrapper-image").src = `assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
-    getElement("course-info-wrapper").style.backgroundColor = data["bg-color"];
+    getElement("course-body-wrapper").style.backgroundColor = data["bg-color"];
     let listStyle = document.body.appendChild(document.createElement("style"));
     listStyle.innerHTML = `
     #course-skills li::before {
@@ -56,7 +58,7 @@ function setStyle(data){
     font-weight: bold; 
     margin-left: -20px; 
     width: 20px;}`;
-    getElement("course-start-btn").style.cssText = `margin-top: 25px; background-color: ${data["btn-color"]}; border: none; font-size: 18px;`;
+    getElement("course-start-btn").style.backgroundColor = data["btn-color"];
 }
 
 function setDifficulty(){
