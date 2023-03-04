@@ -35,23 +35,136 @@
 }
 
 /* Coconut Coding section */
-.cococoding img{
-    border-radius: 20px;
-    margin: 20px !important;
-    width: 30%;
-}
-.cococoding p {
-    padding: 20px;
-}
-.cococoding .card-title{
-    text-align: center;
-}
-.cococoding .card{
-    background-color: rgba(255, 240, 203, 0.10);
-    padding: 10px;
-    min-height: 550px;
+.cococoding{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.cococoding .slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.cococoding .slide-content{
+    padding: 45px 20px;
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+.cococoding .square {
+    border-radius: 25px;
+    background-color: #dcf7ff;
+}
+
+.image-content,
+.square-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.cococoding .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.cococoding .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(187, 139, 255, 0.7);
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(187, 139, 255, 0.7);
+}
+.cococoding .overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #dcf7ff;
+}
+
+.cococoding .card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #dcf7ff;
+    padding: 3px;
+}
+.cococoding .card-image .card-img{
+    height: 100%;
+    wight: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #000000;
+}
+
+.cococoding .name{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cococoding .description{
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
+
+.cococoding .button{
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 8px 16px;
+    background-color: black;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.cococoding .button:hover{
+    background: #1d1d1d;
+}
+
+.cococoding .swiper-navBtn{
+    color: black !important;
+    transition: color 0.3s ease;
+}
+.cococoding .swiper-navBtn:hover{
+    color: #1d1d1d;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 40px;
+}
+.cococoding .swiper-button-next{
+    right: 0;
+}
+.cococoding .swiper-button-prev{
+    left: 0;
+}
+
+.cococoding .swiper-pagination-bullet{
+    background-color: black !important;
+    opacity: 1;
+}
+.cococoding .swiper-pagination-bullet-active{
+    background-color: #1d1d1d;
+}
 
 /* Stats section */
 .stats{
