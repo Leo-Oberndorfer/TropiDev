@@ -10,6 +10,10 @@ footer{
         text-align: center;
         flex-direction: column;
     }
+    footer a {
+        margin-right: 10px !important;
+        margin-left: 10px;
+    }
 }
 
 .footer-top {
@@ -19,6 +23,12 @@ footer{
 
 .footer-top div {
     margin-bottom: 32px;
+}
+
+.socials .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 footer a {
@@ -40,7 +50,6 @@ footer .footer-bottom a:hover {
 }
 
 .devisland img {
-    -webkit-filter: drop-shadow(  0 0 3px #310c29);
     filter: drop-shadow( 0 0 4px #623ce8);
 }
 
