@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="components/headerstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -25,8 +26,8 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script/home/HomeScript.js"></script>
-    <script src="script/home/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header import="components/header.html"></header>
@@ -81,23 +82,10 @@
             <div class="container reveal">
                 <div class="wrapper">
                     <h1>Coconut Coding</h1>
-                        <div class="slide-container swiper">
-                            <div class="slide-content">
-                                <div class="card-wrapper swiper-wrapper">
-                                    <div class="square swiper-slide">
-                                        <div class="image-content">
-                                            <span class="overlay"></span>
-                                            <div class="card-image">
-                                                <img src="assets/homepage/mango.png" alt="hi" class="card-img">
-                                            </div>
-                                        </div>
-                                        <div class="square-content">
-                                            <h2 class="name">Coconut Coding</h2>
-                                            <p class="description">To make coding more fun we have our own competition system called "Coconut Coding" where you can compete against other developers and earn xp. The top 50 developers with the most xp will be displayed on the leaderboard.</p>
-                                            <button class="button">view More</button>
-                                        </div>
-                                    </div>
-                                    <div class="square swiper-slide">
+                    <div class="slide-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper">
+                                <div class="square swiper-slide">
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
@@ -106,11 +94,11 @@
                                         </div>
                                         <div class="square-content">
                                             <h2 class="name">XP</h2>
-                                            <p class="description">To earn xp you will have to complete challenges posted by our team members. The challenges have different difficulties which will range from 1 to 10. The higher the difficulty, the harder the challenge and the more xp you can earn. There are also some kind of requirements for each challenge which will give you different amount of xp when completed. All together they sum up to the maximum amount of obtainable xp.</p>
+                                            <p class="description">To earn xp you will have to complete challenges posted by our team members. The higher the difficulty, the more xp you can earn.</p>
                                             <button class="button">view More</button>
                                         </div>
                                     </div>
-                                    <div class="square swiper-slide">
+                                <div class="square swiper-slide">
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
@@ -119,24 +107,24 @@
                                         </div>
                                         <div class="square-content">
                                             <h2 class="name">Leaderboard</h2>
-                                            <p class="description">On our Leaderboard are the top 50 People with the most XP displayed.</p>
+                                            <p class="description">On our Leaderboard are the top 50 People with the most XP and the highest level displayed.<br>.</p>
                                             <button class="button">view More</button>
                                         </div>
                                     </div>
-                                    <div class="square swiper-slide">
+                                <div class="square swiper-slide">
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="assets/homepage/mango.png" alt="hi" class="card-img">
+                                                <img src="assets/homepage/prize.png" alt="hi" class="card-img">
                                             </div>
                                         </div>
                                         <div class="square-content">
                                             <h2 class="name">Prize</h2>
-                                            <p class="description">To make the competition even more intense we give away prizes sometimes (Maybe once a month or so). We pick someone from the first page of the leaderboard and grant them their prize. I won't tell you what the prizes are, this would ruin the surprise ;)</p>
+                                            <p class="description">To make the competition even more intense we give away prizes sometimes. We pick someone from the leaderboard and grant them their prize.</p>
                                             <button class="button">view More</button>
                                         </div>
                                     </div>
-                                    <div class="square swiper-slide">
+                                <div class="square swiper-slide">
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
@@ -144,12 +132,12 @@
                                             </div>
                                         </div>
                                         <div class="square-content">
-                                            <h2 class="name">Rank</h2>
-                                            <p class="description">When you reach a certain amount of XP you get the respectiv Programming Rank</p>
+                                            <h2 class="name">Level</h2>
+                                            <p class="description">When you reach a certain amount of XP you get the respective Programming Level. For example, BEGINNER for the lowest and LEGEND for the highest.</p>
                                             <button class="button">view More</button>
                                         </div>
                                     </div>
-                                    <div class="square swiper-slide">
+                                <div class="square swiper-slide">
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
@@ -158,15 +146,28 @@
                                         </div>
                                         <div class="square-content">
                                             <h2 class="name">Challenges</h2>
-                                            <p class="description">To earn xp you will have to complete challenges posted by our team members. The challenges have different difficulties which will range from 1 to 10. The higher the difficulty, the harder the challenge and the more xp you can earn. There are also some kind of requirements for each challenge which will give you different amount of xp when completed.</p>
+                                            <p class="description">The challenges have different difficulties which will range from 1 to 10. If you do more than the requirements say, you can get more Xp.</p>
                                             <button class="button">view More</button>
                                         </div>
                                     </div>
+                                <div class="square swiper-slide">
+                                    <div class="image-content">
+                                        <span class="overlay"></span>
+                                        <div class="card-image">
+                                            <img src="assets/homepage/mango.png" alt="hi" class="card-img">
+                                        </div>
+                                    </div>
+                                    <div class="square-content">
+                                        <h2 class="name">Coconut Coding</h2>
+                                        <p class="description">To make coding more fun we have our own competition system called "Coconut Coding" where you can compete against other developers and earn xp.</p>
+                                        <button class="button">view More</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="swiper-button-next swiper-navBtn"></div>
-                            <div class="swiper-button-prev swiper-navBtn"></div>
-                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="swiper-button-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-navBtn"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -284,10 +285,9 @@
 </body>
 <script>
     loadComponents();
+    loadSwiper();
     TypeWriter();
     reveal();
-
-
     //Parallax
     /*window.addEventListener('scroll', function (){
         const parallax = document.querySelector('.parallax');
