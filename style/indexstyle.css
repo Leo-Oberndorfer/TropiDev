@@ -56,7 +56,7 @@
 
 .cococoding .square {
     border-radius: 25px;
-    background-color: #dcf7ff;
+    background-color: #ecf8ff;
 }
 
 .image-content,
@@ -79,7 +79,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(187, 139, 255, 0.7);
+    background-color: rgba(215, 183, 255, 0.7);
     border-radius: 25px 25px 0 25px;
 }
 .overlay::before,
@@ -90,11 +90,11 @@
     bottom: -40px;
     height: 40px;
     width: 40px;
-    background-color: rgba(187, 139, 255, 0.7);
+    background-color: rgba(215, 183, 255, 0.7);
 }
 .cococoding .overlay::after{
     border-radius: 0 25px 0 0;
-    background-color: #dcf7ff;
+    background-color: #ecf8ff;
 }
 
 .cococoding .card-image{
@@ -102,7 +102,7 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background-color: #dcf7ff;
+    background-color: #ecf8ff;
     padding: 3px;
 }
 .cococoding .card-image .card-img{
@@ -110,41 +110,41 @@
     wight: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #000000;
+    border: 4px solid rgb(35, 13, 52);
 }
 
 .cococoding .name{
-    font-size: 18px;
+    font-size: 2rem;
     font-weight: 500;
 }
 
 .cococoding .description{
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
     padding: 10px;
 }
 
 .cococoding .button{
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     padding: 8px 16px;
-    background-color: black;
-    border-radius: 6px;
+    background-color: #262626;
+    border-radius: 20px;
     margin: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 .cococoding .button:hover{
-    background: #1d1d1d;
+    background: #363636;
 }
 
 .cococoding .swiper-navBtn{
-    color: black !important;
+    color: rgb(35, 13, 52) !important;
     transition: color 0.3s ease;
 }
 .cococoding .swiper-navBtn:hover{
-    color: #1d1d1d;
+    color: rgb(43, 17, 65);
 }
 .swiper-navBtn::before,
 .swiper-navBtn::after{
@@ -158,11 +158,11 @@
 }
 
 .cococoding .swiper-pagination-bullet{
-    background-color: black !important;
+    background-color: rgb(35, 13, 52) !important;
     opacity: 1;
 }
 .cococoding .swiper-pagination-bullet-active{
-    background-color: #1d1d1d;
+    background-color: rgb(43, 17, 65);
 }
 
 /* Stats section */
