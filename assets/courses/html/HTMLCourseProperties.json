@@ -18,19 +18,58 @@
   "course-chapters": {
     "chapter-1": {
       "chapter-title": "Introduction to HTML",
-      "chapter-task-description": "HTML is the language used to create the structure of a website. You can think of HTML as the skeleton of a website. In this course we will teach you some basic HTML knowledge and also get a little bit into CSS."
+      "chapter-description": "HTML (Hypertext Markup Language) is a markup language used to create web pages that are served by web servers and displayed by web clients, such as web browsers. It defines the structure and content of a web page using tags and attributes, which are interpreted by web browsers to display text, images, links, and other multimedia content. HTML is a key component of the World Wide Web and is used in conjunction with other technologies, such as CSS and JavaScript, to create dynamic and interactive web pages.",
+      "chapter-paragraph-headings": ["What is a web server?", "What is a web client?"],
+      "chapter-paragraphs": [
+        "Every website needs a server to run on. A web server is a computer that is connected to the internet and is running a web server software. The web server listens for incoming requests from web browsers, retrieves the requested resources, and sends them back to the client over the internet. Web servers typically use HTTP (Hypertext Transfer Protocol) as the primary communication protocol to transfer data between the server and client.",
+        "A web client is a software or application that requests and displays web content from a web server. It communicates with the web server using HTTP and sends requests for web pages or resources such as images, videos, or scripts. The most common web client is a web browser, such as Google Chrome, Firefox, or Safari, but web clients can also be other software programs or applications that communicate with web servers to retrieve and display web content."
+      ],
+      "chapter-paragraph-images": ["assets/courses/html/web-server.png" , "assets/courses/html/web-client.png"],
+      "chapter-paragraphs-code-examples": [],
+      "chapter-images": [],
+      "chapter-tasks": [],
+      "chapter-task-images": [],
+      "chapter-task-input-types": [],
+      "chapter-task-hints": []
     },
     "chapter-2": {
       "chapter-title": "Creating a basic HTML document",
-      "chapter-task-description": "To get started we first need to create a html document. You can do that by creating a new file and saving it with the extension .html."
+      "chapter-description": "To get started we first need to create a html document. You can do that by creating a new file and saving it with the extension .html.",
+      "chapter-paragraph-headings": [""],
+      "chapter-paragraphs": [""],
+      "chapter-paragraph-images": [""],
+      "chapter-paragraphs-code-examples": [],
+      "chapter-images": [],
+      "chapter-tasks": [],
+      "chapter-task-images": [],
+      "chapter-task-input-types": [],
+      "chapter-task-hints": []
     },
     "chapter-3": {
       "chapter-title": "Adding text to a website",
-      "chapter-task-description": "Learn how to add text to a website."
+      "chapter-description": "Learn how to add text to a website.",
+      "chapter-paragraph-headings": [""],
+      "chapter-paragraphs": [""],
+      "chapter-paragraph-images": [""],
+      "chapter-paragraphs-code-examples": [],
+      "chapter-images": [],
+      "chapter-tasks": [],
+      "chapter-task-images": [],
+      "chapter-task-input-types": [],
+      "chapter-task-hints": []
     },
     "chapter-4": {
       "chapter-title": "Adding images and videos to a website",
-      "chapter-task-description": "Learn how to add images and videos to a website."
+      "chapter-description": "Learn how to add images and videos to a website.",
+      "chapter-paragraph-headings": [""],
+      "chapter-paragraphs": [""],
+      "chapter-paragraph-images": [""],
+      "chapter-paragraphs-code-examples": [],
+      "chapter-images": [],
+      "chapter-tasks": [],
+      "chapter-task-images": [],
+      "chapter-task-input-types": [],
+      "chapter-task-hints": []
     }
   }
 }
