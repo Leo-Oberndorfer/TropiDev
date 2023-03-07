@@ -72,7 +72,7 @@ function loadInput(type, answer, prefill, id){
 
     if(type === "text") {
         html +=
-            "<form class='input-form'>" +
+            "<form class='flex input-form'>" +
             "<input type='text' class='input' id='input-" + id + "' placeholder='" + prefill + "'>" +
             "<input type='button' class='button' id='hint' value='Hint' onclick=''>" +
             "<input type='button' class='button' id='submit' value='Submit' onclick=''>" +

@@ -4,14 +4,6 @@
     "course-head-description": "The language used to build the structure of websites. Learn how to add text, images, links and more to your website.",
     "course-duration": "-",
     "course-difficulty": "Easy",
-    "course-skills": [
-      "Create the structure of a website",
-      "Add content to a website",
-      "Create links to other websites",
-      "Create tables and forms",
-      "Create lists"
-    ],
-    "list-item-dot-color": "orangered",
     "bg-color": "#fff2db",
     "btn-color": "orangered"
   },

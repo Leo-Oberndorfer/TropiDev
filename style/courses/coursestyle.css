@@ -16,7 +16,6 @@
 .info-box ul{
     padding: 0;
     list-style: none;
-    display: flex;
     flex-wrap: wrap;
 }
 
@@ -38,21 +37,37 @@
 }
 
 #course-start-btn {
-    margin: 21px 0 10px 0;
     border: none;
     font-size: 18px;
 }
 
 #course-wrapper-cards {
-    align-content: center;
+    align-items: center;
     justify-content: center;
 }
 
-#course-wrapper-cards .skill-card {
-    max-width: 400px;
+#course-wrapper-cards .overview-card {
+    flex-grow: 1;
 }
 
-#course-wrapper-cards .overview-card {
+.card-heading {
+    align-items: center;
+}
+
+#course-heading-icon {
+    display: inline-block;
+    margin-right: 5px;
+    height: 30px;
+}
+
+.overview-card-body-components {
+    align-items: center;
+    height: 95px;
+    gap: 25px;
+}
+
+#course-progress-bar {
+    max-width: 500px;
     flex-grow: 1;
 }
 
@@ -67,24 +82,15 @@
     }
 }
 
-#course-body-wrapper .skill-card ul{
-    list-style: none;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
 .accordion-button {
-    align-content: center;
+    align-items: center;
 }
 
-.accordion-header .task-circle {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 1px solid var(--border-collor);
-    display: inline-block;
-    line-height: 1;
-    margin-right: 5px;
+.accordion-header .task-circle:before{
+    content: "◯";
+    color: var(--border-collor);
+    font-weight: 750;
+    margin-right: 7px;
 }
 
 .accordion-body h4{
@@ -108,7 +114,6 @@
 }
 
 .input-form {
-    display: flex;
     justify-content: space-between;
     gap: 10px;
 }

@@ -19,13 +19,6 @@ function setHomeAppearance(course){
                         getElement(property).innerHTML = courseInfo[property];
                     }
 
-                    let list = getElement("course-skills");
-                    for (let item of courseInfo["course-skills"]) {
-                        let li = document.createElement("li");
-                        li.innerHTML = item;
-                        list.appendChild(li);
-                    }
-
                     setDifficulty();
                     calculateUserProgress(courseInfo);
                     loadChapters(courseChapters);
@@ -47,18 +40,9 @@ function courseNotFound(){
 }
 
 function setStyle(data){
-    getElement("course-wrapper-image").src = `assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
     getElement("course-body-wrapper").style.backgroundColor = data["bg-color"];
-    let listStyle = document.body.appendChild(document.createElement("style"));
-    listStyle.innerHTML = `
-    #course-skills li::before {
-    content: "\\2022"; 
-    color: ${data["list-item-dot-color"]}; 
-    display: inline-block; 
-    font-weight: bold; 
-    margin-left: -20px; 
-    width: 20px;}`;
     getElement("course-start-btn").style.backgroundColor = data["btn-color"];
+    getElement("course-heading-icon").src = `assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
 }
 
 function setDifficulty(){
@@ -71,7 +55,7 @@ function setButton(){
 }
 
 function calculateUserProgress(data){
-    let progress = 50; //TODO: Calculate this - Progress
+    let progress = 0; //TODO: Calculate this - Progress
     getElement("user-progress").innerHTML = progress.toString();
     getElement("progress-bar").style.cssText = `width: ${progress}%; background-color: ${data["btn-color"]};`;
 }
