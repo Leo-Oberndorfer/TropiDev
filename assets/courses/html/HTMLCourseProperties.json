@@ -27,9 +27,10 @@
       "chapter-paragraph-images": ["assets/courses/html/web-server.png" , "assets/courses/html/web-client.png"],
       "chapter-paragraphs-code-examples": [],
       "chapter-images": [],
-      "chapter-tasks": [],
-      "chapter-task-images": [],
-      "chapter-task-input-types": [],
+      "chapter-tasks": ["What does HTTP stand for?", "Where does a website run on?", "What is the most common web client?"],
+      "chapter-task-input-types": ["text", "text", "text"],
+      "chapter-task-prefills": ["", "", ""],
+      "chapter-task-answers": ["hypertext transfer protocol", "web server", "web browser"],
       "chapter-task-hints": []
     },
     "chapter-2": {
@@ -41,34 +42,9 @@
       "chapter-paragraphs-code-examples": [],
       "chapter-images": [],
       "chapter-tasks": [],
-      "chapter-task-images": [],
       "chapter-task-input-types": [],
-      "chapter-task-hints": []
-    },
-    "chapter-3": {
-      "chapter-title": "Adding text to a website",
-      "chapter-description": "Learn how to add text to a website.",
-      "chapter-paragraph-headings": [""],
-      "chapter-paragraphs": [""],
-      "chapter-paragraph-images": [""],
-      "chapter-paragraphs-code-examples": [],
-      "chapter-images": [],
-      "chapter-tasks": [],
-      "chapter-task-images": [],
-      "chapter-task-input-types": [],
-      "chapter-task-hints": []
-    },
-    "chapter-4": {
-      "chapter-title": "Adding images and videos to a website",
-      "chapter-description": "Learn how to add images and videos to a website.",
-      "chapter-paragraph-headings": [""],
-      "chapter-paragraphs": [""],
-      "chapter-paragraph-images": [""],
-      "chapter-paragraphs-code-examples": [],
-      "chapter-images": [],
-      "chapter-tasks": [],
-      "chapter-task-images": [],
-      "chapter-task-input-types": [],
+      "chapter-task-prefills": [],
+      "chapter-task-answers": [],
       "chapter-task-hints": []
     }
   }

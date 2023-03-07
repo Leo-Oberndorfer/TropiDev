@@ -28,8 +28,8 @@ function loadChapters(chapters){
 function loadChapterBody(chapters, chapter, idx){
     let chapterBody = getElement("chapter-body-" + idx);
     let i = 0;
-    while(i < chapters[chapter]["chapter-paragraph-headings"].length){
-        let heading = chapters[chapter]["chapter-paragraph-headings"][i];
+    let headings = chapters[chapter]["chapter-paragraph-headings"];
+    while(i < headings.length){
         let paragraph = chapters[chapter]["chapter-paragraphs"][i];
         let img = chapters[chapter]["chapter-paragraph-images"][i];
 
@@ -37,10 +37,48 @@ function loadChapterBody(chapters, chapter, idx){
             let float = i % 2 !== 0 ? "left" : "right";
             img = "<img src=\"" + img + "\" alt=\"course-asset\" style=\"height: 115px; float: "+ float +";\">";
         }
+
         chapterBody.innerHTML +=
-            "<h4>" + heading + "</h4>" +
+            "<h4>" + headings[i] + "</h4>" +
             "<p>" + img + paragraph + "</p>"
         ;
         i++;
     }
+    chapterBody.innerHTML += loadTasks(chapters, chapter);
 }
+
+function loadTasks(chapters, chapter){
+    let html =
+        "<div class=\"tasks\">" +
+        "<h4 id='task-heading'>Answer the following questions:</h4>";
+
+    let i = 0;
+    while(i < chapters[chapter]["chapter-tasks"].length){
+        html +=
+            "<p class='chapter-task'>" + chapters[chapter]["chapter-tasks"][i] + "</p>" +
+            loadInput(chapters[chapter]["chapter-task-input-types"][i], chapters[chapter]["chapter-task-answers"][i], chapters[chapter]["chapter-task-prefills"][i], i)
+        i++;
+    }
+
+    html += "</div>";
+
+    return html;
+}
+
+function loadInput(type, answer, prefill, id){
+    let html = "";
+
+    prefill = prefill === "" ? answer.replace(/\S/gi, '*') : prefill;
+
+    if(type === "text") {
+        html +=
+            "<form class='input-form'>" +
+            "<input type='text' class='input' id='input-" + id + "' placeholder='" + prefill + "'>" +
+            "<input type='button' class='button' id='hint' value='Hint' onclick=''>" +
+            "<input type='button' class='button' id='submit' value='Submit' onclick=''>" +
+            "</form>"
+    }
+
+    return html;
+}
+
