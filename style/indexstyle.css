@@ -52,11 +52,13 @@
 .cococoding .slide-content{
     margin: 0 40px;
     overflow: hidden;
+    padding: 10px;
 }
 
 .cococoding .square {
     border-radius: 25px;
     background-color: #ecf8ff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .image-content,
@@ -79,8 +81,8 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(215, 183, 255, 0.7);
-    border-radius: 25px 25px 0 25px;
+    background-color: rgb(219, 242, 255);
+    border-radius: 25px 25px 0 0;
 }
 .overlay::before,
 .overlay::after{
@@ -93,7 +95,6 @@
     background-color: rgba(215, 183, 255, 0.7);
 }
 .cococoding .overlay::after{
-    border-radius: 0 25px 0 0;
     background-color: #ecf8ff;
 }
 
@@ -102,7 +103,7 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background-color: #ecf8ff;
+    background-color: #ffffff;
     padding: 3px;
 }
 .cococoding .card-image .card-img{
