@@ -27,16 +27,16 @@
     },
     "chapter-2": {
       "chapter-title": "Creating a basic HTML document",
-      "chapter-description": "To get started we first need to create a html document. You can do that by creating a new file and saving it with the extension .html.",
+      "chapter-description": "For a website you need to create a document with the extension .html. This document will contain all the HTML code for your website.",
       "chapter-paragraph-headings": [""],
       "chapter-paragraphs": [""],
       "chapter-paragraph-images": [""],
       "chapter-paragraphs-code-examples": [],
       "chapter-images": [],
-      "chapter-tasks": [],
-      "chapter-task-input-types": [],
-      "chapter-task-prefills": [],
-      "chapter-task-answers": [],
+      "chapter-tasks": ["Task 1"],
+      "chapter-task-input-types": ["code"],
+      "chapter-task-prefills": [""],
+      "chapter-task-answers": [""],
       "chapter-task-hints": []
     }
   }

@@ -23,6 +23,7 @@ function loadChapters(chapters){
         loadChapterBody(chapters, chapter, idx);
         idx++;
     }
+    Prism.highlightAll();
 }
 
 function loadChapterBody(chapters, chapter, idx){
@@ -50,7 +51,7 @@ function loadChapterBody(chapters, chapter, idx){
 function loadTasks(chapters, chapter){
     let html =
         "<div class=\"tasks\">" +
-        "<h4 id='task-heading'>Answer the following questions:</h4>";
+        "<h4 id='task-heading'>Complete the tasks below:</h4>";
 
     let i = 0;
     while(i < chapters[chapter]["chapter-tasks"].length){
@@ -77,6 +78,17 @@ function loadInput(type, answer, prefill, id){
             "<input type='button' class='button' id='hint' value='Hint' onclick=''>" +
             "<input type='button' class='button' id='submit' value='Submit' onclick=''>" +
             "</form>"
+    } else if(type === "code"){
+        html +=
+            "<div class='code-area'>" +
+                "<textarea id='input-code-box' spellcheck='false' oninput='format(this.value);'></textarea>" +
+                "<pre id='outer-code-box'>" +
+                    "<code id='display-code-box' class='language-html line-numbers'>" +
+                    "&lt;div&gt;Hallo&lt;/div&gt;\n" +
+                    "&lt;h1&gt;Was geht&lt;/h1&gt;" +
+                    "</code>" +
+                "</pre>" +
+            "</div>";
     }
 
     return html;
