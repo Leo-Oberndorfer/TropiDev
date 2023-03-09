@@ -35,7 +35,7 @@
       "chapter-images": [],
       "chapter-tasks": ["Task 1"],
       "chapter-task-input-types": ["code"],
-      "chapter-task-prefills": [""],
+      "chapter-task-prefills": ["&lt;html&gt;\n  &lt;div&gt;\n  &lt;/div&gt;\n&lt;/html&gt;"],
       "chapter-task-answers": [""],
       "chapter-task-hints": []
     }

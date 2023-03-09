@@ -156,6 +156,38 @@
     transition: 0.25s;
 }
 
+/* Code input */
+#outer-code-box, #input-code-box, #display-code-box {
+    tab-size: 2;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+#outer-code-box {
+    overflow-y: hidden;
+}
+
+#input-code-box {
+    box-sizing: border-box;
+    width: calc(100% - 75px);
+    font-family: monospace;
+    resize: none;
+    color: transparent;
+    background: transparent;
+    caret-color: white;
+    padding: 0;
+    border: 0;
+    outline: none;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+}
+
+#display-code-box {
+    display: inline-block;
+    max-width: 100%;
+}
+
 /* Animations */
 .slide-out {
     transition: transform 1.5s ease-in;

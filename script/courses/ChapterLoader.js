@@ -23,7 +23,6 @@ function loadChapters(chapters){
         loadChapterBody(chapters, chapter, idx);
         idx++;
     }
-    Prism.highlightAll();
 }
 
 function loadChapterBody(chapters, chapter, idx){
@@ -81,11 +80,10 @@ function loadInput(type, answer, prefill, id){
     } else if(type === "code"){
         html +=
             "<div class='code-area'>" +
-                "<textarea id='input-code-box' spellcheck='false' oninput='format(this.value);'></textarea>" +
                 "<pre id='outer-code-box'>" +
+                "<textarea oninput='format(this.value)' onkeydown='checkTab(event)' id='input-code-box' spellcheck='false'>" + prefill + "</textarea>" +
                     "<code id='display-code-box' class='language-html line-numbers'>" +
-                    "&lt;div&gt;Hallo&lt;/div&gt;\n" +
-                    "&lt;h1&gt;Was geht&lt;/h1&gt;" +
+                    prefill +
                     "</code>" +
                 "</pre>" +
             "</div>";
