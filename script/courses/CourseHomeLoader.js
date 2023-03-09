@@ -23,7 +23,8 @@ function setHomeAppearance(course){
                     calculateUserProgress(courseInfo);
                     loadChapters(courseChapters);
                     setButton();
-                    setStyle(courseInfo);
+                    loadStyle(courseInfo);
+                    loadCodeInputs();
                 });
             } else {
                 courseNotFound();
@@ -39,10 +40,16 @@ function courseNotFound(){
     console.log("File not found, enter a valid course.");
 }
 
-function setStyle(data){
+function loadStyle(data){
     getElement("course-body-wrapper").style.backgroundColor = data["bg-color"];
     getElement("course-start-btn").style.backgroundColor = data["btn-color"];
     getElement("course-heading-icon").src = `assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
+}
+
+function loadCodeInputs(){
+    Prism.highlightAll();
+    reloadLineNumbers();
+    growBoxes();
 }
 
 function setDifficulty(){
@@ -51,11 +58,11 @@ function setDifficulty(){
 }
 
 function setButton(){
-    getElement("course-start-btn").innerHTML = "Start learning"; //TODO: Calculate this
+    getElement("course-start-btn").innerHTML = "Start learning"; //Calculate this
 }
 
 function calculateUserProgress(data){
-    let progress = 0; //TODO: Calculate this - Progress
+    let progress = 0; //Calculate this - Progress
     getElement("user-progress").innerHTML = progress.toString();
     getElement("progress-bar").style.cssText = `width: ${progress}%; background-color: ${data["btn-color"]};`;
 }
