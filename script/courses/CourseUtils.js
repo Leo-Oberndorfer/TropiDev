@@ -21,9 +21,9 @@ function getCourse(){
 
 function format(text) {
     let codeBox = document.querySelector("#display-code-box");
-    growBoxes();
+    growBox();
 
-    if(text[text.length-1] === "\n") {
+    if(text[text.length-1] === "\n" ||text[text.length-1] === "\t" ||text[text.length-1] === " "){
         text += "‎";
     }
     codeBox.innerHTML = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -37,31 +37,31 @@ function reloadLineNumbers(){
     }
 }
 
-function growBoxes() {
-    let element = document.querySelector("#input-code-box");
+function growBox() {
+    let codeBox = document.querySelector("#input-code-box");
     let ln = document.querySelector(".line-numbers-rows");
-    let height = element.scrollHeight;
+    let height = codeBox.scrollHeight;
     if(height === 0) {
         for (let line of ln.children) {
             height += 24;
         }
     }
-    element.style.height = (height + 4)+"px";
+    codeBox.style.height = height +"px";
 }
 
 function checkTab(event) {
     let element = document.querySelector("#input-code-box");
     let code = element.value;
+    let before_tab = code.slice(0, element.selectionStart); // text before input
+    let after_tab = code.slice(element.selectionEnd, element.value.length); // text after input
     if(event.key === "Tab") {
         /* Tab key pressed */
         event.preventDefault(); // stop normal
-        let before_tab = code.slice(0, element.selectionStart); // text before tab
-        let after_tab = code.slice(element.selectionEnd, element.value.length); // text after tab
         let cursor_pos = element.selectionEnd + 1; // where cursor moves after tab - moving forward by 1 char to after tab
         element.value = before_tab + "\t" + after_tab; // add tab char
         // move cursor
         element.selectionStart = cursor_pos;
         element.selectionEnd = cursor_pos;
-        format(element.value); // Update text to include indent
+        format(element.value);
     }
 }

@@ -49,7 +49,7 @@ function loadStyle(data){
 function loadCodeInputs(){
     Prism.highlightAll();
     reloadLineNumbers();
-    growBoxes();
+    growBox();
 }
 
 function setDifficulty(){

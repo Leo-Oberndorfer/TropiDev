@@ -158,18 +158,20 @@
 
 /* Code input */
 #outer-code-box, #input-code-box, #display-code-box {
-    tab-size: 2;
+    /* border: 1px solid red; */
+    tab-size: 3;
     white-space: pre-wrap;
     word-break: break-word;
 }
 
 #outer-code-box {
+    padding: 16px 18px 16px 62px;
     overflow-y: hidden;
 }
 
 #input-code-box {
     box-sizing: border-box;
-    width: calc(100% - 75px);
+    width: calc(100% - 80px);
     font-family: monospace;
     resize: none;
     color: transparent;

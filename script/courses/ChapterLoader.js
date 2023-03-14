@@ -82,7 +82,7 @@ function loadInput(type, answer, prefill, id){
             "<div class='code-area'>" +
                 "<pre id='outer-code-box'>" +
                 "<textarea oninput='format(this.value)' onkeydown='checkTab(event)' id='input-code-box' spellcheck='false'>" + prefill + "</textarea>" +
-                    "<code id='display-code-box' class='language-html line-numbers'>" +
+                    "<code id='display-code-box' class='language-" + selectedCourseLower + " line-numbers'>" +
                     prefill +
                     "</code>" +
                 "</pre>" +
