@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "dependencies": {
     "jquery": "^3.6.3",
-    "sqlite3": "^5.1.4"
+    "sqlite3": "^5.1.5"
   }
 }
