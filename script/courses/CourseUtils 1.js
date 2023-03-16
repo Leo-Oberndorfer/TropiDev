@@ -1,7 +1,11 @@
 function loadCourse(){
     let course = getCourse();
-    if(course != null) setHomeAppearance(course); return;
-    courseNotFound();
+
+    if(course != null){
+        setHomeAppearance(course);
+    } else {
+        courseNotFound();
+    }
 }
 
 function getCourse(){
@@ -15,17 +19,11 @@ function getCourse(){
     }
 }
 
-function loadCodeInputs(){
-    Prism.highlightAll();
-    growBox();
-    reloadLineNumbers();
-}
-
 function format(text) {
     let codeBox = document.querySelector("#display-code-box");
     growBox();
 
-    if(text[text.length-1] === "\n" ||text[text.length-1] === "\t" ||text[text.length-1] === " "){
+    if(text[text.length-1] === "\n" || text[text.length-1 === " "]) {
         text += "‎";
     }
     codeBox.innerHTML = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -49,6 +47,7 @@ function growBox() {
         }
     }
     codeBox.style.height = height +"px";
+    console.log("Height: " + height);
 }
 
 function checkTab(event) {
@@ -64,6 +63,10 @@ function checkTab(event) {
         // move cursor
         element.selectionStart = cursor_pos;
         element.selectionEnd = cursor_pos;
+    }
+    if(before_tab[before_tab.length-1] !== "\n" && before_tab[before_tab.length-1] !== "\t" && before_tab[before_tab.length-1] !== " " && before_tab[before_tab.length-1] !== "‎"){
         format(element.value);
+    }
+}    format(element.value);
     }
 }

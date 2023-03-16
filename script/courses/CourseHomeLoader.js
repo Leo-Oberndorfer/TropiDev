@@ -24,7 +24,6 @@ function setHomeAppearance(course){
                     loadChapters(courseChapters);
                     setButton();
                     loadStyle(courseInfo);
-                    loadCodeInputs();
                 });
             } else {
                 courseNotFound();
@@ -44,12 +43,6 @@ function loadStyle(data){
     getElement("course-body-wrapper").style.backgroundColor = data["bg-color"];
     getElement("course-start-btn").style.backgroundColor = data["btn-color"];
     getElement("course-heading-icon").src = `assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
-}
-
-function loadCodeInputs(){
-    Prism.highlightAll();
-    reloadLineNumbers();
-    growBox();
 }
 
 function setDifficulty(){
