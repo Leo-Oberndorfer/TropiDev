@@ -84,19 +84,6 @@
     background-color: rgb(219, 242, 255);
     border-radius: 25px 25px 0 0;
 }
-.overlay::before,
-.overlay::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(215, 183, 255, 0.7);
-}
-.cococoding .overlay::after{
-    background-color: #ecf8ff;
-}
 
 .cococoding .card-image{
     position: relative;
@@ -108,7 +95,7 @@
 }
 .cococoding .card-image .card-img{
     height: 100%;
-    wight: 100%;
+    width: 100%;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid rgb(35, 13, 52);
@@ -117,27 +104,17 @@
 .cococoding .name{
     font-size: 2rem;
     font-weight: 500;
+    text-align: center;
 }
 
 .cococoding .description{
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     padding: 10px;
+    height: 100%;
 }
-
-.cococoding .button{
-    border: none;
-    font-size: 18px;
-    color: white;
-    padding: 8px 16px;
-    background-color: #262626;
-    border-radius: 20px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.cococoding .button:hover{
-    background: #363636;
+.swiper-slide{
+    height: auto !important;
 }
 
 .cococoding .swiper-navBtn{
