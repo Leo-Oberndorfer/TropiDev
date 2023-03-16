@@ -28,6 +28,6 @@ Home-, Leaderboard-, Kurs-, Profil- und Coconut Coding Seite
 Bei den Kursen, Erstellung und Auswertung von Challenges, für Login / Register und Anzeige des Leaderboards
 
 ## Ziele
-Bis zum Ende des Wintersemesters möchten wir auf jeden Fall die Homepage und die Kursseite bezüglich html und css vervollständigt haben.
+Bis zum Ende des Wintersemesters möchten wir auf jeden Fall die Homepage und die Start-Kursseite bezüglich html und css vervollständigt haben.
 
-Bis Ende Juni 2023 sollte die Website dann einen HTML & CSS- aber auch einen C#-Kurs anbieten. Außerdem möchten wir es bis dahin schaffen, dass man durch die Teilnahme an Challenges Punkte bekommt, die dann im Profil eingesehen werden können. Die 10 Leute mit den meisten Punkten sollen dann auch am Leaderboard angezeigt werden.
+Später sollte die Website dann einen HTML & CSS- aber auch einen C#-Kurs anbieten. Außerdem möchten wir es bis dahin schaffen, dass man durch die Teilnahme an Challenges Punkte bekommt, die dann im Profil eingesehen werden können. Die 10 Leute mit den meisten Punkten sollen dann auch am Leaderboard angezeigt werden.
