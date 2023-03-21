@@ -6,7 +6,18 @@
     margin-top: 20px;
     margin-right: 35px;
 }
-
+/* Challenge Info */
+.challenge-info{
+    display: flex;
+}
+.challenge-info .image{
+    float:right;
+    padding-left: 300px;
+    height: 300px;
+}
+.challenge-info .info-text{
+    padding-bottom: 125px;
+}
 
 /* Challenge section */
 .challenge-overview {
@@ -22,10 +33,6 @@
 .challenge-overview h2{
     margin: 10px;
     font-weight: 700;
-}
-
-.challenge-overview img{
-    height: 50%;
 }
 
 .challenge-overview .card .btn{
