@@ -34,10 +34,9 @@ table td th {
 
 .username {
     text-align: left;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
-.rank{
-    font-size: 30px;
-    margin-bottom: 20px;
+.level{
+    text-align: right;
 }
