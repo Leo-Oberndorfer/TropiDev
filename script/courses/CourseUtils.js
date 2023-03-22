@@ -55,12 +55,12 @@ function growBox() {
 }
 
 function handelKeyPress(event, ref){
-    appendTabs(event);
     matchBrackets(event, ref);
+    formatLines(event);
     format(ref.value);
 }
 
-function appendTabs(event) {
+function formatLines(event) {
     const textarea = document.querySelector("#input-code-box");
     const cursorPos = textarea.selectionStart;
     const beforeCursor = textarea.value.slice(0, cursorPos);
@@ -72,26 +72,23 @@ function appendTabs(event) {
         textarea.value = beforeCursor + "\t" + afterCursor;
         textarea.selectionStart = cursor_pos;
         textarea.selectionEnd = cursor_pos;
-        format(textarea.value);
     }
 
     if (event.key === 'Enter') {
         const match = beforeCursor.match(/[([{>]\s*$/g);
-        const prevLine = beforeCursor.slice(0, match.index).split('\n').pop();
+        const prevLine = beforeCursor.split('\n').pop();
         const tabs = prevLine.match(/^\t*/)[0];
-        if (match && afterCursor.match(/^\s*[)\]}]/g)) {
-            const newLine = '\n' + tabs + '\t';
-
-            const afterTabs = afterCursor.replace(/^\s*/, '');
-            const newContent = beforeCursor + newLine + '\n' + tabs + afterTabs;
-            // update the value of the textarea with the new content
-            textarea.value = newContent;
-            // set the cursor position after the tabs
-            textarea.selectionStart = cursorPos + newLine.length;
-            textarea.selectionEnd = cursorPos + newLine.length;
-            // prevent the default behavior of the keydown event
-            event.preventDefault();
+        let newLine = '\n' + tabs;
+        let newFollowing = afterCursor;
+        if (match && afterCursor.match(/^\s*[)\]}]/g)){
+            newLine += '\t';
+            newFollowing = '\n' + tabs + afterCursor.replace(/^\s*/, '');
         }
+        const newContent = beforeCursor + newLine + newFollowing;
+        textarea.value = newContent;
+        textarea.selectionStart = cursorPos + newLine.length;
+        textarea.selectionEnd = cursorPos + newLine.length;
+        event.preventDefault();
     }
 }
 
