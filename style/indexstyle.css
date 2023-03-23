@@ -55,12 +55,6 @@
     padding: 10px;
 }
 
-.cococoding .square {
-    border-radius: 5px;
-    background: linear-gradient(180deg, rgb(250, 250, 250) 0%, rgb(250,250,250) 98%, rgb(225, 225, 225) 100%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .image-content,
 .square-content{
     display: flex;
@@ -115,6 +109,9 @@
     height: 100%;
 }
 .swiper-slide{
+    border-radius: 5px;
+    background: linear-gradient(180deg, rgb(250, 250, 250) 0%, rgb(250,250,250) 98%, rgb(225, 225, 225) 100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: auto !important;
 }
 
