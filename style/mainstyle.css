@@ -1,6 +1,6 @@
-.main a {
-    text-decoration: none !important;
+a {
     color: #04a0da;
+    text-decoration: none !important;
 }
 
 .wrapper{
@@ -35,6 +35,7 @@
 }
 
 .boxes div{
+    transition: 0.25s;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
@@ -52,6 +53,13 @@
 
 .boxes p {
     float: left;
+}
+
+.boxes div:hover {
+    cursor: pointer;
+    scale: 105%;
+    transform: rotate(2deg);
+    transition: 0.25s ease-in-out;
 }
 
 /** That fancy purple box we got on every course site */
