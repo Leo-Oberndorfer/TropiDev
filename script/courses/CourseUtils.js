@@ -66,6 +66,7 @@ function formatLines(event) {
     const beforeCursor = textarea.value.slice(0, cursorPos);
     const afterCursor = textarea.value.slice(cursorPos);
 
+
     if(event.key === "Tab") {
         event.preventDefault();
         let cursor_pos = textarea.selectionEnd + 1;
@@ -75,20 +76,24 @@ function formatLines(event) {
     }
 
     if (event.key === 'Enter') {
-        const match = beforeCursor.match(/[([{>]\s*$/g);
-        const prevLine = beforeCursor.split('\n').pop();
-        const tabs = prevLine.match(/^\t*/)[0];
-        let newLine = '\n' + tabs;
-        let newFollowing = afterCursor;
-        if (match && afterCursor.match(/^\s*[)\]}]/g)){
-            newLine += '\t';
-            newFollowing = '\n' + tabs + afterCursor.replace(/^\s*/, '');
+        if(cursorPos === textarea.selectionEnd) {
+            const match = beforeCursor.match(/[([{>]\s*$/g);
+            const prevLine = beforeCursor.split('\n').pop();
+            const tabs = prevLine.match(/^\t*/)[0];
+            let newLine = '\n' + tabs;
+            let newFollowing = afterCursor;
+            if (match && afterCursor.match(/^\s*[)\]}]/g)) {
+                newLine += '\t';
+                newFollowing = '\n' + tabs + afterCursor.replace(/^\s*/, '');
+            }
+            const newContent = beforeCursor + newLine + newFollowing;
+            textarea.value = newContent;
+            textarea.selectionStart = cursorPos + newLine.length;
+            textarea.selectionEnd = cursorPos + newLine.length;
+            event.preventDefault();
+        } else {
+
         }
-        const newContent = beforeCursor + newLine + newFollowing;
-        textarea.value = newContent;
-        textarea.selectionStart = cursorPos + newLine.length;
-        textarea.selectionEnd = cursorPos + newLine.length;
-        event.preventDefault();
     }
 }
 

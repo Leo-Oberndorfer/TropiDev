@@ -12,5 +12,6 @@
     <orderEntry type="library" name="parallax" level="application" />
     <orderEntry type="library" name="vue" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="swiper" level="application" />
   </component>
 </module>

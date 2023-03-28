@@ -1,5 +1,5 @@
 # Developer Island
-Vorschau: http://167.172.187.0/DeveloperIsland - Alle 60s aktuallisiert
+Vorschau: http://10.9.10.25/DeveloperIsland - Alle 60s aktuallisiert
 
 Eine Website für unser WMC Projekt. Mit der Website für Developer Island möchten wir anderen Leuten das Programmieren näher bringen und sie für absolvierte Kurse oder der Teilnahme an Challenges belohnen.
 <br>Außerdem möchten wir zeigen, wie lustig und interessant das Entwickeln von Anwendungen sein kann und dass der Kreativität keine Grenzen gesetzt sind.
@@ -8,9 +8,8 @@ Eine Website für unser WMC Projekt. Mit der Website für Developer Island möch
 Wo unsere Motivation herkommt? Ganz einfach: Da wir in Programmieren keine Probleme haben und anderen Leuten gerne etwas beibringen, haben wir uns dazu entschieden, unsere Hilfe weltweit für jeden über eine Website anzubieten.
 
 ## Teammitglieder
-* Leo Oberndorfer (Struktur, Inhalt und Dynamik)
-* Lejla Music (Feinheiten, Design und Dynamik)
-* Lisa Wieshofer (Inhalt und Überarbeitungen)
+* Leo Oberndorfer
+* Lisa Wieshofer
 
 ## Inhalt
 ### Features
