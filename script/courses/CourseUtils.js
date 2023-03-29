@@ -62,48 +62,57 @@ function handelKeyPress(event, ref){
 
 function formatLines(event) {
     const textarea = document.querySelector("#input-code-box");
-    const cursorPos = textarea.selectionStart;
-    const beforeCursor = textarea.value.slice(0, cursorPos);
-    const afterCursor = textarea.value.slice(cursorPos);
 
+    const selectionStart = textarea.selectionStart;
+    const selectionEnd = textarea.selectionEnd;
+    const beforeCursor = textarea.value.slice(0, selectionStart);
+    const afterCursor = textarea.value.slice(selectionEnd);
 
     if(event.key === "Tab") {
         event.preventDefault();
-        let cursor_pos = textarea.selectionEnd + 1;
-        textarea.value = beforeCursor + "\t" + afterCursor;
-        textarea.selectionStart = cursor_pos;
-        textarea.selectionEnd = cursor_pos;
+        if(selectionStart === selectionEnd) {
+            textarea.value = beforeCursor + "\t" + afterCursor;
+            textarea.selectionStart = selectionEnd + 1;
+            textarea.selectionEnd = selectionEnd + 1;
+        } else {
+            let text = textarea.value;
+            let before = text.substring(0, selectionStart);
+            let selection = text.substring(selectionStart, selectionEnd);
+            let after = text.substring(selectionEnd, text.length);
+            let newSelection = selection.replace(/\n/g, "\n\t");
+            textarea.value = before + "\t" + newSelection + after;
+            textarea.selectionStart = selectionStart;
+            textarea.selectionEnd = selectionEnd + newSelection.length - selection.length + 1;
+        }
     }
 
     if (event.key === 'Enter') {
-        if(cursorPos === textarea.selectionEnd) {
-            const match = beforeCursor.match(/[([{>]\s*$/g);
-            const prevLine = beforeCursor.split('\n').pop();
-            const tabs = prevLine.match(/^\t*/)[0];
-            let newLine = '\n' + tabs;
-            let newFollowing = afterCursor;
-            if (match && afterCursor.match(/^\s*[)\]}]/g)) {
-                newLine += '\t';
-                newFollowing = '\n' + tabs + afterCursor.replace(/^\s*/, '');
-            }
-            const newContent = beforeCursor + newLine + newFollowing;
-            textarea.value = newContent;
-            textarea.selectionStart = cursorPos + newLine.length;
-            textarea.selectionEnd = cursorPos + newLine.length;
-            event.preventDefault();
-        } else {
-
+        const match = beforeCursor.match(/[([{>]\s*$/g);
+        const prevLine = beforeCursor.split('\n').pop();
+        const tabs = prevLine.match(/^\t*/)[0];
+        let newLine = '\n' + tabs;
+        let newFollowing = afterCursor;
+        if (match && afterCursor.match(/^\s*[)\]}]/g)) {
+            newLine += '\t';
+            newFollowing = '\n' + tabs + afterCursor.replace(/^\s*/, '');
         }
+        textarea.value = beforeCursor + newLine + newFollowing;
+        textarea.selectionStart = selectionStart + newLine.length;
+        textarea.selectionEnd = selectionStart + newLine.length;
+        event.preventDefault();
     }
 }
 
 function matchBrackets(event, ref) {
-    const cursorPos = ref.selectionStart;
-    const beforeCursor = ref.value.slice(0, cursorPos);
-    const afterCursor = ref.value.slice(cursorPos);
+    const selectionStart = ref.selectionStart;
+    const selectionEnd = ref.selectionEnd;
+
+    const beforeCursor = ref.value.slice(0, selectionStart);
+    const betweenCursor = ref.value.slice(selectionStart, selectionEnd);
+    const afterCursor = ref.value.slice(selectionEnd);
 
     if (event.key === '(' || event.key === '[' || event.key === '{' || event.key === '<') {
-        ref.value = beforeCursor + event.key + event.key.replace(/[{(\[<]/, function (match) {
+        ref.value = beforeCursor + event.key + betweenCursor + event.key.replace(/[{(\[<]/, function (match) {
             if (match === '(') {
                 return ')';
             } else if (match === '{') {
@@ -114,17 +123,17 @@ function matchBrackets(event, ref) {
                 return '>';
             }
         }) + afterCursor;
-        ref.selectionStart = cursorPos + 1;
-        ref.selectionEnd = cursorPos + 1;
+        ref.selectionStart = selectionEnd + 1;
+        ref.selectionEnd = selectionEnd + 1;
         event.preventDefault();
     }
 
     if(event.key === 'Backspace'){
         if(beforeCursor[beforeCursor.length-1] === '(' || beforeCursor[beforeCursor.length-1] === '[' || beforeCursor[beforeCursor.length-1] === '{' || beforeCursor[beforeCursor.length-1] === '<') {
-            if (ref.value[cursorPos] === ')' || ref.value[cursorPos] === ']' || ref.value[cursorPos] === '}' || ref.value[cursorPos] === '>') {
+            if (ref.value[selectionStart] === ')' || ref.value[selectionStart] === ']' || ref.value[selectionStart] === '}' || ref.value[selectionStart] === '>') {
                 ref.value = beforeCursor + afterCursor.slice(1);
-                ref.selectionStart = cursorPos;
-                ref.selectionEnd = cursorPos;
+                ref.selectionStart = selectionStart;
+                ref.selectionEnd = selectionStart;
             }
         }
     }
