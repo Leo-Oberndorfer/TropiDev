@@ -17,8 +17,7 @@
         "A web client is a software or application that requests and displays web content from a web server. It communicates with the web server using HTTP and sends requests for web pages or resources such as images, videos, or scripts. The most common web client is a web browser, such as Google Chrome, Firefox, or Safari, but web clients can also be other software programs or applications that communicate with web servers to retrieve and display web content."
       ],
       "chapter-paragraph-images": ["assets/courses/html/web-server.png" , "assets/courses/html/web-client.png"],
-      "chapter-paragraphs-code-examples": [],
-      "chapter-images": [],
+      "chapter-paragraph-code-examples": [],
       "chapter-tasks": ["What does HTTP stand for?", "Where does a website run on?", "What is the most common web client?"],
       "chapter-task-input-types": ["text", "text", "text"],
       "chapter-task-prefills": ["", "", ""],
@@ -27,15 +26,15 @@
     },
     "chapter-2": {
       "chapter-title": "Creating a basic HTML document",
-      "chapter-description": "For a website you need to create a document with the extension .html. This document will contain all the HTML code for your website.",
-      "chapter-paragraph-headings": [""],
-      "chapter-paragraphs": [""],
-      "chapter-paragraph-images": [""],
-      "chapter-paragraphs-code-examples": [],
-      "chapter-images": [],
-      "chapter-tasks": ["Task 1"],
+      "chapter-description": "For a website you need to create a document with the .html extension. This document will contain all the HTML code for your website. The main document is usually called index.html. You can create this document in any text editor or IDE (e.g. Notepad, Sublime Text, Visual Studio Code, WebStorm, etc.).",
+      "chapter-paragraph-headings": ["Inside the document", ""],
+      "chapter-paragraphs": ["Since HTML 5, every html file should start with &lt;!DOCTYPE html&gt;. This tells the browser to expect an html document. After that the &lt;html&gt; tag follows. This tag tells the browser that the content inside is HTML code. Inside the &lt;html&gt; tag you will find the &lt;head&gt; and &lt;body&gt; tags. The &lt;head&gt; tag contains information about the document, such as the title of the document. The &lt;body&gt; tag contains the content of the document, such as text, images, links, etc.<br><br><b>IMPORTANT:</b> Almost every opening tag should have a closing tag. For example, &lt;html&gt; has a closing tag &lt;/html&gt;.",
+        "<br>Here is an example of a basic HTML document:"],
+      "chapter-paragraph-images": [],
+      "chapter-paragraph-code-examples": ["", "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n\t&lt;title&gt;Learning HTML&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n\t&lt;h1&gt;Hello World&lt;/h1&gt;\n&lt;/body&gt;\n&lt;/html&gt;"],
+      "chapter-tasks": ["Use the editor below to create a basic html document containing a title and a h1 heading"],
       "chapter-task-input-types": ["code"],
-      "chapter-task-prefills": ["&lt;html&gt;\n\t&lt;div&gt;\n\t&lt;/div&gt;\n&lt;/html&gt;"],
+      "chapter-task-prefills": ["&lt;!DOCTYPE html&gt;"],
       "chapter-task-answers": [""],
       "chapter-task-hints": []
     }

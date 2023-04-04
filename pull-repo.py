@@ -1,6 +1,6 @@
 import time, os
 
-path = "/var/www"
+path = "/var/www/html"
 
 os.chdir(path)
 

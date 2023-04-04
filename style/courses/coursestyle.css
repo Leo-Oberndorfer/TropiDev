@@ -135,22 +135,22 @@
     max-width: 125px;
 }
 
-.input-form #hint {
-    border: 1px solid var(--hint-color);
+.input-form .hint {
+    border: 1px solid var(--hint-color) !important;
     color: var(--hint-color);
 }
 
-.input-form #hint:hover {
+.input-form .hint:hover {
     background-color: var(--hint-color);
     color: var(--bs-card-bg);
     transition: 0.25s;
 }
 
-.input-form #submit {
-    border: 1px solid var(--submit-color);
+.input-form .submit {
+    border: 1px solid var(--submit-color) !important;
     color: var(--submit-color);
 }
-.input-form #submit:hover {
+.input-form .submit:hover {
     background-color: var(--submit-color);
     color: var(--bs-card-bg);
     transition: 0.25s;
