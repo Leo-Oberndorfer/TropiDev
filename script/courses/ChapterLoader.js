@@ -45,7 +45,7 @@ function loadChapterBody(chapters, chapter, idx){
         chapterBody.innerHTML +=
             (heading !== "" ? "<h4>" + headings[i] + "</h4>" : "") +
             "<p>" + img + paragraph + "</p>" +
-            ((codeExample !== undefined && codeExample !== "") ? "<pre><code class='language-" + selectedCourseLower + " line-numbers'>" + codeExample + "</code></pre>" : "")
+            ((codeExample !== undefined && codeExample !== "") ? "<pre data-src=" + codeExample + " class='line-numbers'></pre>" : "")
         ;
         i++;
     }

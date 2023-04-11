@@ -31,7 +31,7 @@
       "chapter-paragraphs": ["Since HTML 5, every html file should start with &lt;!DOCTYPE html&gt;. This tells the browser to expect an html document. After that the &lt;html&gt; tag follows. This tag tells the browser that the content inside is HTML code. Inside the &lt;html&gt; tag you will find the &lt;head&gt; and &lt;body&gt; tags. The &lt;head&gt; tag contains information about the document, such as the title of the document. The &lt;body&gt; tag contains the content of the document, such as text, images, links, etc.<br><br><b>IMPORTANT:</b> Almost every opening tag should have a closing tag. For example, &lt;html&gt; has a closing tag &lt;/html&gt;.",
         "<br>Here is an example of a basic HTML document:"],
       "chapter-paragraph-images": [],
-      "chapter-paragraph-code-examples": ["", "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n\t&lt;title&gt;Learning HTML&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n\t&lt;h1&gt;Hello World&lt;/h1&gt;\n&lt;/body&gt;\n&lt;/html&gt;"],
+      "chapter-paragraph-code-examples": ["", "assets/courses/html/code-snippets/HTMLDoc.html"],
       "chapter-tasks": ["Use the editor below to create a basic html document containing a title and a h1 heading"],
       "chapter-task-input-types": ["code"],
       "chapter-task-prefills": ["&lt;!DOCTYPE html&gt;"],
