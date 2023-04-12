@@ -97,6 +97,10 @@
     margin-top: 25px;
 }
 
+.accordion-body p{
+    margin-bottom: 10px !important;
+}
+
 #course-start-btn:hover {
     opacity: 0.65;
 }
@@ -114,8 +118,15 @@
 }
 
 .input-form {
-    justify-content: space-between;
     gap: 10px;
+}
+
+.text-input-form {
+    justify-content: space-between;
+}
+
+.code-input-form {
+    justify-content: end;
 }
 
 .input-form input {

@@ -9,7 +9,6 @@ while True:
     if not os.path.exists(f"{path}/DeveloperIsland"):
         os.system("git clone https://github.com/Leo-Oberndorfer/DeveloperIsland")
     else:
-        os.mkdir(f"{path}/DeveloperIsland")
         os.chdir(f"{path}/DeveloperIsland")
         os.system("git pull origin main")
     time.sleep(60)

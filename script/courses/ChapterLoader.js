@@ -77,10 +77,10 @@ function loadInput(type, answer, prefill, id){
 
     if(type === "text") {
         html +=
-            "<form class='flex input-form'>" +
-            "<input type='text' class='input' id='input-" + id + "' placeholder='" + prefill + "'>" +
-            "<input type='button' class='button hint' id='hint-" + id + "' value='Hint' onclick=''>" +
-            "<input type='button' class='button submit' id='submit-" + id + "' value='Submit' onclick=''>" +
+            "<form class='flex input-form text-input-form'>" +
+                "<input type='text' class='input' id='input-" + id + "' placeholder='" + prefill + "'>" +
+                "<input type='button' class='button hint' id='hint-" + id + "' value='Hint' onclick=''>" +
+                "<input type='button' class='button submit' id='submit-" + id + "' value='Submit' onclick=''>" +
             "</form>"
     } else if(type === "code"){
         html +=
@@ -91,7 +91,7 @@ function loadInput(type, answer, prefill, id){
                     prefill +
                     "</code>" +
                 "</pre>" +
-                "<form class='flex input-form'>" +
+                "<form class='flex input-form code-input-form'>" +
                     "<input type='button' class='button hint' id='hint-" + id + "' value='Hint' onclick=''>" +
                     "<input type='button' class='button submit' id='submit-" + id + "' value='Submit' onclick=''>" +
                 "</form>" +

@@ -26,16 +26,17 @@
     },
     "chapter-2": {
       "chapter-title": "Creating a basic HTML document",
-      "chapter-description": "For a website you need to create a document with the .html extension. This document will contain all the HTML code for your website. The main document is usually called index.html. You can create this document in any text editor or IDE (e.g. Notepad, Sublime Text, Visual Studio Code, WebStorm, etc.).",
-      "chapter-paragraph-headings": ["Inside the document", ""],
-      "chapter-paragraphs": ["Since HTML 5, every html file should start with &lt;!DOCTYPE html&gt;. This tells the browser to expect an html document. After that the &lt;html&gt; tag follows. This tag tells the browser that the content inside is HTML code. Inside the &lt;html&gt; tag you will find the &lt;head&gt; and &lt;body&gt; tags. The &lt;head&gt; tag contains information about the document, such as the title of the document. The &lt;body&gt; tag contains the content of the document, such as text, images, links, etc.<br><br><b>IMPORTANT:</b> Almost every opening tag should have a closing tag. For example, &lt;html&gt; has a closing tag &lt;/html&gt;.",
-        "<br>Here is an example of a basic HTML document:"],
+      "chapter-description": "For a website you need to create a document with the .html extension. This document will contain all the HTML code for your website. The main document is usually called <code>index.html</code>. You can create this document in any text editor or IDE (e.g. Notepad, Sublime Text, Visual Studio Code, WebStorm, etc.).",
+      "chapter-paragraph-headings": ["Inside the document", "", ""],
+      "chapter-paragraphs": ["Since HTML 5, every html file should start with <code>&lt;!DOCTYPE html&gt;</code>. This tells the browser to expect an html document. After that the <code>&lt;html&gt;</code> tag follows. This tag tells the browser that the content inside is HTML code. Inside the <code>&lt;html&gt;</code> tag you will find the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags. While the <code>&lt;head&gt;</code> tag contains information about the document, such as the title of the document the <code>&lt;body&gt;</code> tag contains the content of the document, such as text, images, links, etc.",
+        "<b>IMPORTANT:</b> Almost every opening tag should have a closing tag. For example, <code>&lt;html&gt;</code> has the closing tag <code>&lt;/html&gt;</code>.",
+        "Here is an example of a basic HTML document:"],
       "chapter-paragraph-images": [],
-      "chapter-paragraph-code-examples": ["", "assets/courses/html/code-snippets/HTMLDoc.html"],
-      "chapter-tasks": ["Use the editor below to create a basic html document containing a title and a h1 heading"],
-      "chapter-task-input-types": ["code"],
-      "chapter-task-prefills": ["&lt;!DOCTYPE html&gt;"],
-      "chapter-task-answers": [""],
+      "chapter-paragraph-code-examples": ["", "", "assets/courses/html/code-snippets/HTMLDoc.html"],
+      "chapter-tasks": ["Use the editor below to create a basic html document containing a title and a h1 heading", "What's the closing tag for the <code>&lt;p&gt;</code> element?"],
+      "chapter-task-input-types": ["code", "text"],
+      "chapter-task-prefills": ["&lt;!DOCTYPE html&gt;", ""],
+      "chapter-task-answers": ["", "</p>"],
       "chapter-task-hints": []
     }
   }
