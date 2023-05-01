@@ -1,0 +1,22 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    width: 500px;
+}
+
+.login-form .continue{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.login-form .continue > * {
+    flex-grow: 1;
+}
+
+.g-signin2 {
+    width: 100px;
+}

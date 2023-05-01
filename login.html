@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- General stuff -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title and Icon -->
+    <title>Developer Island | Login</title>
+    <link rel="icon" href="assets/icon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style/mainstyle.css">
+    <link rel="stylesheet" href="style/loginstyle.css">
+    <link rel="stylesheet" href="components/footerstyle.css">
+    <link rel="stylesheet" href="components/headerstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="components/ComponentLoader.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+<body>
+<header import="components/header.html"></header>
+<div class="container">
+    <div class="wrapper">
+        <h1>Hello there</h1>
+        <div class="login-container">
+            <form class="login-form" action="http://68.183.209.122:81/api/users" method="get">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Email</label>
+                  <input type="text" id="password" name="email" class="form-control" placeholder="Email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" id="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-group continue">
+                    <input type="submit" class="btn btn-primary" value="Continue">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer import="components/footer.html"></footer>
+</body>
+<script>
+    loadComponents();
+</script>
+</html>
