@@ -39,7 +39,7 @@ header {
     text-align: center;
 }
 
-.navbar-nav a:hover, .navbar-nav a:focus {
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
     color: white;
 }
 
@@ -48,9 +48,8 @@ header {
     border: 1px solid #200b31;
 }
 
-.navbar .dropdown-item{
+.navbar .dropdown-content{
     color: #cccccc;
-    line-height: 40px;
 }
 
 .navbar .dropdown-item:hover{
@@ -72,14 +71,35 @@ header {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
-.navbar-nav .register {
+.account-buttons .nav-item {
     border-radius: 5px;
     padding: 5px;
     background-color: var(--header-secondary-color);
 }
 
+/* Login and Register form */
+.form-dropdown {
+    border: none !important;
+    transform: translate(-40%);
+    width: 350px;
+}
+
+.form-dropdown .btn {
+    color: white;
+    background-color: #521881;
+}
+
+.form-dropdown .btn:hover {
+    color: white;
+    background-color: #601b98;
+}
+
 @media screen and (max-width: 991px) {
     .navbar-nav .nav-item {
+        width: 100%;
+    }
+    .form-dropdown {
+        transform: none;
         width: 100%;
     }
 }

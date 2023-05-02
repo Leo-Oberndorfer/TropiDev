@@ -14,9 +14,9 @@
                             Courses
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="courses.html?course=cs">C#</a></li>
-                            <li><a class="dropdown-item" href="courses.html?course=html">HTML</a></li>
-                            <li><a class="dropdown-item" href="courses.html?course=css">CSS</a></li>
+                            <li><a class="dropdown-item dropdown-content" href="courses.html?course=cs">C#</a></li>
+                            <li><a class="dropdown-item dropdown-content" href="courses.html?course=html">HTML</a></li>
+                            <li><a class="dropdown-item dropdown-content" href="courses.html?course=css">CSS</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -28,13 +28,39 @@
                         <a class="nav-link" href="leaderboard.html">Leaderboard</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav mb-2 mb-lg-0 flex-row">
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                <ul class="navbar-nav account-buttons mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Login</a>
+                        <form class="dropdown-menu form-dropdown p-4" method="get" action="http://68.183.209.122:81/api/users">
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label dropdown-content">Email address</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="email@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="passwordInput" class="form-label dropdown-content">Password</label>
+                                <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="btn">Sign in</button>
+                        </form>
                     </li>
-                    <!--<li class="nav-item register">
-                        <a class="nav-link" href="portal/login.html?redirect=register">Register</a>
-                    </li>-->
+                    <li class="nav-item register dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Register</a>
+                        <form class="dropdown-menu form-dropdown p-4" method="post" action="http://68.183.209.122:81/api/users">
+                            <div class="mb-3">
+                                <label for="usernameInput" class="form-label dropdown-content">Username</label>
+                                <input type="text" class="form-control" id="usernameInput" placeholder="Username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label dropdown-content">Email address</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="email@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="passwordInput" class="form-label dropdown-content">Password</label>
+                                <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="btn">Sign up</button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>
