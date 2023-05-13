@@ -1,68 +1,79 @@
-<div class="container">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/header/logo.png" height="65" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Courses
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item dropdown-content" href="courses.html?course=cs">C#</a></li>
-                            <li><a class="dropdown-item dropdown-content" href="courses.html?course=html">HTML</a></li>
-                            <li><a class="dropdown-item dropdown-content" href="courses.html?course=css">CSS</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <!-- Maybe change this -->
-                        <a class="nav-link" href="coconut_coding.html">Coconut Coding</a>
-                    </li>
+<div class="header-navbar">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/header/logo.png" height="65" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item dropdown-content" href="courses.html?course=cs">C#</a></li>
+                                <li><a class="dropdown-item dropdown-content" href="courses.html?course=html">HTML</a></li>
+                                <li><a class="dropdown-item dropdown-content" href="courses.html?course=css">CSS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Maybe change this -->
+                            <a class="nav-link" href="coconut_coding.html">Coconut Coding</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="leaderboard.html">Leaderboard</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav account-buttons mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Login</a>
-                        <form class="dropdown-menu form-dropdown p-4" method="get" action="http://68.183.209.122:81/api/users">
-                            <div class="mb-3">
-                                <label for="emailInput" class="form-label dropdown-content">Email address</label>
-                                <input type="email" class="form-control" id="emailInput" placeholder="email@example.com" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="passwordInput" class="form-label dropdown-content">Password</label>
-                                <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
-                            </div>
-                            <button type="submit" class="btn">Sign in</button>
-                        </form>
-                    </li>
-                    <li class="nav-item register dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Register</a>
-                        <form class="dropdown-menu form-dropdown p-4" method="post" action="http://68.183.209.122:81/api/users">
-                            <div class="mb-3">
-                                <label for="usernameInput" class="form-label dropdown-content">Username</label>
-                                <input type="text" class="form-control" id="usernameInput" placeholder="Username" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="emailInput" class="form-label dropdown-content">Email address</label>
-                                <input type="email" class="form-control" id="emailInput" placeholder="email@example.com" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="passwordInput" class="form-label dropdown-content">Password</label>
-                                <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
-                            </div>
-                            <button type="submit" class="btn">Sign up</button>
-                        </form>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav account-buttons mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Login</a>
+                            <form class="dropdown-menu form-dropdown p-4" method="get" action="http://68.183.209.122:81/api/users">
+                                <div class="mb-3">
+                                    <label for="emailInput" class="form-label dropdown-content">Email address</label>
+                                    <input type="email" class="form-control" id="emailInput" placeholder="email@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="passwordInput" class="form-label dropdown-content">Password</label>
+                                    <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
+                                </div>
+                                <button type="submit" class="btn">Sign in</button>
+                            </form>
+                        </li>
+                        <li class="nav-item register dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Register</a>
+                            <form class="dropdown-menu form-dropdown p-4" method="post" action="http://68.183.209.122:81/api/users">
+                                <div class="mb-3">
+                                    <label for="username" class="form-label dropdown-content">Username</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label dropdown-content">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label dropdown-content">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="passwordconfirm" class="form-label dropdown-content">Confirm Password</label>
+                                    <input type="password" class="form-control" id="passwordconfirm" placeholder="Confirm Password" required>
+                                </div>
+                                <button type="submit" class="btn">Sign up</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
+</div>
+<div class="header-banner">
+    <div class="container">
+        <p>This website is currently In-Dev. Some things might not work as expected. You can watch the progress <a class="underline" style="color: #ffffff" href="https://github.com/Leo-Oberndorfer/DeveloperIsland">here</a>.</p>
+    </div>
 </div>

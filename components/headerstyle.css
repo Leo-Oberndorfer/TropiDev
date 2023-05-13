@@ -1,14 +1,30 @@
 :root {
     --header-primary-color: #230d34;
     --header-secondary-color: #2a103f;
+    --banner-bg-color: #c53500;
+    --banner-fg-color: #ffffff;
 }
 
 header {
     position: sticky;
     z-index: 10;
     top: 0;
+}
+
+.header-navbar {
     background-color: var(--header-primary-color);
     font-family: "Cascadia Code", sans-serif;
+}
+
+.header-banner {
+    color: var(--banner-fg-color);
+    text-align: center;
+    background-color: var(--banner-bg-color);
+}
+
+.header-banner p {
+    margin: 0;
+    padding: 5px 0;
 }
 
 .container-fluid {

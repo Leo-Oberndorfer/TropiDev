@@ -1,6 +1,13 @@
 a {
-    color: #04a0da;
     text-decoration: none !important;
+}
+
+.hyperlink-formatted, .hyperlink-formatted:hover, .hyperlink-formatted:visited, .hyperlink-formatted:active {
+    color: #04a0da;
+}
+
+.underline {
+    text-decoration: underline !important;
 }
 
 .wrapper{
