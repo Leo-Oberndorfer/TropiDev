@@ -33,6 +33,14 @@ function loadComponents() {
         }
     }
     setTimeout(() => {
-        requestLoginStatus();
-    }, 100);
+        loadPortal();
+    }, 250);
+}
+
+function loadPortal(){
+    const userToken = getToken();
+    setPortalType(userToken);
+    if(!IsLoggedIn(userToken)) {
+        registerLoginForm();
+    }
 }

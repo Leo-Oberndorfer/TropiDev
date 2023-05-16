@@ -1,35 +1,61 @@
-function getUserFromToken(){
-    let result = null;
-    console.log(document.cookie);
-    if(document.cookie === "") return result;
-    const token = document.cookie.split(';').find(cookie => cookie.includes('token')).split('=')[1];
-    console.log(token);
+function getUserByToken(token){
+    if(token === "") return null;
 
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
-            let response = JSON.parse(xhr.responseText);
-            if (response) {
-                console.log(response);
-                result = response;
+            let response = xhr.responseText;
+            if (response !== "User not found!") {
+                return JSON.parse(response);
+            } else {
+                return null;
             }
         }
     }
-    xhr.open('GET', 'http://68.183.209.122:81/api/users', true);
+    xhr.open('POST', 'http://68.183.209.122:81/api/users/token', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({token}));
-    if(result === null){
-        setTimeout(() => {
-            return result;
-        }, 100);
-    }
-    return result;
 }
 
-function requestLoginStatus(){
+function getToken(){
+    return document.cookie !== "" ? document.cookie.split(';').find(cookie => cookie.includes('token')).split('=')[1] : "";
+}
+
+function registerLoginForm(){
+    const loginForm = document.getElementById('login-form');
+    loginForm.onsubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData(loginForm);
+        const body = JSON.stringify(Object.fromEntries(formData.entries()));
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                let response = xhr.responseText;
+                if (response !== "User not found!") {
+                    handleResponse(JSON.parse(response));
+                }
+            }
+        }
+        xhr.open('POST', 'http://68.183.209.122:81/api/users/credentials', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(body);
+    };
+}
+
+function handleResponse(response){
+    document.cookie = `token=${response.id}`;
+    setPortalType(response.id);
+}
+
+function IsLoggedIn(token){
+    return getUserByToken(token) !== null;
+}
+
+function setPortalType(token){
     const portalTemplate = document.getElementById('portalTemplate');
     const portal = document.getElementById('portal');
 
-    if (getUserFromToken() !== null) {
+    if (IsLoggedIn(token)) {
         portal.replaceChild(portalTemplate.content.getElementById("loggedIn").cloneNode(true), portal.childNodes[0]);
     } else {
         portal.replaceChild(portalTemplate.content.getElementById("loggedOut").cloneNode(true), portal.childNodes[0]);
