@@ -1,3 +1,53 @@
+<template id="portalTemplate">
+    <ul id="loggedOut" class="navbar-nav account-buttons mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Login</a>
+            <form id="login-form" class="dropdown-menu form-dropdown p-4" action="http://68.183.209.122:81/api/users" method="POST">
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label dropdown-content">Email address</label>
+                    <input type="email" name="email" class="form-control" id="emailInput" placeholder="email@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label dropdown-content">Password</label>
+                    <input type="password" name="password" class="form-control" id="passwordInput" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Sign in</button>
+            </form>
+        </li>
+        <li class="nav-item register dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Register</a>
+            <form id="register-form" class="dropdown-menu form-dropdown p-4">
+                <div class="mb-3">
+                    <label for="username" class="form-label dropdown-content">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label dropdown-content">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label dropdown-content">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordconfirm" class="form-label dropdown-content">Confirm Password</label>
+                    <input type="password" class="form-control" id="passwordconfirm" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn">Sign up</button>
+            </form>
+        </li>
+    </ul>
+    <ul id="loggedIn" class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Account</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-content" href="profile.html">Profile</a></li>
+                <li><a class="dropdown-item dropdown-content" href="settings.html">Settings</a></li>
+                <li><a class="dropdown-item dropdown-content" href="logout.html">Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</template>
 <div class="header-navbar">
     <div class="container">
         <nav class="navbar navbar-expand-lg">
@@ -29,44 +79,7 @@
                             <a class="nav-link" href="leaderboard.html">Leaderboard</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav account-buttons mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Login</a>
-                            <form class="dropdown-menu form-dropdown p-4" method="get" action="http://68.183.209.122:81/api/users">
-                                <div class="mb-3">
-                                    <label for="emailInput" class="form-label dropdown-content">Email address</label>
-                                    <input type="email" class="form-control" id="emailInput" placeholder="email@example.com" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="passwordInput" class="form-label dropdown-content">Password</label>
-                                    <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
-                                </div>
-                                <button type="submit" class="btn">Sign in</button>
-                            </form>
-                        </li>
-                        <li class="nav-item register dropdown">
-                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Register</a>
-                            <form class="dropdown-menu form-dropdown p-4" method="post" action="http://68.183.209.122:81/api/users">
-                                <div class="mb-3">
-                                    <label for="username" class="form-label dropdown-content">Username</label>
-                                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label dropdown-content">Email address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label dropdown-content">Password</label>
-                                    <input type="password" class="form-control" id="password" placeholder="Password" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="passwordconfirm" class="form-label dropdown-content">Confirm Password</label>
-                                    <input type="password" class="form-control" id="passwordconfirm" placeholder="Confirm Password" required>
-                                </div>
-                                <button type="submit" class="btn">Sign up</button>
-                            </form>
-                        </li>
-                    </ul>
+                    <div id="portal"><p style="color: white; margin: 0">N/A</p></div>
                 </div>
             </div>
         </nav>

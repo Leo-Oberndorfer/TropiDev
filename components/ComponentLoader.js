@@ -29,7 +29,10 @@ function loadComponents() {
             xhttp.open("GET", file, true);
             xhttp.send();
             /* Exit the function: */
-            return;
+            break;
         }
     }
+    setTimeout(() => {
+        requestLoginStatus();
+    }, 100);
 }
