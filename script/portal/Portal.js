@@ -35,7 +35,11 @@ function registerLoginForm(){
                     handleResponse(JSON.parse(token));
                 });
             } else {
-                alert("Invalid credentials!");
+                getElement("invalid-password").classList.remove("hidden");
+                const pwinput = getElement("passwordInput");
+                pwinput.value = "";
+                pwinput.focus();
+                pwinput.style.outline = "3px solid red";
             }
         });
     };
@@ -43,7 +47,6 @@ function registerLoginForm(){
 
 function logOut(){
     document.cookie = "token=";
-    setPortalType("");
 }
 
 function handleResponse(response){
