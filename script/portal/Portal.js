@@ -1,7 +1,18 @@
-function getUserByToken(token){
-    if(token === "") return null;
+async function getUserByToken(token){
+    if(token === "") throw new Error("No token set!");
 
-    const xhr = new XMLHttpRequest();
+    const response = await fetch('http://68.183.209.122:81/api/users/token', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({token})
+    });
+
+    if(response.status === 200) return await response.json();
+    else throw new Error("User not found!");
+
+    /*const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
             let response = xhr.responseText;
@@ -14,7 +25,7 @@ function getUserByToken(token){
     }
     xhr.open('POST', 'http://68.183.209.122:81/api/users/token', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify({token}));
+    xhr.send(JSON.stringify({token}));*/
 }
 
 function getToken(){
@@ -22,25 +33,26 @@ function getToken(){
 }
 
 function registerLoginForm(){
-    const loginForm = document.getElementById('login-form');
+    const loginForm = getElement('login-form');
     loginForm.onsubmit = async (e) => {
         e.preventDefault();
-        const formData = new FormData(loginForm);
-        const body = JSON.stringify(Object.fromEntries(formData.entries()));
-        const xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState === 4) {
-                let response = xhr.responseText;
-                if (response !== "User not found!") {
-                    handleResponse(JSON.parse(response));
-                } else {
-                    alert("Invalid credentials!");
-                }
+        const body = JSON.stringify(Object.fromEntries(new FormData(loginForm).entries()));
+
+        fetch("http://68.183.209.122:81/api/users/credentials", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: body
+        }).then(response => {
+            if (response.ok) {
+                response.text().then(token => {
+                    handleResponse(JSON.parse(token));
+                });
+            } else {
+                alert("Invalid credentials!");
             }
-        }
-        xhr.open('POST', 'http://68.183.209.122:81/api/users/credentials', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(body);
+        });
     };
 }
 
@@ -54,14 +66,16 @@ function handleResponse(response){
     setPortalType(response.id);
 }
 
-function setPortalType(token){
-    const portalTemplate = document.getElementById('portalTemplate');
-    const portal = document.getElementById('portal');
+function setPortalType(token) {
+    const portalTemplate = getElement('portalTemplate');
+    const portal = getElement('portal');
 
-    if (token === "") {
+    getUserByToken(token).then(user => {
+        portal.replaceChild(portalTemplate.content.getElementById("loggedIn").cloneNode(true), portal.childNodes[0]);
+        getElement("username").innerHTML = user.username;
+    }).catch(err => {
+        console.log(err);
         portal.replaceChild(portalTemplate.content.getElementById("loggedOut").cloneNode(true), portal.childNodes[0]);
         registerLoginForm();
-    } else {
-        portal.replaceChild(portalTemplate.content.getElementById("loggedIn").cloneNode(true), portal.childNodes[0]);
-    }
+    });
 }
