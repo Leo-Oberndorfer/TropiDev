@@ -1,31 +1,16 @@
-async function getUserByToken(token){
-    if(token === "") throw new Error("No token set!");
+function getUserByToken(token){
+    if(token === "") return Promise.reject("No token provided!");
 
-    const response = await fetch('http://68.183.209.122:81/api/users/token', {
+    return fetch('http://68.183.209.122:81/api/users/token', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({token})
+    }).then(response => {
+        if(response.ok) return response.json();
+        else throw new Error("User not found!");
     });
-
-    if(response.status === 200) return await response.json();
-    else throw new Error("User not found!");
-
-    /*const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4) {
-            let response = xhr.responseText;
-            if (response !== "User not found!") {
-                return JSON.parse(response);
-            } else {
-                return null;
-            }
-        }
-    }
-    xhr.open('POST', 'http://68.183.209.122:81/api/users/token', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify({token}));*/
 }
 
 function getToken(){
