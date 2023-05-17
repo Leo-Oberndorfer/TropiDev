@@ -33,6 +33,8 @@ function registerLoginForm(){
                 let response = xhr.responseText;
                 if (response !== "User not found!") {
                     handleResponse(JSON.parse(response));
+                } else {
+                    alert("Invalid credentials!");
                 }
             }
         }
@@ -42,22 +44,24 @@ function registerLoginForm(){
     };
 }
 
+function logOut(){
+    document.cookie = "token=";
+    setPortalType("");
+}
+
 function handleResponse(response){
     document.cookie = `token=${response.id}`;
     setPortalType(response.id);
-}
-
-function IsLoggedIn(token){
-    return getUserByToken(token) !== null;
 }
 
 function setPortalType(token){
     const portalTemplate = document.getElementById('portalTemplate');
     const portal = document.getElementById('portal');
 
-    if (IsLoggedIn(token)) {
-        portal.replaceChild(portalTemplate.content.getElementById("loggedIn").cloneNode(true), portal.childNodes[0]);
-    } else {
+    if (token === "") {
         portal.replaceChild(portalTemplate.content.getElementById("loggedOut").cloneNode(true), portal.childNodes[0]);
+        registerLoginForm();
+    } else {
+        portal.replaceChild(portalTemplate.content.getElementById("loggedIn").cloneNode(true), portal.childNodes[0]);
     }
 }

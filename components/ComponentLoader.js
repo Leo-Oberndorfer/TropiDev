@@ -9,7 +9,7 @@ function loadComponents() {
         if (file) {
             /* Make an HTTP request using the attribute value as the file name: */
             xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
+            xhttp.onreadystatechange = function () {
                 if (this.readyState === 4) {
                     if (this.status === 200) {
                         elmnt.innerHTML = this.responseText;
@@ -33,14 +33,6 @@ function loadComponents() {
         }
     }
     setTimeout(() => {
-        loadPortal();
+        setPortalType(getToken());
     }, 250);
-}
-
-function loadPortal(){
-    const userToken = getToken();
-    setPortalType(userToken);
-    if(!IsLoggedIn(userToken)) {
-        registerLoginForm();
-    }
 }
