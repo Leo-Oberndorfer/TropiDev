@@ -1,0 +1,95 @@
+.chapter-tasks {
+    margin-top: 40px;
+}
+
+.chapter-tasks .task-heading {
+    color: rgba(255, 0, 81, 0.8);
+}
+
+.chapter-tasks .task-description {
+    margin: 15px 0 5px;
+}
+
+.input-form {
+    gap: 10px;
+}
+
+.text-input-form {
+    justify-content: space-between;
+}
+
+.code-input-form {
+    justify-content: end;
+}
+
+.input-form input {
+    background-color: var(--bs-card-bg);
+    border: 1px solid var(--border-collor);
+    border-radius: 5px;
+    padding: 7px 13px;
+    flex-grow: 1;
+}
+
+.input-form .input:focus {
+    outline: none;
+    border: 1px solid #006fff;
+}
+
+.input-form .button {
+    max-width: 125px;
+}
+
+.input-form .hint {
+    border: 1px solid var(--hint-color) !important;
+    color: var(--hint-color);
+}
+
+.input-form .hint:hover {
+    background-color: var(--hint-color);
+    color: var(--bs-card-bg);
+    transition: 0.25s;
+}
+
+.input-form .submit {
+    border: 1px solid var(--submit-color) !important;
+    color: var(--submit-color);
+}
+.input-form .submit:hover {
+    background-color: var(--submit-color);
+    color: var(--bs-card-bg);
+    transition: 0.25s;
+}
+
+/* Code input */
+.outer-code-box, .input-code-box, .display-code-box {
+    border: 1px solid red;
+    tab-size: 3;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.outer-code-box {
+    padding: 16px 18px 16px 62px;
+    overflow-y: hidden;
+}
+
+.input-code-box {
+    box-sizing: border-box;
+    width: calc(100% - 80px);
+    font-family: monospace;
+    resize: none;
+    color: transparent;
+    background: transparent;
+    caret-color: white;
+    padding: 0;
+    /* border: 0; */
+    outline: none;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+}
+
+.display-code-box {
+    display: inline-block;
+    max-width: 100%;
+}

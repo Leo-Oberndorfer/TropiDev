@@ -11,6 +11,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style/courses/coursestyle.css">
+    <link rel="stylesheet" href="style/courses/taskstyle.css">
     <link rel="stylesheet" href="style/mainstyle.css">
     <link rel="stylesheet" href="components/footerstyle.css">
     <link rel="stylesheet" href="components/headerstyle.css">
@@ -25,13 +26,53 @@
 
     <script src="components/ComponentLoader.js"></script>
     <script src="script/courses/CourseHomeLoader.js"></script>
-    <script src="script/courses/ChapterLoader.js"></script>
     <script src="script/courses/CourseUtils.js"></script>
     <script src="script/utils/Events.js"></script>
     <script src="script/utils/Utils.js"></script>
     <script src="script/portal/Portal.js"></script>
+    <script src="script/courses/ChapterLoader.js"></script>
 </head>
 <body>
+<template id="chtml1">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading-{%id%}">
+            <button class="accordion-button collapsed" onclick="loadCodeInputs();" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{%id%}" aria-expanded="false" aria-controls="flush-collapse-{%id%}">
+               <div class="task-circle" id="task-circle-{%id%}"></div>
+               <b class="chapter-title">
+               </b>
+            </button>
+        </h2>
+        <div id="flush-collapse-{%id%}" class="accordion-collapse collapse" aria-labelledby="flush-heading-{%id%}" data-bs-parent="#course-chapter-list">
+            <div class="accordion-body" id="chapter-body-{%id%}">
+                <p class="chapter-description"></p>
+                <div class="chapter-paragraphs" id="chapter-paragraphs-{%id%}"></div>
+                <div class="chapter-tasks" id="chapter-tasks-{%id%}">
+                    <h4 class="task-heading">Complete the tasks below:</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="paragraph">
+        <h4 class="paragraph-title"></h4>
+        <p class="paragraph-text"></p>
+    </div>
+    <div class="chapter-task text-input-task">
+        <p class="task-description"></p>
+        <form class="flex input-form text-input-form">
+            <input type="text" class="input" placeholder="">
+            <input type="button" class="button hint" value="Hint" onclick="">
+            <input type="button" class="button submit" value="Submit" onclick="">
+        </form>
+    </div>
+    <div class="code-input-task">
+        <p class="task-description"></p>
+        <pre class="outer-code-box"><textarea oninput="formatInput(this.value)" onkeydown="handelKeyPress(event, this)" class="input-code-box" spellcheck="false"></textarea><code class="display-code-box line-numbers"></code></pre>
+        <form class="flex input-form code-input-form">
+            <input type="button" class="button hint" value="Hint" onclick="">
+            <input type="button" class="button submit" value="Submit" onclick="">
+        </form>
+    </div>
+</template>
     <header class="site-component" import="components/header.html"></header>
     <div id="course-body">
         <div class="wrapper info-box" id="info-box">

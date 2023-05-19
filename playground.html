@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playground</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style/courses/taskstyle.css">
+    <link rel="stylesheet" href="style/prism.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="script/utils/Utils.js"></script>
+    <script src="script/courses/CourseUtils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script/utils/prism.js"></script>
+</head>
+<body>
+<div class="code-input-task">
+    <pre class="outer-code-box"><textarea oninput="formatInput(this.value)" onkeydown="handelKeyPress(event, this)" class="input-code-box" spellcheck="false"></textarea><code class="display-code-box line-numbers language-html">Hello World</code></pre>
+</div>
+<pre><code class="line-numbers language-js">Hello World</code></pre>
+</body>
+<script>
+    loadCodeInputs();
+</script>
+</html>

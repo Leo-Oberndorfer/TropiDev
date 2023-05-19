@@ -1,7 +1,7 @@
 function loadCourse(){
     let course = getCourse();
     if(course != null) {
-        setHomeAppearance(course);
+        loadCourseComponents(course);
         return;
     }
     courseNotFound();
@@ -20,13 +20,13 @@ function getCourse(){
 
 function loadCodeInputs(){
     Prism.highlightAll();
-    growBox();
+    resizeInputBox();
     reloadLineNumbers();
 }
 
-function format(text) {
-    let codeBox = document.querySelector("#display-code-box");
-    growBox();
+function formatInput(text) {
+    let codeBox = document.querySelector(".display-code-box");
+    resizeInputBox();
 
     if(text[text.length-1] === "\n" || text[text.length-1] === "\t" || text[text.length-1] === " "){
         text += "‎";
@@ -37,14 +37,16 @@ function format(text) {
 
 function reloadLineNumbers(){
     let ln = document.querySelector(".line-numbers-rows");
+    if(ln === null) return;
     for(let line of ln.children){
         line.style.height = "24px";
     }
 }
 
-function growBox() {
-    let codeBox = document.querySelector("#input-code-box");
+function resizeInputBox() {
+    let codeBox = document.querySelector(".input-code-box");
     let ln = document.querySelector(".line-numbers-rows");
+    if(ln === null || codeBox === null) return;
     let height = codeBox.scrollHeight;
     if(height === 0) {
         for (let line of ln.children) {
@@ -57,11 +59,11 @@ function growBox() {
 function handelKeyPress(event, ref){
     matchBrackets(event, ref);
     formatLines(event);
-    format(ref.value);
+    formatInput(ref.value);
 }
 
 function formatLines(event) {
-    const textarea = document.querySelector("#input-code-box");
+    const textarea = document.querySelector(".input-code-box");
 
     const selectionStart = textarea.selectionStart;
     const selectionEnd = textarea.selectionEnd;

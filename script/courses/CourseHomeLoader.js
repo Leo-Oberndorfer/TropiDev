@@ -3,7 +3,7 @@ let selectedCourseLower;
 let file;
 const properties = ["course-head-title", "course-head-description", "course-duration", "course-difficulty"];
 
-function setHomeAppearance(course){
+function loadCourseComponents(course){
     selectedCourseLower = course;
     selectedCourseUpper = course.toUpperCase();
     file = `assets/courses/${selectedCourseLower}/${selectedCourseUpper}CourseProperties.json`;
