@@ -66,7 +66,7 @@
     </div>
     <div class="code-input-task">
         <p class="task-description"></p>
-        <pre class="outer-code-box"><textarea oninput="formatInput(this.value)" onkeydown="handelKeyPress(event, this)" class="input-code-box" spellcheck="false"></textarea><code class="display-code-box line-numbers"></code></pre>
+        <pre class="outer-code-box"><textarea oninput="formatInput(this.parentNode)" onkeydown="handelKeyPress(event, this)" class="input-code-box" spellcheck="false"></textarea><code class="display-code-box line-numbers"></code></pre>
         <form class="flex input-form code-input-form">
             <input type="button" class="button hint" value="Hint" onclick="">
             <input type="button" class="button submit" value="Submit" onclick="">

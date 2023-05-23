@@ -20,19 +20,23 @@ function getCourse(){
 
 function loadCodeInputs(){
     Prism.highlightAll();
-    resizeInputBox();
     reloadLineNumbers();
+    const codeAreas = document.querySelectorAll(".outer-code-box");
+    for(let codeArea of codeAreas){
+        resizeBox(codeArea);
+    }
 }
 
-function formatInput(text) {
-    let codeBox = document.querySelector(".display-code-box");
+function formatInput(parent) {
+    let text = parent.querySelector(".input-code-box").value;
+    let codeBox = parent.querySelector(".display-code-box");
 
     if(text[text.length-1] === "\n" || text[text.length-1] === "\t" || text[text.length-1] === " "){
         text += "‎";
     }
     codeBox.innerHTML = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     Prism.highlightElement(codeBox);
-    resizeInputBox();
+    resizeBox(parent);
 }
 
 function reloadLineNumbers(){
@@ -43,22 +47,20 @@ function reloadLineNumbers(){
     }
 }
 
-function resizeInputBox() {
-    let codeBox = document.querySelector(".input-code-box");
-    let displayBox = document.querySelector(".display-code-box");
-    let height = displayBox.offsetHeight;
-    codeBox.style.height = height +"px";
+function resizeBox(parent) {
+    const codeBox = parent.querySelector(".input-code-box");
+    const displayBox = parent.querySelector(".display-code-box");
+    const height = displayBox.offsetHeight;
+    codeBox.style.height = (height >= 26 ? height : 26) +"px";
 }
 
 function handelKeyPress(event, ref){
     matchBrackets(event, ref);
-    formatLines(event);
-    formatInput(ref.value);
+    formatLines(event, ref);
+    formatInput(ref.parentNode);
 }
 
-function formatLines(event) {
-    const textarea = document.querySelector(".input-code-box");
-
+function formatLines(event, textarea) {
     const selectionStart = textarea.selectionStart;
     const selectionEnd = textarea.selectionEnd;
     const beforeCursor = textarea.value.slice(0, selectionStart);
