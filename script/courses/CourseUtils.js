@@ -26,13 +26,13 @@ function loadCodeInputs(){
 
 function formatInput(text) {
     let codeBox = document.querySelector(".display-code-box");
-    resizeInputBox();
 
     if(text[text.length-1] === "\n" || text[text.length-1] === "\t" || text[text.length-1] === " "){
         text += "‎";
     }
     codeBox.innerHTML = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     Prism.highlightElement(codeBox);
+    resizeInputBox();
 }
 
 function reloadLineNumbers(){
@@ -45,14 +45,8 @@ function reloadLineNumbers(){
 
 function resizeInputBox() {
     let codeBox = document.querySelector(".input-code-box");
-    let ln = document.querySelector(".line-numbers-rows");
-    if(ln === null || codeBox === null) return;
-    let height = codeBox.scrollHeight;
-    if(height === 0) {
-        for (let line of ln.children) {
-            height += 24;
-        }
-    }
+    let displayBox = document.querySelector(".display-code-box");
+    let height = displayBox.offsetHeight;
     codeBox.style.height = height +"px";
 }
 
