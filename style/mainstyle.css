@@ -134,3 +134,35 @@ a {
 .hidden {
     display: none;
 }
+
+/* Bootstrap Container override */
+@media (min-width: 576px) {
+    .container {
+        max-width: 100% !important;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 98% !important;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 96% !important;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 94% !important;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 92% !important;
+    }
+}
+@media (min-width: 1600px) {
+    .container {
+        max-width: 90% !important;
+    }
+}
