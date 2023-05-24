@@ -136,3 +136,17 @@ function matchBrackets(event, ref) {
         }
     }
 }
+
+/* Currently specialised for the HTML course */
+function runCode(ref){
+    const parent = ref.parentNode.parentNode;
+    const preview = parent.querySelector(".console");
+    const code = parent.querySelector(".input-code-box").value;
+    preview.src = "data:text/html;charset=utf-8," + code;
+}
+
+function clearConsole(ref){
+    const parent = ref.parentNode.parentNode;
+    const preview = parent.querySelector(".console");
+    preview.src = "";
+}

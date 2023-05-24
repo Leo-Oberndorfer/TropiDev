@@ -1,3 +1,11 @@
+:root {
+    --border-collor: #9a9a9a;
+    --submit-color: #08b70b;
+    --hint-color: #9700ff;
+    --preview-color: #ff0062;
+    --clear-console-color: #ff5900;
+}
+
 .chapter-tasks {
     margin-top: 40px;
 }
@@ -8,6 +16,23 @@
 
 .chapter-tasks .task-description {
     margin: 15px 0 5px;
+}
+
+.code-editor {
+    gap: 10px;
+    display: flex;
+}
+
+.code-editor * {
+    flex: 1;
+}
+
+.code-editor .console {
+    margin: 0.5em 0;
+    border: 1px solid #272822;
+    border-radius: 5px;
+    background: rgb(229, 229, 229);
+    padding: 10px;
 }
 
 .input-form {
@@ -39,8 +64,30 @@
     max-width: 125px;
 }
 
+.input-form .clear-console {
+    border: 1px solid var(--clear-console-color);
+    color: var(--clear-console-color);
+}
+
+.input-form .clear-console:hover {
+    background-color: var(--clear-console-color);
+    color: var(--bs-card-bg);
+    transition: 0.25s;
+}
+
+.input-form .run {
+    border: 1px solid var(--preview-color);
+    color: var(--preview-color);
+}
+
+.input-form .run:hover {
+    background-color: var(--preview-color);
+    color: var(--bs-card-bg);
+    transition: 0.25s;
+}
+
 .input-form .hint {
-    border: 1px solid var(--hint-color) !important;
+    border: 1px solid var(--hint-color);
     color: var(--hint-color);
 }
 
@@ -51,7 +98,7 @@
 }
 
 .input-form .submit {
-    border: 1px solid var(--submit-color) !important;
+    border: 1px solid var(--submit-color);
     color: var(--submit-color);
 }
 .input-form .submit:hover {
@@ -60,10 +107,22 @@
     transition: 0.25s;
 }
 
+@media screen and (max-width: 991px) {
+    .code-editor {
+        flex-direction: column;
+    }
+    .code-input-form {
+        justify-content: space-between;
+    }
+    .code-input-form .button{
+        max-width: 100%;
+    }
+}
+
 /* Code input */
 .outer-code-box, .input-code-box, .display-code-box {
     border: none !important;
-    tab-size: 3 !important;
+    tab-size: 4 !important;
     white-space: pre-wrap !important;
     word-break: break-word !important;
 }

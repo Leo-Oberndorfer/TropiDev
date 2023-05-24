@@ -27,7 +27,7 @@ function loadBody(accordionItem, template, chapters, chapter){
         const img = chapterImage !== "" && chapterImage !== undefined ? "<img src='" + chapterImage + "' alt='course-asset' style='height: 115px; float: " + float + ";'>" : "";
         paragraph.querySelector(".paragraph-title").innerHTML = headings[i];
         paragraphText.innerHTML = img + chapters[chapter]["chapter-paragraphs"][i];
-        if(codeExample !== undefined && codeExample !== "") paragraph.innerHTML += "<pre data-src=" + codeExample + " class='line-numbers'></pre>";
+        if(codeExample !== undefined && codeExample !== "") paragraph.innerHTML += "<pre data-src=" + codeExample + " class='line-numbers'></pre><a href='" + codeExample + "' target='_blank'>Open in new tab</a>";
         accordionItem.querySelector(".chapter-paragraphs").appendChild(paragraph);
         i++;
     }
@@ -47,7 +47,7 @@ function loadTasks(accordionItem, template, chapters, chapter){
         } else if(taskType === "code") {
             const displayCodeBox = task.querySelector(".display-code-box");
             displayCodeBox.classList.add("language-" + getCourse());
-            task.querySelector(".input-code-box").innerHTML = displayCodeBox.innerHTML = prefill;
+            task.querySelector(".input-code-box").innerHTML = displayCodeBox.innerHTML = prefill.replace(/</g, "&lt;").replace(/>/g, "&gt;");
         }
         accordionItem.querySelector(".chapter-tasks").appendChild(task);
         i++;

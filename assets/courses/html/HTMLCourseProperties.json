@@ -35,7 +35,7 @@
             "chapter-paragraph-code-examples": ["", "", "assets/courses/html/code-snippets/HTMLDoc.html"],
             "chapter-tasks": ["Use the editor below to create a basic html document containing a title and a h1 heading", "What's the closing tag for the <code>&lt;p&gt;</code> element?"],
             "chapter-task-input-types": ["code", "text"],
-            "chapter-task-prefills": ["&lt;!DOCTYPE html&gt;", ""],
+            "chapter-task-prefills": ["<!DOCTYPE html>", ""],
             "chapter-task-answers": ["", "</p>"],
             "chapter-task-hints": []
         },
@@ -64,10 +64,10 @@
                 "IDs can only be used once on the same page. In CSS they are selected with a hash in front of the ID name: <code>#my-id</code>. In HTML they are added to an element with the id attribute: <code>&lt;div id=\"my-id\"&gt;&lt;/div&gt;</code>."
             ],
             "chapter-paragraph-images": [],
-            "chapter-paragraph-code-examples": ["assets/courses/html/code-snippets/ClassExample.html", ""],
-            "chapter-tasks": ["Add a class to the <code>&lt;h1&gt;</code> element with the name <code>my-class</code>", "Add an id to the <code>&lt;h1&gt;</code> element with the name <code>my-id</code>"],
+            "chapter-paragraph-code-examples": ["assets/courses/html/code-snippets/ClassExample.html", "assets/courses/html/code-snippets/IdExample.html"],
+            "chapter-tasks": ["Add a class called <code>my-class</code> to the <code>&lt;h1&gt;</code> element.", "Add an id called <code>my-id</code> to the <code>&lt;h1&gt;</code> element."],
             "chapter-task-input-types": ["code", "code"],
-            "chapter-task-prefills": ["", ""],
+            "chapter-task-prefills": ["<h1>Heading with a class</h1>", "<h1>Heading with an id</h1>"],
             "chapter-task-answers": ["", ""],
             "chapter-task-hints": []
         }

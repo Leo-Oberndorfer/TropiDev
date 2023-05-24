@@ -8,27 +8,25 @@ function loadCourseComponents(course){
     selectedCourseUpper = course.toUpperCase();
     file = `assets/courses/${selectedCourseLower}/${selectedCourseUpper}CourseProperties.json`;
 
-    fetch(file)
-        .then(response => {
-            if(response.ok){
-                response.json().then(data => {
-                    let courseInfo = data["course-info"];
-                    let courseChapters = data["course-chapters"];
-                    document.title = `Developer Island | ${selectedCourseUpper} Course`;
-                    for (let property of properties) {
-                        getElement(property).innerHTML = courseInfo[property];
-                    }
-
-                    setDifficulty();
-                    calculateUserProgress(courseInfo);
-                    loadChapters(courseChapters);
-                    setButton();
-                    loadStyle(courseInfo);
-                });
-            } else {
-                courseNotFound();
-            }
-        })
+    fetch(file).then(response => {
+        if(response.ok){
+            response.json().then(data => {
+                let courseInfo = data["course-info"];
+                let courseChapters = data["course-chapters"];
+                document.title = `Developer Island | ${selectedCourseUpper} Course`;
+                for (let property of properties) {
+                    getElement(property).innerHTML = courseInfo[property];
+                }
+                setDifficulty();
+                calculateUserProgress(courseInfo);
+                loadChapters(courseChapters);
+                setButton();
+                loadStyle(courseInfo);
+            });
+        } else {
+            courseNotFound();
+        }
+    })
 }
 
 function courseNotFound(){
