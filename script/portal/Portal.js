@@ -51,7 +51,7 @@ function logOut(){
 
 function handleResponse(response){
     document.cookie = `token=${response.id}`;
-    setPortalType(response.id);
+    location.reload();
 }
 
 function setPortalType(token) {

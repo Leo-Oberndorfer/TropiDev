@@ -6,10 +6,6 @@
     --clear-console-color: #ff5900;
 }
 
-.chapter-tasks {
-    margin-top: 40px;
-}
-
 .chapter-tasks .task-heading {
     color: rgba(255, 0, 81, 0.8);
 }
@@ -107,7 +103,7 @@
     transition: 0.25s;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
     .code-editor {
         flex-direction: column;
     }

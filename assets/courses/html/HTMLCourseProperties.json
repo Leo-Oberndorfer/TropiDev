@@ -33,9 +33,9 @@
                 "Here is an example of a basic HTML document:"],
             "chapter-paragraph-images": [],
             "chapter-paragraph-code-examples": ["", "", "assets/courses/html/code-snippets/HTMLDoc.html"],
-            "chapter-tasks": ["Use the editor below to create a basic html document containing a title and a h1 heading", "What's the closing tag for the <code>&lt;p&gt;</code> element?"],
-            "chapter-task-input-types": ["code", "text"],
-            "chapter-task-prefills": ["<!DOCTYPE html>", ""],
+            "chapter-tasks": ["What's the closing tag for a <code>&lt;p&gt;</code> element?", "Use the editor below to create a basic html document containing a title and a h1 heading"],
+            "chapter-task-input-types": ["text", "code"],
+            "chapter-task-prefills": ["", "<!DOCTYPE html>"],
             "chapter-task-answers": ["", "</p>"],
             "chapter-task-hints": []
         },
@@ -49,7 +49,7 @@
             ],
             "chapter-paragraph-images": [],
             "chapter-paragraph-code-examples": [],
-            "chapter-tasks": ["What is the content of the <code>&lt;h1&gt;Hello&lt;/h1&gt;</code> element?", "What is the attribute of the <code>&lt;a href=\"https://www.google.com\"&gt;Google&lt;/a&gt;</code> element?"],
+            "chapter-tasks": ["What is the content of this element: <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>", "What is the attribute of this element: <code>&lt;a href=\"https://www.google.com\"&gt;Google&lt;/a&gt;</code>"],
             "chapter-task-input-types": ["text", "text"],
             "chapter-task-prefills": ["", ""],
             "chapter-task-answers": ["Hello", "href"],
@@ -58,13 +58,12 @@
         "chapter-4": {
             "chapter-title": "Classes and IDs",
             "chapter-description": "Classes and IDs are attributes that can be added to HTML elements to style them using CSS. Class- and Id-names are case-sensitive, cannot start with a number, cannot contain spaces and can only include alphanumeric characters and underscores.",
-            "chapter-paragraph-headings": ["Classes", "IDs"],
+            "chapter-paragraph-headings": ["Usage"],
             "chapter-paragraphs": [
-                "Classes can be used multiple times on the same page. In CSS they are selected with a dot in front of the class name: <code>.my-class</code>. In HTML they are added to an element with the class attribute: <code>&lt;div class=\"my-class\"&gt;&lt;/div&gt;</code>.",
-                "IDs can only be used once on the same page. In CSS they are selected with a hash in front of the ID name: <code>#my-id</code>. In HTML they are added to an element with the id attribute: <code>&lt;div id=\"my-id\"&gt;&lt;/div&gt;</code>."
+                "Classes and IDs can be used on any HTML element. In CSS classes are selected with a dot in front of the class name: <code>.my-class</code>. In HTML they are added to an element with the class attribute: <code>&lt;div class=\"my-class\"&gt;&lt;/div&gt;</code>. While classes can be used multiple times on the same page, IDs can only be used once. In CSS they are selected with a hash in front of the ID name: <code>#my-id</code>. In HTML they are added to an element with the id attribute: <code>&lt;div id=\"my-id\"&gt;&lt;/div&gt;</code>."
             ],
             "chapter-paragraph-images": [],
-            "chapter-paragraph-code-examples": ["assets/courses/html/code-snippets/ClassExample.html", "assets/courses/html/code-snippets/IdExample.html"],
+            "chapter-paragraph-code-examples": ["assets/courses/html/code-snippets/ClassIdExample.html"],
             "chapter-tasks": ["Add a class called <code>my-class</code> to the <code>&lt;h1&gt;</code> element.", "Add an id called <code>my-id</code> to the <code>&lt;h1&gt;</code> element."],
             "chapter-task-input-types": ["code", "code"],
             "chapter-task-prefills": ["<h1>Heading with a class</h1>", "<h1>Heading with an id</h1>"],

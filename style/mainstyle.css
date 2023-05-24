@@ -166,3 +166,8 @@ a {
         max-width: 90% !important;
     }
 }
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1800px !important;
+    }
+}

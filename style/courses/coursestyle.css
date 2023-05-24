@@ -87,12 +87,12 @@
     margin-right: 7px;
 }
 
-.accordion-body h4{
-    margin-top: 25px;
+.accordion-body .chapter-paragraphs {
+    margin: 0 0 50px;
 }
 
-.accordion-body p{
-    margin-bottom: 10px !important;
+.accordion-body .paragraph {
+    margin: 20px 0;
 }
 
 #course-start-btn:hover {
