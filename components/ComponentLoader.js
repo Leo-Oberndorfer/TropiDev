@@ -1,4 +1,4 @@
-function loadComponents() {
+function loadComponents(LRP = false) {
     const components = getElements("site-component");
     for(let i = 0 ; i < components.length ; i++) {
         const component = components[i];
@@ -8,6 +8,7 @@ function loadComponents() {
                 response.text().then(htmlCode => {
                     component.innerHTML = htmlCode;
                     if (component.nodeName === "HEADER") setPortalType(getToken());
+                    if (LRP && getToken() === "") displayLRPopup();
                 });
             } else {
                 component.innerHTML = "Unable to load this component";

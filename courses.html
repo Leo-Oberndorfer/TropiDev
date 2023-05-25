@@ -9,12 +9,10 @@
     <title>Developer Island | Invalid Course</title>
     <link rel="icon" href="assets/icon.png">
 
-    <!-- Styles -->
+    <!-- Style -->
     <link rel="stylesheet" href="style/courses/coursestyle.css">
     <link rel="stylesheet" href="style/courses/taskstyle.css">
     <link rel="stylesheet" href="style/mainstyle.css">
-    <link rel="stylesheet" href="components/footerstyle.css">
-    <link rel="stylesheet" href="components/headerstyle.css">
     <link rel="stylesheet" href="style/prism.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
@@ -24,7 +22,12 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="script/utils/prism.js"></script>
 
+    <!-- Site components -->
     <script src="components/ComponentLoader.js"></script>
+    <link rel="stylesheet" href="components/footerstyle.css">
+    <link rel="stylesheet" href="components/headerstyle.css">
+    <link rel="stylesheet" href="components/LoginPopupReminderStyle.css">
+
     <script src="script/courses/CourseHomeLoader.js"></script>
     <script src="script/courses/CourseUtils.js"></script>
     <script src="script/utils/Events.js"></script>
@@ -79,6 +82,7 @@
     </div>
 </template>
     <header class="site-component" import="components/header.html"></header>
+    <div class="site-component" import="components/LoginPopupReminder.html"></div>
     <div id="course-body">
         <div class="wrapper info-box" id="info-box">
             <div class="container" id="course-overview-container">
@@ -114,16 +118,18 @@
                                     <img src="" alt="course-icon" id="course-heading-icon">
                                     <h2 class="card-title">Overview</h2>
                                 </div>
-                                <p class="card-text">
-                                    <img src="assets/courses/sushi.png" alt="sushi" style="height: 115px; float: right; margin-left: 20px;">
-                                    Hey, it's me, Sushi! I will accompany you through this course.<br>Below is a list of chapters for this course. The lessons build on each other so I recommend you work through them one after the other. You can still start wherever you want but since every chapter covers a different topic, lessons before won't be marked as completed when completing the current lesson. Your progress will be stored in your profile so you can quit anytime and come back later without having to redo everything. With that being said, I wish you a lot of fun with this course and hopefully I can bring you a bit closer to programming. Also check out the other courses if you want to learn more. If you need help feel free to ask for a hint by pressing the purple hint button.
-                                </p>
-                                <div class="flex overview-card-body-components">
-                                    <a href="#" class="btn btn-primary faded" id="course-start-btn">How'd you get here</a>
-                                    <div id="course-progress-bar">
-                                        <small class="text-muted user-progress">Your progress (<span id="user-progress">0</span>%):</small>
-                                        <div class="progress">
-                                            <div class="progress-bar faded" id="progress-bar" role="progressbar" aria-label="course-progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div id="overview-body">
+                                    <p class="card-text">
+                                        <img src="assets/courses/sushi.png" alt="sushi" style="height: 115px; float: right; margin-left: 20px;">
+                                        Hey, it's me, Sushi! I will accompany you through this course.<br>Below is a list of chapters for this course. The lessons build on each other so I recommend you work through them one after the other. You can still start wherever you want but since every chapter covers a different topic, lessons before won't be marked as completed when completing the current lesson. If you are logged in your progress will be stored in your profile so you can quit anytime and come back later without having to redo everything. With that being said, I wish you a lot of fun with this course and hopefully I can bring you a bit closer to programming. Also check out the other courses if you want to learn more. If you need help feel free to ask for a hint by pressing the purple hint button.
+                                    </p>
+                                    <div class="flex overview-card-body-components">
+                                        <a href="#" class="btn btn-primary faded" id="course-start-btn">How'd you get here</a>
+                                        <div id="course-progress-bar">
+                                            <small class="text-muted user-progress">Your progress (<span id="user-progress">0</span>%):</small>
+                                            <div class="progress">
+                                                <div class="progress-bar faded" id="progress-bar" role="progressbar" aria-label="course-progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +145,7 @@
     <footer class="site-component" import="components/footer.html"></footer>
 </body>
 <script>
-    loadComponents();
+    loadComponents(true)
     loadCourse();
 </script>
 </html>

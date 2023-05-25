@@ -17,13 +17,13 @@ function getToken(){
     return document.cookie !== "" ? document.cookie.split(';').find(cookie => cookie.includes('token')).split('=')[1] : "";
 }
 
-function registerLoginForm(){
+function handleLoginData(){
     const loginForm = getElement('login-form');
     loginForm.onsubmit = async (e) => {
         e.preventDefault();
         const body = JSON.stringify(Object.fromEntries(new FormData(loginForm).entries()));
 
-        fetch("http://68.183.209.122:81/api/users/credentials", {
+        fetch("http://68.183.209.122:81/api/users/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -64,6 +64,21 @@ function setPortalType(token) {
     }).catch(err => {
         console.log(err);
         portal.replaceChild(portalTemplate.content.getElementById("loggedOut").cloneNode(true), portal.childNodes[0]);
-        registerLoginForm();
+        handleLoginData();
     });
+}
+
+function displayLRPopup(){
+    const loginPopup = getElement("lrp-form");
+    const courseBody = getElement("course-body");
+    if(loginPopup === null) return;
+    courseBody.style.filter = "blur(2px)";
+    loginPopup.style.display = "block";
+}
+
+function dismissLRPopup(){
+    const loginPopup = getElement("lrp-form");
+    const courseBody = getElement("course-body");
+    courseBody.style.filter = "";
+    loginPopup.style.display = "none";
 }

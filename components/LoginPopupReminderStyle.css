@@ -1,0 +1,30 @@
+#lrp-form {
+    display: none;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    max-width: 500px;
+    background-color: rgb(248, 248, 248);
+    text-align: center;
+}
+
+#lrp-form .card-header {
+    padding: 10px;
+    background-color: #ffb470;
+}
+
+#lrp-form .button-container {
+    text-align: end;
+}
+
+#lrp-form .image-container {
+    margin-bottom: 20px;
+}
+
+#lrp-form .btn-close {
+    font-size: 20px;
+    font-weight: bold;
+}
