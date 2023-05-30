@@ -12,7 +12,9 @@
 }
 
 #lrp-form .card-header {
-    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-collapse: separate;
     background-color: #ffb470;
 }
 
@@ -21,10 +23,21 @@
 }
 
 #lrp-form .image-container {
-    margin-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 #lrp-form .btn-close {
+    margin: 10px;
     font-size: 20px;
     font-weight: bold;
+}
+
+#lrp-form .card-body {
+    padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    #lrp-form {
+        width: 90%;
+    }
 }
