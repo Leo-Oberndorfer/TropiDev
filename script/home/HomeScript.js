@@ -1,5 +1,5 @@
 function loadSwiper() {
-    var swiper = new Swiper(".slide-content", {
+    new Swiper(".slide-content", {
         slidesPerView: 3,
         spaceBetween: 25,
         loop: true,

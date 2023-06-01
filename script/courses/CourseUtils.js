@@ -137,7 +137,7 @@ function matchBrackets(event, ref) {
     }
 }
 
-/* Currently specialised for the HTML course */
+/* Currently specialised for the HTML course, not finished */
 function runCode(ref){
     const parent = ref.parentNode.parentNode;
     const preview = parent.querySelector(".console");
