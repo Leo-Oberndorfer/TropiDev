@@ -1,5 +1,5 @@
 function loadCourse(){
-    let course = getCourse();
+    const course = getCourse();
     if(course != null) {
         loadCourseComponents(course);
         return;
@@ -8,28 +8,25 @@ function loadCourse(){
 }
 
 function getCourse(){
-    let urlParams = new URLSearchParams(window.location.search);
-    let param = urlParams.get('course');
+    const urlParams = new URLSearchParams(window.location.search);
+    const param = urlParams.get('course');
 
-    if(param != null){
-        return param.toLowerCase();
-    } else {
-        return null;
-    }
+    if(param != null) return param.toLowerCase();
+    return null;
 }
 
 function loadCodeInputs(){
+    const codeAreas = document.querySelectorAll(".outer-code-box");
     Prism.highlightAll();
     reloadLineNumbers();
-    const codeAreas = document.querySelectorAll(".outer-code-box");
-    for(let codeArea of codeAreas){
+    for(const codeArea of codeAreas){
         resizeBox(codeArea);
     }
 }
 
 function formatInput(parent) {
+    const codeBox = parent.querySelector(".display-code-box");
     let text = parent.querySelector(".input-code-box").value;
-    let codeBox = parent.querySelector(".display-code-box");
 
     if(text[text.length-1] === "\n" || text[text.length-1] === "\t" || text[text.length-1] === " "){
         text += "‎";
@@ -40,9 +37,9 @@ function formatInput(parent) {
 }
 
 function reloadLineNumbers(){
-    let ln = document.querySelector(".line-numbers-rows");
+    const ln = document.querySelector(".line-numbers-rows");
     if(ln === null) return;
-    for(let line of ln.children){
+    for(const line of ln.children){
         line.style.height = "24px";
     }
 }

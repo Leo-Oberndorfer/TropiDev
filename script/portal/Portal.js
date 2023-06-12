@@ -21,7 +21,7 @@ function handleLoginData(){
     const loginForm = getElement('login-form');
     loginForm.onsubmit = async (e) => {
         e.preventDefault();
-        const body = JSON.stringify(Object.fromEntries(new FormData(loginForm).entries()));
+        const body = JSON.stringify(Object.fromEntries(new FormData(loginForm).entries())); // Encryption will be added later
 
         fetch("http://68.183.209.122:81/api/users/login", {
             method: 'POST',

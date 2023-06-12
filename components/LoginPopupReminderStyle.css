@@ -1,6 +1,7 @@
 #lrp-form {
     display: none;
     border-radius: 5px;
+    box-shadow: 0 0 5px 0 #ffcfa6;
     position: fixed;
     top: 50%;
     left: 50%;

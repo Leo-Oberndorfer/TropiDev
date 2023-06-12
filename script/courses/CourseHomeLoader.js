@@ -6,7 +6,7 @@ function loadCourseComponents(course){
     const properties = ["course-head-title", "course-head-description", "course-duration", "course-difficulty"];
     selectedCourseLower = course;
     selectedCourseUpper = course.toUpperCase();
-    file = `assets/courses/${selectedCourseLower}/${selectedCourseUpper}CourseProperties.json`;
+    file = `assets/courses/${selectedCourseLower}/${selectedCourseUpper}CourseProperties.json`; // Will be moved to backend later
 
     fetch(file).then(response => {
         if(response.ok){

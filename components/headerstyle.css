@@ -68,7 +68,7 @@ header {
     color: #cccccc;
 }
 
-.navbar .dropdown-item:hover{
+.navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
     color: #dadada;
     background-color: #34154d;
 }
