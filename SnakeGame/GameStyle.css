@@ -1,0 +1,140 @@
+html, body {
+    background-color: #ffebad;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#board {
+    background-color: #fffa95;
+    border: 2px solid #ffcf93;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 auto;
+    height: 750px;
+    width: 750px;
+}
+
+#board .row {
+    height: calc(100% / 20);
+    display: flex;
+}
+
+#board .block {
+    background-color: #fff;
+    border: 1px solid #f3eee6;
+    border-collapse: collapse;
+    width: calc(100% / 9);
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+    gap: 25px;
+    padding: 20px;
+}
+
+#menu #start {
+    border: 2px solid #ad3d00;
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    background: #ffd2b9;
+}
+
+#settings {
+    display: flex;
+    gap: 60px;
+    font-family: "Cascadia Code", sans-serif;
+    margin-bottom: 20px;
+}
+
+#settings input {
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+    max-width: 75px;
+}
+
+#settings input:focus {
+    outline: none;
+}
+
+#stats {
+    text-align: center;
+    width: 400px;
+}
+
+#stats p {
+    color: #8a004e;
+    font-weight: 750;
+    font-size: 24px;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #004c8a;
+    box-shadow: 0 0 5px #004c8a;
+    background-color: #8eccff;
+
+    /* Make it so it slides from bottom to the center of the screen */
+    animation: float 1s ease-in-out infinite, slide 1s ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(-50%, 5%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.02);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+#gameOver h1 {
+    color: #e34514;
+    font-weight: 750;
+    font-size: 36px;
+}
+
+#gameOver p {
+    color: #004c8a;
+    font-weight: 750;
+    font-size: 24px;
+}
+
+#gameOver button {
+    margin: 0 10px;
+    color: #004c8a;
+    border: 2px solid #1e8ce7;
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    background: #deefff;
+}
+
+.hidden {
+    display: none !important;
+}
