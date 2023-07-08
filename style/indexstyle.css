@@ -14,7 +14,7 @@
 
 .welcome .wrapper h1{
     padding-bottom: 30px;
-    color: #dcffff;
+    color: var(--primary-sub-color);
     text-shadow: 0 0 12px #3d65e7;
     font-family: "Arial Black", sans-serif;
 }
@@ -24,18 +24,19 @@
     margin: auto;
     display: block;
     font-family: "Arial Black", sans-serif;
-    color: #e0ceff;
+    color: var(--primary-sub-color);
     text-shadow: 0 0 12px #ff0d00;
     font-size: 20px;
 }
 
 /* Offer section */
 .offers {
-    background: linear-gradient(180deg, rgb(250, 250, 250) 0%, rgb(250,250,250) 98%, rgb(225, 225, 225) 100%);
+    background: white;
 }
 
 /* Coconut Coding section */
 .cococoding{
+    background: var(--primary-sub-color);
     margin: 0;
     padding: 0;
     display: flex;
@@ -84,9 +85,11 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: var(--primary-sub-color);
     padding: 3px;
 }
+
+/* Region Edit */
 .cococoding .card-image .card-img{
     height: 100%;
     width: 100%;
@@ -140,17 +143,18 @@
 .cococoding .swiper-pagination-bullet-active{
     background-color: rgb(43, 17, 65);
 }
+/* Region Edit End */
 
 /* Stats section */
 .stats{
-    background-color: rgba(187, 139, 255, 0.2);
-}
-
-.stats .boxes div {
     background-color: white;
 }
 
 /* Mascots section */
+.mascots {
+    background: var(--primary-sub-color);
+}
+
 .mascots .row img{
     height: 80%;
 }
@@ -165,17 +169,13 @@
     }
 }
 
-.course-overview {
-    background-color: #dcf7ff;
-}
-
 .course-overview .row{
     justify-content: center;
     align-content: center;
 }
 
 .course-overview .card-title {
-    color: #ffeeee;
+    color: var(--primary-sub-color);
     text-shadow: 0 0 4px #ffb9c2;
     padding: 10px;
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.22);
@@ -184,7 +184,7 @@
 .course-overview .card-text{
     min-height: 75px;
     padding: 10px;
-    color: white;
+    color: var(--primary-sub-color);
     font-size: 20px;
     text-shadow: 0 1px 2px rgb(199, 194, 194);
 }
@@ -220,15 +220,15 @@
     margin: 10px;
     border: none;
     font-size: 18px;
-    background-color: #262626;
-    color: white !important;
+    background-color: var(--secondary-color);
+    color: var(--primary-sub-color) !important;
     border-radius: 20px;
     min-width: 175px;
     box-shadow: 0 1px 3px rgba(21, 19, 19, 0.86);
 }
 
 #typeWrite{
-    color: #ffffff;
+    color: white;
 }
 
 .animate-popin {

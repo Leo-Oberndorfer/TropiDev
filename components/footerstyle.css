@@ -1,6 +1,6 @@
 footer{
-    color: white;
-    background-color: #00172b;
+    color: var(--primary-sub-color);
+    background-color: var(--secondary-color);
 }
 
 @media screen and (max-width: 991px){
@@ -34,12 +34,12 @@ footer{
 footer a {
     margin-right: 20px;
     text-decoration: none;
-    color: white;
+    color: var(--primary-sub-color);
 }
 
 footer .footer-bottom a:hover {
     opacity: 1 !important;
-    color: #ffffff;
+    color: var(--primary-sub-color);
 }
 
 .footer-bottom {

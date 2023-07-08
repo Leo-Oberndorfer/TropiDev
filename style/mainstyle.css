@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #110026;
+    --secondary-color: #000134;
+    --primary-sub-color: #EFF7FF;
+    --sub-color1: #558C8C;
+    --sub-color2: #E8DB7D;
+}
+
 ::-webkit-scrollbar {
     width: 9px;
 }
@@ -20,7 +28,7 @@ a {
 }
 
 .hyperlink-formatted, .hyperlink-formatted:hover, .hyperlink-formatted:visited, .hyperlink-formatted:active {
-    color: #04a0da;
+    color: var(--sub-color1);
 }
 
 .underline {
@@ -36,13 +44,13 @@ a {
     text-align: center;
     font-size: 64px;
     font-weight: 750;
-    color: #230d34;
+    color: var(--primary-color);
     margin: auto;
     padding-bottom: 20px;
 }
 
 .wrapper h2{
-    color: #00172b;
+    color: var(--secondary-color);
     margin-top: 5px;
 }
 
@@ -59,6 +67,7 @@ a {
 }
 
 .boxes div{
+    background: white;
     transition: 0.25s;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -86,12 +95,12 @@ a {
     transition: 0.25s ease-in-out;
 }
 
-/** That fancy purple box we got on every course site */
+/** That fancy purple heading-box we got on every course site */
 .info-box {
     position: relative;
     z-index: 8;
-    background-color: #230d34;
-    color: #c9c9c9;
+    background-color: var(--primary-color);
+    color: var(--primary-sub-color);
 }
 
 .card {

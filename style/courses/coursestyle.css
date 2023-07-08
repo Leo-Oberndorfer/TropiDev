@@ -112,3 +112,9 @@
 .fade-in {
     opacity: 1;
 }
+
+@media screen and (max-width: 513px){
+    .accordion-body {
+        padding: var(--bs-accordion-body-padding-y) 0 !important;
+    }
+}
