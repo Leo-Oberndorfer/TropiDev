@@ -1,9 +1,16 @@
 /* Welcome section */
+
+/*
 .welcome{
     background-image: url("../assets/homepage/banner.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 25%;
+    animation-delay: .3ms;
+}
+ */
+
+.welcome {
     animation-delay: .3ms;
 }
 
@@ -14,7 +21,6 @@
 
 .welcome .wrapper h1{
     padding-bottom: 30px;
-    color: var(--primary-sub-color);
     text-shadow: 0 0 12px #3d65e7;
     font-family: "Arial Black", sans-serif;
 }
@@ -24,19 +30,12 @@
     margin: auto;
     display: block;
     font-family: "Arial Black", sans-serif;
-    color: var(--primary-sub-color);
-    text-shadow: 0 0 12px #ff0d00;
+    text-shadow: 0 0 12px #6600ff;
     font-size: 20px;
-}
-
-/* Offer section */
-.offers {
-    background: white;
 }
 
 /* Coconut Coding section */
 .cococoding{
-    background: var(--primary-sub-color);
     margin: 0;
     padding: 0;
     display: flex;
@@ -44,117 +43,7 @@
     justify-content: center;
 }
 
-.cococoding .slide-container{
-    max-width: 1120px;
-    width: 100%;
-    padding: 40px 0;
-}
-
-.cococoding .slide-content{
-    margin: 0 40px;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.image-content,
-.square-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
-}
-
-.cococoding .image-content{
-    position: relative;
-    row-gap: 5px;
-    padding: 25px 0;
-}
-
-.cococoding .overlay{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(180deg, rgb(251, 219, 255) 0%, rgb(254, 238, 255) 95%, rgb(250,250,250) 100%);
-    border-radius: 5px 5px 0 0;
-}
-
-.cococoding .card-image{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background-color: var(--primary-sub-color);
-    padding: 3px;
-}
-
-/* Region Edit */
-.cococoding .card-image .card-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid rgb(35, 13, 52);
-}
-
-.cococoding .name{
-    color: #00172b;
-    font-size: 2rem;
-    font-weight: 500;
-    text-align: center;
-}
-
-.cococoding .description{
-    font-size: 16px;
-    text-align: center;
-    padding: 10px;
-    height: 100%;
-}
-.swiper-slide{
-    border-radius: 5px;
-    background: linear-gradient(180deg, rgb(250, 250, 250) 0%, rgb(250,250,250) 98%, rgb(225, 225, 225) 100%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: auto !important;
-}
-
-.cococoding .swiper-navBtn{
-    color: rgb(35, 13, 52) !important;
-    transition: color 0.3s ease;
-}
-.cococoding .swiper-navBtn:hover{
-    color: rgb(43, 17, 65);
-}
-.swiper-navBtn::before,
-.swiper-navBtn::after{
-    font-size: 40px;
-}
-.cococoding .swiper-button-next{
-    right: 0;
-}
-.cococoding .swiper-button-prev{
-    left: 0;
-}
-
-.cococoding .swiper-pagination-bullet{
-    background-color: rgb(35, 13, 52) !important;
-    opacity: 1;
-}
-.cococoding .swiper-pagination-bullet-active{
-    background-color: rgb(43, 17, 65);
-}
-/* Region Edit End */
-
-/* Stats section */
-.stats{
-    background-color: white;
-}
-
 /* Mascots section */
-.mascots {
-    background: var(--primary-sub-color);
-}
-
 .mascots .row img{
     height: 80%;
 }
@@ -175,7 +64,6 @@
 }
 
 .course-overview .card-title {
-    color: var(--primary-sub-color);
     text-shadow: 0 0 4px #ffb9c2;
     padding: 10px;
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.22);
@@ -184,7 +72,6 @@
 .course-overview .card-text{
     min-height: 75px;
     padding: 10px;
-    color: var(--primary-sub-color);
     font-size: 20px;
     text-shadow: 0 1px 2px rgb(199, 194, 194);
 }
@@ -220,11 +107,9 @@
     margin: 10px;
     border: none;
     font-size: 18px;
-    background-color: var(--secondary-color);
-    color: var(--primary-sub-color) !important;
+    background-color: var(--black-opacity-20p);
     border-radius: 20px;
     min-width: 175px;
-    box-shadow: 0 1px 3px rgba(21, 19, 19, 0.86);
 }
 
 #typeWrite{

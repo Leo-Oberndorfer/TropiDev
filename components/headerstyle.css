@@ -1,4 +1,5 @@
 :root {
+    --button-text-color: #dadada;
     --banner-bg-color: #c53500;
     --banner-fg-color: #ffffff;
 }
@@ -43,42 +44,33 @@ header {
     justify-content: center;
 }
 
-.navbar-nav .nav-item{
+.nav-item{
     margin: 5px 15px;
 }
 
+.nav-link{
+    padding: 10px 15px !important;
+}
+
 .navbar-nav a {
+    border-radius: 5px;
     font-size: 18px;
-    color: var(--primary-sub-color);
+    color: var(--button-text-color);
     text-align: center;
 }
 
-.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
-    color: white;
-}
-
 .navbar .dropdown-menu{
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color-light);
     border: 1px solid var(--primary-color);
 }
 
 .navbar .dropdown-content{
-    color: var(--primary-sub-color);
-}
-
-.navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
-    color: var(--primary-sub-color);
-    background-color: var(--sub-color1);
+    color: var(--button-text-color);
 }
 
 .navbar-toggler{
     border-radius: 0 !important;
     border: none !important;
-}
-
-.navbar-toggler:focus{
-    box-shadow: none !important;
-    background-color: var(--secondary-color);
 }
 
 .navbar-toggler-icon {
@@ -87,7 +79,6 @@ header {
 
 .account-buttons .nav-item {
     border-radius: 5px;
-    padding: 5px;
     background-color: var(--secondary-color);
 }
 
@@ -98,11 +89,37 @@ header {
     width: 350px;
 }
 
-.form-dropdown .btn, .form-dropdown .btn:hover {
-    color: var(--primary-sub-color);
-    background-color: var(--sub-color1);
+.form-dropdown .btn {
+    color: var(--button-text-color);
+    background-color: var(--pallet-color-4);
 }
 
+/* Hover & Focus */
+.nav-buttons .nav-link:hover,
+.nav-buttons .nav-link:focus,
+.nav-buttons .dropdown-item:hover,
+.nav-buttons .dropdown-item:focus {
+    background: var(--primary-color-light);
+    color: white;
+}
+
+.account-buttons .nav-link:hover,
+.account-buttons .nav-link:focus {
+    background-color: var(--secondary-color-light);
+    color: white !important;
+}
+
+.form-dropdown .btn:hover {
+    color: white;
+    background-color: var(--pallet-color-4-light);
+}
+
+.navbar-toggler:focus{
+    box-shadow: none !important;
+    background-color: var(--primary-color-light);
+}
+
+/* Mobile */
 @media screen and (max-width: 991px) {
     .navbar-nav .nav-item {
         width: 100%;

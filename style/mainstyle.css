@@ -1,9 +1,18 @@
 :root {
-    --primary-color: #110026;
-    --secondary-color: #000134;
-    --primary-sub-color: #EFF7FF;
-    --sub-color1: #558C8C;
-    --sub-color2: #E8DB7D;
+    --primary-color: #050638;
+    --primary-color-light: #06143d;
+    --secondary-color: #1e004f;
+    --secondary-color-light: #24055d;
+    --pallet-color-3: #66004C;
+    --pallet-color-3-light: #7a005c;
+    --pallet-color-4: #10416e;
+    --pallet-color-4-light: #1e4f8c;
+    --black-opacity-20p: rgba(0, 0, 0, 0.20);
+}
+
+body {
+    color: white !important;
+    background: linear-gradient(180deg, var(--primary-color-light) 0%, var(--secondary-color) 10%, var(--secondary-color-light) 20%, var(--pallet-color-3) 30%, var(--pallet-color-3-light) 40%, var(--pallet-color-4) 50%, var(--pallet-color-4-light) 60%, var(--pallet-color-4) 70%, var(--secondary-color-light) 80%, var(--secondary-color) 90%, var(--primary-color-light) 100%);
 }
 
 ::-webkit-scrollbar {
@@ -23,12 +32,16 @@
     background: #98005c;
 }
 
+code {
+    color: #36daff !important;
+}
+
 a {
     text-decoration: none !important;
 }
 
 .hyperlink-formatted, .hyperlink-formatted:hover, .hyperlink-formatted:visited, .hyperlink-formatted:active {
-    color: var(--sub-color1);
+    color: var(--pallet-color-4-light);
 }
 
 .underline {
@@ -44,13 +57,11 @@ a {
     text-align: center;
     font-size: 64px;
     font-weight: 750;
-    color: var(--primary-color);
     margin: auto;
     padding-bottom: 20px;
 }
 
 .wrapper h2{
-    color: var(--secondary-color);
     margin-top: 5px;
 }
 
@@ -67,14 +78,13 @@ a {
 }
 
 .boxes div{
-    background: white;
     transition: 0.25s;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
     margin: 20px;
     min-width: 350px;
     max-width: 390px;
+    background-color: var(--black-opacity-20p);
 }
 
 .boxes img{
@@ -91,16 +101,15 @@ a {
 .boxes div:hover {
     cursor: pointer;
     scale: 105%;
-    transform: rotate(2deg);
+    transform: rotate(1deg);
     transition: 0.25s ease-in-out;
 }
 
 /** That fancy purple heading-box we got on every course site */
 .info-box {
+    background-color: var(--black-opacity-20p);
     position: relative;
     z-index: 8;
-    background-color: var(--primary-color);
-    color: var(--primary-sub-color);
 }
 
 .card {

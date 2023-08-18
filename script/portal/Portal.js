@@ -67,18 +67,3 @@ function setPortalType(token) {
         handleLoginData();
     });
 }
-
-function displayLRPopup(){
-    const loginPopup = getElement("lrp-form");
-    const courseBody = getElement("course-body");
-    if(loginPopup === null) return;
-    courseBody.style.filter = "blur(2px)";
-    loginPopup.style.display = "block";
-}
-
-function dismissLRPopup(){
-    const loginPopup = getElement("lrp-form");
-    const courseBody = getElement("course-body");
-    courseBody.style.filter = "";
-    loginPopup.style.display = "none";
-}

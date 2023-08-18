@@ -13,7 +13,7 @@ function loadCourseComponents(course){
             response.json().then(data => {
                 let courseInfo = data["course-info"];
                 let courseChapters = data["course-chapters"];
-                document.title = `Developer Island | ${selectedCourseUpper} Course`;
+                document.title = `Tropi Dev | ${selectedCourseUpper} Course`;
                 for (let property of properties) {
                     getElement(property).innerHTML = courseInfo[property];
                 }
@@ -31,14 +31,13 @@ function loadCourseComponents(course){
 
 function courseNotFound(){
     getElement("course-body").innerHTML =
-        "<h1 style='font-size: 64px; font-weight: 750; color: #230d34;'>Course not found</h1>" +
-        "<p style='font-size: 18px; font-weight: 500; color: #00172b'><p>We couldn't find a course associated with this url</p>";
+        "<h1 style='font-size: 64px; font-weight: 750;'>Course not found</h1>" +
+        "<p style='font-size: 18px; font-weight: 500;'><p>We couldn't find a course associated with this url</p>";
     getElement("course-body").style.cssText = "text-align: center; padding: 250px 25px 250px 25px;";
     console.log("File not found, enter a valid course.");
 }
 
 function loadStyle(data){
-    getElement("course-body-wrapper").style.backgroundColor = data["bg-color"];
     getElement("course-start-btn").style.backgroundColor = data["btn-color"];
     getElement("course-heading-icon").src = `assets/courses/${selectedCourseLower}/${selectedCourseLower}.png`;
 }

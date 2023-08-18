@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Title and Icon -->
-    <title>Developer Island | Invalid Course</title>
+    <title>Tropi Dev | Invalid Course</title>
     <link rel="icon" href="assets/icon.png">
 
     <!-- Style -->
@@ -26,7 +26,6 @@
     <script src="components/ComponentLoader.js"></script>
     <link rel="stylesheet" href="components/footerstyle.css">
     <link rel="stylesheet" href="components/headerstyle.css">
-    <link rel="stylesheet" href="components/LoginPopupReminderStyle.css">
 
     <script src="script/courses/CourseHomeLoader.js"></script>
     <script src="script/courses/CourseUtils.js"></script>
@@ -82,7 +81,6 @@
     </div>
 </template>
     <header class="site-component" import="components/header.html"></header>
-    <div class="site-component" import="components/LoginPopupReminder.html"></div>
     <div id="course-body">
         <div class="wrapper info-box" id="info-box">
             <div class="container" id="course-overview-container">
@@ -112,7 +110,7 @@
             <div class="container" id="course-body-container">
                 <div class="row row-cols-1 row-cols-md-2 g-4" id="course-wrapper-cards">
                     <div class="col overview-card">
-                        <div class="card">
+                        <div class="card" id="course-main">
                             <div class="card-body">
                                 <div class="card-heading flex">
                                     <img src="" alt="course-icon" id="course-heading-icon">
@@ -124,11 +122,11 @@
                                         Hey, it's me, Sushi! I will accompany you through this course.<br>Below is a list of chapters for this course. The lessons build on each other so I recommend you work through them one after the other. You can still start wherever you want but since every chapter covers a different topic, lessons before won't be marked as completed when completing the current lesson. If you are logged in your progress will be stored in your profile so you can quit anytime and come back later without having to redo everything. With that being said, I wish you a lot of fun with this course and hopefully I can bring you a bit closer to programming. Also check out the other courses if you want to learn more. If you need help feel free to ask for a hint by pressing the purple hint button.
                                     </p>
                                     <div class="flex overview-card-body-components">
-                                        <a href="#" class="btn btn-primary faded" id="course-start-btn">How'd you get here</a>
+                                        <a href="#" class="btn btn-primary" id="course-start-btn">How'd you get here</a>
                                         <div id="course-progress-bar">
-                                            <small class="text-muted user-progress">Your progress (<span id="user-progress">0</span>%):</small>
+                                            <small class="user-progress">Your progress (<span id="user-progress">0</span>%):</small>
                                             <div class="progress">
-                                                <div class="progress-bar faded" id="progress-bar" role="progressbar" aria-label="course-progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" id="progress-bar" role="progressbar" aria-label="course-progress" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +143,7 @@
     <footer class="site-component" import="components/footer.html"></footer>
 </body>
 <script>
-    loadComponents(true)
+    loadComponents()
     loadCourse();
 </script>
 </html>

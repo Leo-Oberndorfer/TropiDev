@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Title and Icon -->
-    <title>Developer Island | Home</title>
+    <title>Tropi Dev | Home</title>
     <link rel="icon" href="assets/icon.png">
 
     <!-- Styles -->
@@ -35,7 +35,13 @@
 <body>
     <header class="site-component" import="components/header.html"></header>
     <div class="main">
-        <div class="welcome">
+        <div class="welcome" id="test">
+            <!--
+            <div class="layer" data-depth="0.2"><img src="assets/homepage/layers/layer1.png" alt="Layer 1"></div>
+            <div class="layer" data-depth="0.4"><img src="assets/homepage/layers/layer2.png" alt="Layer 2"></div>
+            <div class="layer" data-depth="0.6"><img src="assets/homepage/layers/layer3.png" alt="Layer 3"></div>
+            <div class="layer" data-depth="0.8"><img src="assets/homepage/layers/layer4.png" alt="Layer 4"></div>
+            -->
             <div class="container">
                 <div class="wrapper">
                     <h1>
@@ -85,87 +91,7 @@
             <div class="container reveal">
                 <div class="wrapper">
                     <h1>Coconut Coding</h1>
-                    <div class="slide-container swiper">
-                        <div class="slide-content">
-                            <div class="card-wrapper swiper-wrapper card-only">
-                                <div class="square swiper-slide">
-                                        <div class="image-content">
-                                            <span class="overlay"></span>
-                                            <div class="card-image">
-                                                <img src="assets/homepage/XP.png" alt="hi" class="card-img">
-                                            </div>
-                                        </div>
-                                        <div class="square-content">
-                                            <h2 class="name">XP</h2>
-                                            <p class="description">To earn xp you will have to complete challenges posted by our team members. The higher the difficulty, the more xp you can earn.</p>
-                                        </div>
-                                    </div>
-                                <div class="square swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-                                    <div class="card-image">
-                                        <img src="assets/homepage/Challengs.png" alt="hi" class="card-img">
-                                    </div>
-                                </div>
-                                <div class="square-content">
-                                    <h2 class="name">Challenges</h2>
-                                    <p class="description">The challenges have different difficulties which will range from 1 to 10. If you do more than the requirements say, you can get more Xp.</p>
-                                </div>
-                            </div>
-                                <div class="square swiper-slide">
-                                        <div class="image-content">
-                                            <span class="overlay"></span>
-                                            <div class="card-image">
-                                                <img src="assets/homepage/Leaderboard.png" alt="hi" class="card-img">
-                                            </div>
-                                        </div>
-                                        <div class="square-content">
-                                            <h2 class="name">Leaderboard</h2>
-                                            <p class="description">On our Leaderboard are the top 50 People with the most XP and the highest level displayed.</p>
-                                        </div>
-                                    </div>
-                                <div class="square swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay"></span>
-                                        <div class="card-image">
-                                            <img src="assets/homepage/Level.png" alt="hi" class="card-img">
-                                        </div>
-                                    </div>
-                                    <div class="square-content">
-                                        <h2 class="name">Level</h2>
-                                        <p class="description">When you reach a certain amount of XP you get the respective Programming Level. For example, BEGINNER for the lowest and LEGEND for the highest.</p>
-                                    </div>
-                                </div>
-                                <div class="square swiper-slide">
-                                        <div class="image-content">
-                                            <span class="overlay"></span>
-                                            <div class="card-image">
-                                                <img src="assets/homepage/prize.png" alt="hi" class="card-img">
-                                            </div>
-                                        </div>
-                                        <div class="square-content">
-                                            <h2 class="name">Prize</h2>
-                                            <p class="description">To make the competition even more intense we give away prizes sometimes. We pick someone from the leaderboard and grant them their prize.</p>
-                                        </div>
-                                    </div>
-                                <div class="square swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay"></span>
-                                        <div class="card-image">
-                                            <img src="assets/homepage/mango.png" alt="hi" class="card-img">
-                                        </div>
-                                    </div>
-                                    <div class="square-content">
-                                        <h2 class="name">Coconut Coding</h2>
-                                        <p class="description">To make coding more fun we have our own competition system called "Coconut Coding" where you can compete against other developers and earn xp.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next swiper-navBtn"></div>
-                        <div class="swiper-button-prev swiper-navBtn"></div>
-                        <div class="swiper-pagination"></div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -282,8 +208,8 @@
 </body>
 <script>
     loadComponents();
-    loadSwiper();
     TypeWriter();
     reveal();
+    parallaxRun();
 </script>
 </html>
