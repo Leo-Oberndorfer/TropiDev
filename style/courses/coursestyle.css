@@ -88,6 +88,10 @@
     align-items: center;
 }
 
+.accordion-button:after {
+    filter: drop-shadow( 0 0 2px #ffffff);
+}
+
 .accordion-header .task-circle:before{
     content: "◯";
     color: var(--border-collor);

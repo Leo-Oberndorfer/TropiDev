@@ -103,8 +103,10 @@ header {
     color: white;
 }
 
-.account-buttons .nav-link:hover,
-.account-buttons .nav-link:focus {
+#portal .nav-link:hover,
+#portal .nav-link:focus,
+#portal .dropdown-menu a:hover
+{
     background-color: var(--secondary-color-light);
     color: white !important;
 }

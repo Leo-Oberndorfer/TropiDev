@@ -20,7 +20,7 @@
 }
 
 .welcome .wrapper h1{
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     text-shadow: 0 0 12px #3d65e7;
     font-family: "Arial Black", sans-serif;
 }
@@ -32,6 +32,70 @@
     font-family: "Arial Black", sans-serif;
     text-shadow: 0 0 12px #6600ff;
     font-size: 20px;
+}
+
+.welcome #welcome-section {
+    margin: 0 50px;
+}
+
+.welcome #register-prompt {
+    flex: 1;
+}
+
+.welcome #register-prompt h2 {
+    font-size: 48px;
+    font-weight: 750;
+    text-shadow: 0 0 12px #ffffff;
+    font-family: "Arial Black", sans-serif;
+}
+
+.welcome #register-prompt h3 {
+    margin-bottom: 15px;
+}
+
+.welcome #register-pre-form {
+    gap: 10px;
+    justify-content: start;
+}
+
+.welcome #register-pre-form input {
+    font-family: "Cascadia Code", sans-serif;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.welcome #register-pre-form input[type="submit"] {
+    background-color: var(--pallet-color-4);
+    color: var(--button-text-color);
+}
+
+.welcome #register-pre-form input[type="submit"]:hover {
+    color: white;
+    background-color: var(--pallet-color-4-light);
+}
+
+.welcome #animated-text {
+    flex: 2;
+}
+
+@media screen and (max-width: 991px) {
+    .welcome #welcome-section {
+        flex-direction: column-reverse;
+    }
+
+    .welcome #register-pre-form {
+        justify-content: center;
+    }
+
+    .welcome #animated-text {
+        width: 100%;
+    }
+
+    .welcome #register-prompt {
+        text-align: center;
+    }
 }
 
 /* Coconut Coding section */

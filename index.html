@@ -44,12 +44,24 @@
             -->
             <div class="container">
                 <div class="wrapper">
-                    <h1>
-                        <span id="typeWrite" class="animate-popin typewrite text " data-period="2000" data-type='["Hello World!", "Hallo Welt!", "Hola Mundo!", "Ciao Mondo!", "こんにちは世界", "Привет мир!", "Bonjour le monde!"]'>
-                            <span class="wrap"></span>
-                        </span>
-                    </h1>
-                    <p id="subtitel" class="animate-popin text">Interested in becoming a programmer?<br>Well, this is definitely the right place!</p>
+                    <div id="welcome-section" class="flex">
+                        <div id="register-prompt">
+                            <h2>Join the fun!</h2>
+                            <h3>Learn coding or compete against others in a tropical way.</h3>
+                            <form id="register-pre-form" class="flex">
+                                <input id="input" type="text" name="email" placeholder="Email">
+                                <input id="button" type="submit" name="register" value="Let's code">
+                            </form>
+                        </div>
+                        <div id="animated-text">
+                            <h1>
+                                <span id="typeWrite" class="animate-popin typewrite text " data-period="2000" data-type='["Hello World!", "Hallo Welt!", "Hola Mundo!", "Ciao Mondo!", "こんにちは世界", "Привет мир!", "Bonjour le monde!"]'>
+                                    <span class="wrap"></span>
+                                </span>
+                            </h1>
+                            <!-- <p id="subtitel" class="animate-popin text">Interested in becoming a programmer?<br>Well, this is definitely the right place!</p> -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,18 +92,22 @@
                         </div>
                         <div onClick="window.open('https://forms.gle/Z5XWQRjs2ENvEkw79')">
                             <img src="assets/homepage/staff.png" alt="Staff">
-                            <h2>Staff positions</h2>
+                            <h2>Staff Positions</h2>
                             <p>If you want to help us out you can become a part of our team by filling out an application.</p>
+                        </div>
+                        <div onclick="window.open('https://discord.gg/EeeT8yNQht')">
+                            <img src="assets/homepage/discord.png" alt="Discord">
+                            <h2>Discord Server</h2>
+                            <p>Join our discord server to get in touch with the community and meet other developers.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="cococoding">
-            <div class="container reveal">
+            <div class="container">
                 <div class="wrapper">
                     <h1>Coconut Coding</h1>
-
                 </div>
             </div>
         </div>
@@ -120,30 +136,6 @@
                         <div>
                             <h2 id="donations">16</h2>
                             <p>donations worth a total of <b id="amount">80€</b></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mascots">
-            <div class="container reveal">
-                <div class="wrapper">
-                    <h1>Island owners</h1>
-                    <div class="boxes">
-                        <div>
-                            <img src="assets/homepage/cocosloth.png" alt="Coco">
-                            <h2>Coco the sloth</h2>
-                            <p class="card-text">Yo what's up, my name is Coco, and I am responsible for the coconut challenges. You will meet me <a class="hyperlink-formatted" href="#">there</a> :)</p>
-                        </div>
-                        <div>
-                            <img src="assets/homepage/sushi.png" alt="Sushi">
-                            <h2>Sushi the crab</h2>
-                            <p class="card-text">Hey, I am Sushi the crab. You can find me in basically every course. I will help you reach the end and give you some hints.</p>
-                        </div>
-                        <div>
-                            <img src="assets/homepage/mango.png" alt="Mango">
-                            <h2>Mango the parrot</h2>
-                            <p class="card-text">Hellooo, it's me, Mango! I make sure that everybody has a great time and I am there for you if you need something.</p>
                         </div>
                     </div>
                 </div>
@@ -199,6 +191,30 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mascots">
+        <div class="container reveal">
+            <div class="wrapper">
+                <h1>Island owners</h1>
+                <div class="boxes">
+                    <div>
+                        <img src="assets/homepage/cocosloth.png" alt="Coco">
+                        <h2>Coco the sloth</h2>
+                        <p class="card-text">Yo what's up, my name is Coco, and I am responsible for the coconut challenges. You will meet me <a class="hyperlink-formatted" href="#">there</a> :)</p>
+                    </div>
+                    <div>
+                        <img src="assets/homepage/sushi.png" alt="Sushi">
+                        <h2>Sushi the crab</h2>
+                        <p class="card-text">Hey, I am Sushi the crab. You can find me in basically every course. I will help you reach the end and give you some hints.</p>
+                    </div>
+                    <div>
+                        <img src="assets/homepage/mango.png" alt="Mango">
+                        <h2>Mango the parrot</h2>
+                        <p class="card-text">Hellooo, it's me, Mango! I make sure that everybody has a great time and I am there for you if you need something.</p>
                     </div>
                 </div>
             </div>
