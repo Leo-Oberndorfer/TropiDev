@@ -16,26 +16,7 @@
             </form>
         </li>
         <li class="nav-item dropdown" id="register">
-            <a class="nav-link btn-toggle-show" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">Register</a>
-            <form id="register-form" class="dropdown-menu form-dropdown p-4 btn-toggle-show">
-                <div class="mb-3">
-                    <label for="username" class="form-label dropdown-content">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label dropdown-content">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label dropdown-content">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" required>
-                </div>
-                <div class="mb-3">
-                    <label for="passwordconfirm" class="form-label dropdown-content">Confirm Password</label>
-                    <input type="password" class="form-control" id="passwordconfirm" placeholder="Confirm Password" required>
-                </div>
-                <button type="submit" class="btn">Sign up</button>
-            </form>
+            <a class="nav-link" href="#" role="button" onclick="document.getElementById('register-overlay').classList.remove('hidden')">Register</a>
         </li>
     </ul>
     <ul id="loggedIn" class="navbar-nav">

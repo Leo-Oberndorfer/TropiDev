@@ -89,7 +89,7 @@
 }
 
 .accordion-button:after {
-    filter: drop-shadow( 0 0 2px #ffffff);
+    filter: invert(1);
 }
 
 .accordion-header .task-circle:before{

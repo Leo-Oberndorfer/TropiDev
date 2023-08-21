@@ -21,7 +21,7 @@
 
 .welcome .wrapper h1{
     padding-bottom: 50px;
-    text-shadow: 0 0 12px #3d65e7;
+    text-shadow: 0 0 12px var(--pallet-color-3-light);
     font-family: "Arial Black", sans-serif;
 }
 
@@ -45,7 +45,7 @@
 .welcome #register-prompt h2 {
     font-size: 48px;
     font-weight: 750;
-    text-shadow: 0 0 12px #ffffff;
+    text-shadow: 0 0 12px var(--pallet-color-4-light);
     font-family: "Arial Black", sans-serif;
 }
 

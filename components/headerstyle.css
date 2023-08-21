@@ -61,7 +61,6 @@ header {
 
 .navbar .dropdown-menu{
     background-color: var(--primary-color-light);
-    border: 1px solid var(--primary-color);
 }
 
 .navbar .dropdown-content{
