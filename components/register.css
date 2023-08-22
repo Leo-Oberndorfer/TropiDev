@@ -14,15 +14,23 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#register-form-container .offcanvas {
+#register-form {
     width: 450px;
+    padding: 20px;
     position: relative;
     background-color: var(--primary-color-light);
     border-radius: 5px;
     box-shadow: white 0 0 5px;
 }
 
-#register-form-container .offcanvas-header button {
+#register-form #register-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#register-form #register-form-header button {
     font-weight: 1000;
     border-radius: 10px;
     width: 50px;
@@ -32,12 +40,13 @@
     color: var(--button-text-color);
 }
 
-#register-form-container .offcanvas-header button:hover {
+#register-form #register-form-header button:hover {
     background-color: var(--black-opacity-20p);
     color: white;
 }
 
-#register-form-container .offcanvas .btn {
+#register-form .btn {
+    margin-top: 20px;
     color: var(--button-text-color);
     background-color: var(--pallet-color-4);
 }
