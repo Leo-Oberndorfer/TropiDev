@@ -107,6 +107,37 @@
     justify-content: center;
 }
 
+#swiper-slide-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+#swiper-slide-wrapper .swiper-slide {
+    transition: transform 0.5s;
+    width: 350px;
+}
+
+#swiper-slide-wrapper .swiper-slide .card { background-color: black }
+
+#swiper-slide-wrapper .active-slide {
+    order: 0;
+    transform: scale(1.1);
+}
+
+#swiper-slide-wrapper .prev-slide {
+    order: -1;
+    transform: translateX(-100px) scale(0.9);
+}
+
+#swiper-slide-wrapper .next-slide {
+    order: 1;
+    transform: translateX(100px) scale(0.9);
+}
+
+#swiper-slide-wrapper .hidden-slide {
+    display: none;
+}
+
 /* Mascots section */
 .mascots .row img{
     height: 80%;

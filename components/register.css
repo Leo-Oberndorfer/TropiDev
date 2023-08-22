@@ -15,6 +15,7 @@
 }
 
 #register-form-container .offcanvas {
+    width: 450px;
     position: relative;
     background-color: var(--primary-color-light);
     border-radius: 5px;

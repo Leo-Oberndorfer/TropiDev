@@ -1,6 +1,6 @@
 :root {
     --button-text-color: #dadada;
-    --banner-bg-color: #c53500;
+    --banner-info-bg-color: #0079c5;
     --banner-fg-color: #ffffff;
 }
 
@@ -18,7 +18,14 @@ header {
 .header-banner {
     color: var(--banner-fg-color);
     text-align: center;
-    background-color: var(--banner-bg-color);
+}
+
+.header-banner #not-compliant {
+    background-color: #ff8800;
+}
+
+.header-banner #info {
+    background-color: var(--banner-info-bg-color);
 }
 
 .header-banner p {
@@ -128,5 +135,15 @@ header {
     .form-dropdown {
         transform: none;
         width: 100%;
+    }
+}
+@media screen and (max-width: 408px) {
+    .header-banner #not-compliant {
+        display: block;
+    }
+}
+@media screen and (min-width: 409px) {
+    .header-banner #not-compliant {
+        display: none;
     }
 }

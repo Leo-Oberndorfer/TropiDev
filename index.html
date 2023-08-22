@@ -32,6 +32,8 @@
     <script src="script/utils/RevealAnimation.js"></script>
     <script src="script/home/HomeScript.js"></script>
     <script src="script/portal/Portal.js"></script>
+    <script src="components/FormInteraction.js"></script>
+    <script src="script/home/Carousel.js"></script>
 </head>
 <body>
     <header class="site-component" import="components/header.html"></header>
@@ -50,9 +52,9 @@
                         <div id="register-prompt">
                             <h2>Join the fun!</h2>
                             <h3>Learn coding or compete against others in a tropical way.</h3>
-                            <form id="register-pre-form" class="flex">
-                                <input id="input" type="text" name="email" placeholder="Email">
-                                <input id="button" type="submit" name="register" value="Let's code">
+                            <form onsubmit="event.preventDefault(); InputRegisterEmail();" id="register-pre-form" class="flex">
+                                <input id="register-prompt-email" type="text" name="email" placeholder="Email">
+                                <input id="register-prompt-submit" type="submit" name="register" value="Let's code">
                             </form>
                         </div>
                         <div id="animated-text">
@@ -110,6 +112,45 @@
             <div class="container">
                 <div class="wrapper">
                     <h1>Coconut Coding</h1>
+                    <div id="coconut-carousel">
+                        <div id="swiper-slide-wrapper" class="flex">
+                            <div class="swiper-slide active-slide">
+                                <div class="card">
+                                    <img src="assets/homepage/cococoding/1.png" alt="Coconut Coding">
+                                    <h2>What is Coconut Coding? 1</h2>
+                                    <p>Coconut Coding is a community for developers of all skill levels. We offer free courses, challenges and events.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide next-slide">
+                                <div class="card">
+                                    <img src="assets/homepage/cococoding/1.png" alt="Coconut Coding">
+                                    <h2>What is Coconut Coding? 2</h2>
+                                    <p>Coconut Coding is a community for developers of all skill levels. We offer free courses, challenges and events.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide hidden-slide">
+                                <div class="card">
+                                    <img src="assets/homepage/cococoding/1.png" alt="Coconut Coding">
+                                    <h2>What is Coconut Coding? 3</h2>
+                                    <p>Coconut Coding is a community for developers of all skill levels. We offer free courses, challenges and events.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide hidden-slide">
+                                <div class="card">
+                                    <img src="assets/homepage/cococoding/1.png" alt="Coconut Coding">
+                                    <h2>What is Coconut Coding? 4</h2>
+                                    <p>Coconut Coding is a community for developers of all skill levels. We offer free courses, challenges and events.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide prev-slide">
+                                <div class="card">
+                                    <img src="assets/homepage/cococoding/1.png" alt="Coconut Coding">
+                                    <h2>What is Coconut Coding? 5</h2>
+                                    <p>Coconut Coding is a community for developers of all skill levels. We offer free courses, challenges and events.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -228,6 +269,6 @@
     loadComponents();
     TypeWriter();
     reveal();
-    parallaxRun();
+    initCarousel();
 </script>
 </html>

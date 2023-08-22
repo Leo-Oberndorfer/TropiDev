@@ -1,5 +1,5 @@
 <div id="register-form-container">
-    <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas register-form" aria-labelledby="offcanvasLabel">
         <div class="offcanvas-header">
             <h3 class="offcanvas-title" id="offcanvasLabel">Register</h3>
             <button onclick="document.getElementById('register-overlay').classList.add('hidden')">✗</button>
@@ -7,20 +7,20 @@
         <div class="offcanvas-body">
             <form id="register-form">
                 <div class="mb-3">
-                    <label for="username" class="form-label dropdown-content">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                    <label for="register-form-username" class="form-label dropdown-content">Username</label>
+                    <input type="text" class="form-control" id="register-form-username" placeholder="Username" required>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label dropdown-content">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+                    <label for="register-form-email" class="form-label dropdown-content">Email address</label>
+                    <input type="email" class="form-control" id="register-form-email" placeholder="email@example.com" required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label dropdown-content">Password</label>
                     <input type="password" class="form-control" id="password" placeholder="Password" required>
                 </div>
                 <div class="mb-3">
-                    <label for="passwordconfirm" class="form-label dropdown-content">Confirm Password</label>
-                    <input type="password" class="form-control" id="passwordconfirm" placeholder="Confirm Password" required>
+                    <label for="register-form-passwordconfirm" class="form-label dropdown-content">Confirm Password</label>
+                    <input type="password" class="form-control" id="register-form-passwordconfirm" placeholder="Confirm Password" required>
                 </div>
                 <button type="submit" class="btn">Sign up</button>
             </form>
