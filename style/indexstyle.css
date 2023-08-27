@@ -116,8 +116,13 @@
     background-color: var(--black-opacity-20p);
     transition: transform 0.5s;
     width: 350px;
+    height: 200px;
     margin: 10px;
     border-radius: 5px;
+}
+
+#swiper-slide-wrapper .swiper-slide:hover {
+    cursor: pointer;
 }
 
 #swiper-slide-wrapper .swiper-slide .card {
@@ -142,6 +147,7 @@
 
 #swiper-slide-wrapper .hidden-slide {
     display: none;
+    transform: scale(0.1);
 }
 
 /* Mascots section */

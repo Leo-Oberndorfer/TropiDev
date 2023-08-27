@@ -13,21 +13,17 @@ function addListener(element){
             // Remove old prev slide
             document.getElementsByClassName("swiper-slide")[(slideIndex - 1) > -1 ? slideIndex - 1 : slideCount - 1].classList.remove("prev-slide");
             document.getElementsByClassName("swiper-slide")[(slideIndex - 1) > -1 ? slideIndex - 1 : slideCount - 1].classList.add("hidden-slide");
-            console.log(slideIndex - 1 + " Prev Removed");
             // Set new prev slide
             document.getElementsByClassName("swiper-slide")[slideIndex].classList.remove("active-slide");
             document.getElementsByClassName("swiper-slide")[slideIndex].classList.add("prev-slide");
-            console.log(slideIndex + " Prev Added");
             // Set active slide
             this.classList.remove("next-slide");
             this.classList.add("active-slide");
-            console.log(slideIndex + 1 + " Active Added");
             // Update slide index
             slideIndex = (slideIndex + 1) % slideCount;
             // Set next slide
             document.getElementsByClassName("swiper-slide")[(slideIndex + 1) % slideCount].classList.remove("hidden-slide");
             document.getElementsByClassName("swiper-slide")[(slideIndex + 1) % slideCount].classList.add("next-slide");
-            console.log((slideIndex + 1) % slideCount + " Next Added");
         } else if(this.classList.contains("prev-slide")){
             // Remove old next slide
             document.getElementsByClassName("swiper-slide")[(slideIndex + 1) % slideCount].classList.remove("next-slide");
