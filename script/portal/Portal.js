@@ -18,7 +18,7 @@ function getToken(){
 }
 
 function handleLoginData(){
-    const loginForm = getElement('login-form');
+    const loginForm= getElement('login-form');
     loginForm.onsubmit = async (e) => {
         e.preventDefault();
         const body = JSON.stringify(Object.fromEntries(new FormData(loginForm).entries())); // Encryption will be added later
